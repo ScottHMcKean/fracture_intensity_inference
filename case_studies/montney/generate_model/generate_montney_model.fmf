@@ -257,6 +257,11 @@ BEGIN ImportFile
 	TypeName = "STL"
 END
 
+BEGIN ImportFile
+	Path = "LowerMontneyIntersection.stl"
+	TypeName = "STL"
+END
+
 BEGIN CREATEREGION
 	ObjectName = "Lower_Montney"
 	Type = "Box"

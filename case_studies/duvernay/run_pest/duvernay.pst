@@ -1,0 +1,46 @@
+pcf
+* control data
+restart estimation
+10  12  3  0  2
+1  1  single  point  1  0  0
+10  -3.0  0.3  0.03  10  0
+5.0  5.0  1.0e-3
+0.1  noaui
+10  .005  4  4  .005  4
+1  1  1
+* parameter groups
+p32_vals  relative  1E-2  1E-4  switch  1.50  parabolic
+power_law_d  relative  1E-2  1E-4  switch  1.50  parabolic
+power_law_l  relative  1E-1  1E-3  switch  1.50  parabolic
+* parameter data
+NE_SW_P32  none  relative  0.001  1E-5  0.01  p32_vals  1.0  0.0  1
+NW_SE_P32  none  relative  0.001  1E-5  0.01  p32_vals  1.0  0.0  1
+REGIONAL_D  none  relative  2  1.01  3.99  power_law_d  1.0  0.0  1
+REGIONAL_MIN  none  relative  300  100  599  power_law_l  1.0  0.0  1
+REGIONAL_X  none  relative  250  50  250  power_law_l  1.0  0.0  1
+REGIONAL_MAX  none  relative  1000  600  3000  power_law_l  1.0  0.0  1
+NNE_SSW_P32  none  relative  0.005  1E-4  0.1  p32_vals  1.0  0.0  1
+NNE_SSW_D  none  relative  2  1.01  3.99  power_law_d  1.0  0.0  1
+NNE_SSW_X  none  relative  100  10  300  power_law_l  1.0  0.0  1
+NNE_SSW_MIN  none  relative  200  100  499  power_law_l  1.0  0.0  1
+* observation groups
+lineaments
+d2w
+* observation data
+total_length  6150  0.1  lineaments
+num_lineaments 18  10  lineaments
+d2wm3s  6.59179413  1  d2w
+d2wm2s  19.45979499  1  d2w
+d2wm1s  37.67247344  1  d2w
+d2w0s  70.99529733  1  d2w
+d2wp1s  145.45048756  1  d2w
+d2wp2s  370.64855337  1  d2w
+d2wp3s  578.66404124  1  d2w
+d2w100  0.7439666  100  d2w
+d2w200  0.22722338  100  d2w
+d2w300  0.02881002  100  d2w
+* model command line
+python run_pest.py duvernay.fmf
+* model input/output
+duvernay.ptf  duvernay.fmf
+output.pin  output.sts

@@ -1,0 +1,16 @@
+solid LowerMontneyIntersection
+facet
+outer loop
+vertex -208.664 -1099.34 -208.6
+vertex 2791.34 -1099.34 -208.6
+vertex 2791.34 900.656 -208.6
+endloop
+endfacet
+facet
+outer loop
+vertex -208.664 -1099.34 -208.6
+vertex 2791.34 900.656 -208.6
+vertex -208.664 900.656 -208.6
+endloop
+endfacet
+endsolid LowerMontneyIntersection

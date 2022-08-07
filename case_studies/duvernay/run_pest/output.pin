@@ -1,0 +1,13 @@
+pif @
+l1 [total_length]1:60
+l1 [num_lineaments]1:60
+l1 [d2wm3s]1:60
+l1 [d2wm2s]1:60
+l1 [d2wm1s]1:60
+l1 [d2w0s]1:60
+l1 [d2wp1s]1:60
+l1 [d2wp2s]1:60
+l1 [d2wp3s]1:60
+l1 [d2w100]1:60
+l1 [d2w200]1:60
+l1 [d2w300]1:60
