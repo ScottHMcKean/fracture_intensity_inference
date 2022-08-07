@@ -1,0 +1,32 @@
+BEGIN FORMAT
+    Format = Ascii
+    XAxis = East
+    Length_Unit = Meter
+    Scale = 886.2269287
+    No_Fractures =        1
+    No_TessFractures =        0
+    No_Properties = 3
+END FORMAT
+
+BEGIN PROPERTIES
+    Prop1    =    (Real*4)    "Transmissivity"
+    Prop2    =    (Real*4)    "Storativity"
+    Prop3    =    (Real*4)    "Aperture"
+END PROPERTIES
+
+BEGIN SETS
+    Set1    =    "N-S Fault"
+END SETS
+
+BEGIN FRACTURE
+    1    4    1    1e-06    1e-06    0.0001
+    1    -826.1200653    66.2318788    -3294.226925
+    2    -702.4799362    1834.368109    -3294.226925
+    3    -702.4799362    1834.368109    -1521.773068
+    4    -826.1200653    66.2318788    -1521.773068
+    0    -0.9975640503    0.06975647341    -3.646658769e-17
+END FRACTURE
+
+BEGIN TESSFRACTURE
+END TESSFRACTURE
+

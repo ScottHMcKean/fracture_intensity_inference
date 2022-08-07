@@ -1,0 +1,835 @@
+#=================================================================
+# TOC2ME Fracture Property Inference
+#==================================================================
+ 
+#=================================================================
+### Load Data
+# Well paths, stages, and induced seismicity points in .frd file
+#=================================================================
+BEGIN ImportFile
+	Path = "..\duvernay_model.frd"
+	TypeName = "FRED"
+END
+ 
+BEGIN SetSeed
+	Seed = 100
+END
+ 
+#=================================================================
+### Hydraulic Fractures
+# Generate hydraulic fractures from stage centres
+#==================================================================
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "Well_A_fracs"
+	FractureModel = "BOOTSTRAP"
+	RegionName = "Well_A_mid"
+	#** Size
+		BEGIN SizeHeight
+			ValueType "Length" Units "m"
+			Type = "NORMAL"
+			Parameter "Mean" = 350 [m]
+			Parameter "Std Dev." = 100
+			MinValue = 200 [m]
+			MaxValue = 500 [m]
+		END
+		BEGIN SizeLength
+			ValueType "Length" Units "m"
+			Type = "NORMAL"
+			Parameter "Mean" = 600 [m]
+			Parameter "Std Dev." = 150
+			MinValue = 100 [m]
+			MaxValue = 1500 [m]
+		END
+	ClipToRegion = 1
+	UseSurfacePoints = 0     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Orientation
+		UsePole = 1
+		#** (Distribution Parameters as scalar distributions below)
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+		END
+		BEGIN TrendDistribution
+			ValueType "Angle" Units "deg"
+			Type = "CONSTANT"
+			Parameter "Value" = 135 [deg]
+		END
+		BEGIN PlungeDistribution
+			ValueType "Angle" Units "deg"
+			Type = "CONSTANT"
+			Parameter "Value" = 0 [deg]
+		END
+	#** Shape
+	SidesDist Type = "CONSTANT" "Value" = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "Well_A_fracs"
+	#FractureSet_Name = "Set_Name"  #Optional name for generated set - (replaces existing objects!)
+END
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "Well_D_fracs"
+	FractureModel = "BOOTSTRAP"
+	RegionName = Well_D_mid
+	#** Size
+		BEGIN SizeHeight
+			ValueType "Length" Units "m"
+			Type = "NORMAL"
+			Parameter "Mean" = 350 [m]
+			Parameter "Std Dev." = 100
+			MinValue = 200 [m]
+			MaxValue = 500 [m]
+		END
+		BEGIN SizeLength
+			ValueType "Length" Units "m"
+			Type = "NORMAL"
+			Parameter "Mean" = 600 [m]
+			Parameter "Std Dev." = 150
+			MinValue = 100 [m]
+			MaxValue = 1500 [m]
+		END
+	ClipToRegion = 1
+	UseSurfacePoints = 0     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Orientation
+		UsePole = 1
+		#** (Distribution Parameters as scalar distributions below)
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+		END
+		BEGIN TrendDistribution
+			ValueType "Angle" Units "deg"
+			Type = "CONSTANT"
+			Parameter "Value" = 135 [deg]
+		END
+		BEGIN PlungeDistribution
+			ValueType "Angle" Units "deg"
+			Type = "CONSTANT"
+			Parameter "Value" = 0 [deg]
+		END
+	#** Shape
+	SidesDist Type = "CONSTANT" "Value" = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "Well_D_fracs"
+	#FractureSet_Name = "Set_Name"  #Optional name for generated set - (replaces existing objects!)
+END
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "Well_C_fracs"
+	FractureModel = "BOOTSTRAP"
+	RegionName = "Well_C_mid"
+	#** Size
+		BEGIN SizeHeight
+			ValueType "Length" Units "m"
+			Type = "NORMAL"
+			Parameter "Mean" = 350 [m]
+			Parameter "Std Dev." = 100
+			MinValue = 200 [m]
+			MaxValue = 500 [m]
+		END
+		BEGIN SizeLength
+			ValueType "Length" Units "m"
+			Type = "NORMAL"
+			Parameter "Mean" = 600 [m]
+			Parameter "Std Dev." = 150
+			MinValue = 100 [m]
+			MaxValue = 1500 [m]
+		END
+	ClipToRegion = 1
+	UseSurfacePoints = 0     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Orientation
+		UsePole = 1
+		#** (Distribution Parameters as scalar distributions below)
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+		END
+		BEGIN TrendDistribution
+			ValueType "Angle" Units "deg"
+			Type = "CONSTANT"
+			Parameter "Value" = 135 [deg]
+		END
+		BEGIN PlungeDistribution
+			ValueType "Angle" Units "deg"
+			Type = "CONSTANT"
+			Parameter "Value" = 0 [deg]
+		END
+	#** Shape
+	SidesDist Type = "CONSTANT" "Value" = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "Well_C_fracs"
+	#FractureSet_Name = "Set_Name"  #Optional name for generated set - (replaces existing objects!)
+END
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "Well_B_fracs"
+	FractureModel = "BOOTSTRAP"
+	RegionName = "Well_B_mid"
+	#** Size
+		BEGIN SizeHeight
+			ValueType "Length" Units "m"
+			Type = "NORMAL"
+			Parameter "Mean" = 200 [m]
+			Parameter "Std Dev." = 50
+			MinValue = 100 [m]
+			MaxValue = 300 [m]
+		END
+		BEGIN SizeLength
+			ValueType "Length" Units "m"
+			Type = "NORMAL"
+			Parameter "Mean" = 400 [m]
+			Parameter "Std Dev." = 75
+			MinValue = 200 [m]
+			MaxValue = 600 [m]
+		END
+	ClipToRegion = 1
+	UseSurfacePoints = 0     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Orientation
+		UsePole = 1
+		#** (Distribution Parameters as scalar distributions below)
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+		END
+		BEGIN TrendDistribution
+			ValueType "Angle" Units "deg"
+			Type = "CONSTANT"
+			Parameter "Value" = 135 [deg]
+		END
+		BEGIN PlungeDistribution
+			ValueType "Angle" Units "deg"
+			Type = "CONSTANT"
+			Parameter "Value" = 0 [deg]
+		END
+	#** Shape
+	SidesDist Type = "CONSTANT" "Value" = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "Well_B_fracs"
+END
+ 
+#=================================================================
+### Natural Fractures
+# Generate three sets
+#==================================================================
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "NE-SW"
+	FractureModel = "REGION"
+	RegionName = "Base_to_Wab"
+	ClipToRegion = 1
+	UseSurfacePoints = 1     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Intensity
+		P32 =     1.0000000E-05 [1/m] #NE_SW_P32
+		AdjustedByTruncation = 1
+	#** Orientation
+		UsePole = 1
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+			Parameter "Mean Trend" = 145 [deg]
+			Parameter "Mean Plunge" = 0 [deg]
+		END
+	#** Size
+	BEGIN LengthDistribution
+		ValueType "Length" Units "m"
+		Type = "POWERLAW"
+		Parameter "Xmin" =      2.4947552E+02 [m] #NE_SW_X
+		Parameter "D" =      1.6016008E+00 #NE_SW_D
+		MinValue =        3.0935730E+02 [m] #NE_SW_MIN
+		MaxValue =        9.9866026E+02 [m] #NE_SW_MAX
+	END
+	BEGIN HeightDistribution
+		ValueType "Length" Units "m"
+		Type = "CONSTANT"
+		Parameter "Value" = 2000 [m]
+	END
+	#** Shape
+	NumSides = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "NE-SW"
+END
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "NW-SE"
+	FractureModel = "REGION"
+	RegionName = "Base_to_Wab"
+	ClipToRegion = 1
+	UseSurfacePoints = 1     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Intensity
+		P32 =    2.9439560E-03 [1/m] #NW_SE_P32
+		AdjustedByTruncation = 1
+	#** Orientation
+		UsePole = 1
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+			Parameter "Mean Trend" = 225 [deg]
+			Parameter "Mean Plunge" = 0 [deg]
+		END
+	#** Size
+	BEGIN LengthDistribution
+		ValueType "Length" Units "m"
+		Type = "POWERLAW"
+		Parameter "Xmin" =      2.4947552E+02 [m] #NW_SE_X
+		Parameter "D" =      1.6016008E+00 #NW_SE_D
+		MinValue =        3.0935730E+02 [m] #NW_SE_MIN
+		MaxValue =        9.9866026E+02 [m] #NW_SE_MAX
+	END
+	BEGIN HeightDistribution
+		ValueType "Length" Units "m"
+		Type = "CONSTANT"
+		Parameter "Value" = 2000 [m]
+	END
+	#** Shape
+	NumSides = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "NW-SE"
+END
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "NNE-SSW"
+	FractureModel = "REGION"
+	RegionName = "HVI_Nisku"
+	ClipToRegion = 1
+	UseSurfacePoints = 1     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Intensity
+		P32 =     3.0750261E-03 [1/m] #NNE_SSW_P32
+		AdjustedByTruncation = 1
+	#** Orientation
+		UsePole = 1
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+			Parameter "Mean Trend" = 110 [deg]
+			Parameter "Mean Plunge" = 0 [deg]
+		END
+	#** Size
+	BEGIN LengthDistribution
+		ValueType "Length" Units "m"
+		Type = "POWERLAW"
+		Parameter "Xmin" =    3.0000000E+02 [m] #NNE_SSW_X
+		Parameter "D" =     2.8951943E+00 #NNE_SSW_D
+		MinValue =       2.7180645E+02 [m] #NNE_SSW_MIN
+		MaxValue = 1000 [m] #NNE_SSW_MAX
+	END
+	BEGIN HeightDistribution
+		ValueType "Length" Units "m"
+		Type = "CONSTANT"
+		Parameter "Value" = 1000 [m]
+	END
+	#** Shape
+	NumSides = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "NNE-SSW"
+END
+ 
+#=============================================
+# Create Set_Name property for filtering
+# Fracs = 1, NE fracs=2, NW fracs=3
+#============================================
+ 
+BEGIN AddProperty
+	Object = "Well_B_fracs_1"
+	Object = "Well_A_fracs_1"
+	Object = "Well_D_fracs_1"
+	Object = "Well_C_fracs_1"
+	PropertyName = "Set_Name"
+	Correlation = "CONSTANT"
+	ParaConst = 1
+	NullValue = -9999
+	Element = 128
+	Type = "single precision floating point"
+	ValueType = "--None--"
+	UnitsType = " - "
+END
+ 
+BEGIN AddProperty
+	Object = "NE-SW_1"
+	PropertyName = "Set_Name"
+	Correlation = "CONSTANT"
+	ParaConst = 2
+	NullValue = -9999
+	Element = 128
+	Type = "single precision floating point"
+	ValueType = "--None--"
+	UnitsType = " - "
+END
+ 
+BEGIN AddProperty
+	Object = "NW-SE_1"
+	PropertyName = "Set_Name"
+	Correlation = "CONSTANT"
+	ParaConst = 3
+	NullValue = -9999
+	Element = 128
+	Type = "single precision floating point"
+	ValueType = "--None--"
+	UnitsType = " - "
+END
+ 
+BEGIN AddProperty
+	Object = "NNE-SSW_1"
+	PropertyName = "Set_Name"
+	Correlation = "CONSTANT"
+	ParaConst = 4
+	NullValue = -9999
+	Element = 128
+	Type = "single precision floating point"
+	ValueType = "--None--"
+	UnitsType = " - "
+END
+ 
+BEGIN AddProperty
+	Object = "N-S Fault"
+	PropertyName = "Set_Name"
+	Correlation = "CONSTANT"
+	ParaConst = 5
+	NullValue = -9999
+	Element = 128
+	Type = "single precision floating point"
+	ValueType = "--None--"
+	UnitsType = " - "
+END
+ 
+#=================================================================
+### Analyze Fracture Connectivity
+# Run connectivity back to each well through individual stages
+# The sliding sleeve has a bug so use a well connectivity analysis
+# Instead of each stage. OK for sliding sleeve, but stage-level
+# connectivity preferred for other wells.
+#==================================================================
+ 
+BEGIN DefineIntersectingFractures
+	Name = "Intersection"
+	ComputeWellLog = 0
+	ComputeIntersectingFractures = 0
+	ComputeConnectedFractures = 1
+	ComputeStats = 0
+	ComputePerInterval = 0
+	ComputeDepthCorrelation = 0
+	WellInterval Well = "Well A" IntervalSet = "Well_A_stages" IntervalName = ""
+	FractureSet = "Well_A_fracs_1"
+	FractureSet = "N-S Fault"
+	FractureSet = "NNE-SSW_1"
+	FractureSet = "NW-SE_1"
+	FractureSet = "NE-SW_1"
+	UseMinMaxConnectionLevel = 1
+	MinConnectionLevel = 1
+	MaxConnectionLevel = 2
+	#ExportConnected = "output.fab"  #optional connected fractures saved to fab file
+END
+ 
+BEGIN WellIntersectingFractures
+	Name = "Intersection"
+END
+ 
+BEGIN DefineIntersectingFractures
+	Name = "Intersection"
+	ComputeWellLog = 0
+	ComputeIntersectingFractures = 0
+	ComputeConnectedFractures = 1
+	ComputeStats = 0
+	ComputePerInterval = 0
+	ComputeDepthCorrelation = 0
+	WellInterval Well = "Well B" IntervalSet = "Well_B_stages" IntervalName = ""
+	FractureSet = "Well_B_fracs_1"
+	FractureSet = "N-S Fault"
+	FractureSet = "NNE-SSW_1"
+	FractureSet = "NW-SE_1"
+	FractureSet = "NE-SW_1"
+	UseMinMaxConnectionLevel = 1
+	MinConnectionLevel = 1
+	MaxConnectionLevel = 2
+	#ExportConnected = "output.fab"  #optional connected fractures saved to fab file
+END
+ 
+BEGIN WellIntersectingFractures
+	Name = "Intersection"
+END
+ 
+BEGIN DefineIntersectingFractures
+	Name = "Intersection"
+	ComputeWellLog = 0
+	ComputeIntersectingFractures = 0
+	ComputeConnectedFractures = 1
+	ComputeStats = 0
+	ComputePerInterval = 0
+	ComputeDepthCorrelation = 0
+	WellInterval Well = "Well C" IntervalSet = "Well_C_stages" IntervalName = ""
+	FractureSet = "Well_C_fracs_1"
+	FractureSet = "N-S Fault"
+	FractureSet = "NNE-SSW_1"
+	FractureSet = "NW-SE_1"
+	FractureSet = "NE-SW_1"
+	UseMinMaxConnectionLevel = 1
+	MinConnectionLevel = 1
+	MaxConnectionLevel = 2
+	#ExportConnected = "output.fab"  #optional connected fractures saved to fab file
+END
+ 
+BEGIN WellIntersectingFractures
+	Name = "Intersection"
+END
+
+BEGIN DefineIntersectingFractures
+	Name = "Intersection"
+	ComputeWellLog = 0
+	ComputeIntersectingFractures = 0
+	ComputeConnectedFractures = 1
+	ComputeStats = 0
+	ComputePerInterval = 0
+	ComputeDepthCorrelation = 0
+	WellInterval Well = "Well D" IntervalSet = "Well_D_stages" IntervalName = ""
+	FractureSet = "Well_D_fracs_1"
+	FractureSet = "N-S Fault"
+	FractureSet = "NNE-SSW_1"
+	FractureSet = "NW-SE_1"
+	FractureSet = "NE-SW_1"
+	UseMinMaxConnectionLevel = 1
+	MinConnectionLevel = 1
+	MaxConnectionLevel = 2
+	#ExportConnected = "output.fab"  #optional connected fractures saved to fab file
+END
+ 
+BEGIN WellIntersectingFractures
+	Name = "Intersection"
+END
+
+BEGIN DefineFilter
+	Name = "ConnectedFracs"
+	ElementType = "Fractures"
+	FilterType = "Connected Fractures"
+	Object = "IntersectionWell A_Well_A_stages_Conn1-2_1"
+	Object = "IntersectionWell B_Well_B_stages_Conn1-2_1"
+	Object = "IntersectionWell C_Well_C_stages_Conn1-2_1"
+	Object = "IntersectionWell D_Well_D_stages_Conn1-2_1"
+END
+ 
+BEGIN CreateReferenceSet
+	Filter = "ConnectedFracs"
+	ObjectName = "ConnectedFracs_%d"
+END
+ 
+BEGIN ConvertReferenceSet
+	Object = "ConnectedFracs_%d"
+	ObjectName = "ConnectedFracs_%d"
+	MergeTessFracs = 0
+END
+ 
+BEGIN AddProperty
+	Object = "ConnectedFracs_%d"
+	ToObject = "Well A"
+	ToObject = "Well D"
+	ToObject = "Well B"
+	ToObject = "Well C"
+	PropertyName = "Distance2Well"
+	ToIntersection = 0
+	VertOnly = 0
+	HorizOnly = 0
+	SelectionType = 1
+	DataInterpolation = "MIN"
+	Correlation = "Distance"
+	Type = "single precision floating point"
+	Element = 128
+END
+ 
+#=========================================================================
+### Simulate Seismic Faults
+# Create simulated seismic scale faults (connected set 2 faults GT100m) a
+# Can filter to within Xm of the wells (if turned on, currently off)
+#=========================================================================
+ 
+BEGIN ComputeHeightWidth
+	Object = "ConnectedFracs_%d"
+END
+ 
+BEGIN DefineFilter
+	Name = "Seismogenic"
+	ElementType = "Fractures"
+	FilterType = "Fracture Sets"
+	Property Name = "Set_Name"  MinValue = "4"  MaxValue = "5" Bool = "AND"
+	#Property Name = "Distance2Well"  MaxValue = "600" Bool = "AND"
+	Object = "ConnectedFracs_%d"
+END
+ 
+BEGIN CreateFracturesSubset
+	Filter = "Seismogenic"
+END
+ 
+BEGIN RenameObject
+	Object = "ConnectedFracs_%d_Seismogenic"
+	NewName = "SeismogenicFracs_%d"
+END
+ 
+BEGIN ConvertReferenceSet
+	Object = "SeismogenicFracs_%d"
+	ObjectName = "SeismogenicFracs_%d"
+	MergeTessFracs = 0
+END
+ 
+BEGIN ReparentObject
+	Object = "SeismogenicFracs_%d"
+	NewParent = "Fracture Sets"
+END
+ 
+# Tessellating fractures from seismogenic set
+BEGIN TessellateFracs
+	Object = "SeismogenicFracs_%d"
+	ElementSize = 50 [m]
+END
+ 
+BEGIN ConvertObjectToPoints
+	Object = "SeismogenicFracs_%d_tess_1"
+	Name = "SimulatedEvents_%d"
+	ElementType = 2     #1=Vert, 2=Face, 4=Cell
+	MergePoints = 1
+END
+ 
+# Add a filter here to limit to between seismogenic formations
+BEGIN DefineFilter
+	Name = "SubsampleEvents"
+	ElementType = "Verts"
+	FilterType = "Point Data"
+	Region Name = "HVI_Nisku"  CenterInside Bool = "AND"
+	Percent = 20
+	Object = "SimulatedEvents_%d"
+END
+ 
+BEGIN CreatePointSubset
+	Object = "SimulatedEvents_%d"
+	Name = "SubsampledEvents_%d"
+	Filter = "SubsampleEvents"
+END
+ 
+BEGIN ReparentObject
+	Object = "SubsampledEvents_%d"
+	NewParent = "Point Data"
+END
+ 
+#==============================================================================
+# Seismic Intensity
+#==============================================================================
+ 
+BEGIN ComputeHeightWidth
+	Object = "SeismogenicFracs_%d_tess_1"
+END
+ 
+BEGIN DefineSurfaceIntersect
+	DefName = "FaultIntensitySearch"
+	ObjectName = "Duvernay"
+	FractureSet = "SeismogenicFracs_%d_tess_1"
+	ComputeTraces = 1
+	NewObjectName = "SeismogenicFaultTraces_%d"     #optional specify new object name
+	ComputeFracs = 0
+	ComputeConnected = 0
+	ExportConnected = 0
+	ConnectedPath = ""
+	UseMinMaxConnLev = 0
+	MinConnLev = 0
+	MaxConnLev = 0
+	ComputeStats = 1
+	ExportStats = 1
+	StatsPath = "SeismogenicFaultIntensity.sts"
+END
+ 
+BEGIN RunSurfaceIntersect
+	DefName = "FaultIntensitySearch"
+END
+ 
+#=============================================
+# Export objects
+#=============================================
+ 
+BEGIN ExportFile
+	Path = "SeismogenicFracs.fab"
+	TypeName = "FAB"
+	Object = "SeismogenicFracs_0"
+END
+ 
+BEGIN ExportFile
+	Path = "SubsampledEvents.ors"
+	TypeName = "BOOTSTRAP"
+	Object = "SubsampledEvents_0"
+END

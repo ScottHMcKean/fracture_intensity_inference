@@ -1,0 +1,346 @@
+BEGIN SetBackgroundColor
+	Color1 = 255, 255, 255
+	Color2 = 255, 255, 255
+END
+
+BEGIN SetScaleColors
+	ScaleLineColor = 102, 102, 102
+	ScaleFillColor = 255, 255, 255
+END
+
+BEGIN SetScaleColors
+	ScaleTVDSS = 0
+END
+
+BEGIN ImportFile
+	Path = ""
+	TypeName = "FRED"
+END
+
+BEGIN SetFlowSimUsesHead
+	UseHead = 0
+END
+
+BEGIN ConvertFilePCA
+END
+
+BEGIN SetCurrentUnits
+	Length = "m"
+	Time = "hrs"
+	Permeability = "mD"
+	Compressibility = "1/kPa"
+	Transmissivity = "m2/s"
+	Storativity = "-"
+	Aperture = "m"
+	Angle = "deg"
+	Depth = "m"
+	Density = "kg/m3"
+	Viscosity = "Pa-s"
+	FlowRate = "m3/s"
+	Porosity = "fraction"
+	Pressure = "Pa"
+	Area = "m2"
+	Volume = "m3"
+	Mass = "kg"
+	Head = "m"
+	Temperature = "°C"
+	MatrixConductance = "m/s"
+	MatrixStorage = "1/m"
+	Acceleration = "m/s2"
+	UnitStrength = "kg/m"
+	Force = "N"
+	Velocity = "m/s"
+	P33 = "-"
+	Conductance = "m3/sec"
+END
+
+BEGIN ImportFile
+	Path = "Well A.txt"
+	TypeName = "WELL"
+END
+
+BEGIN ImportFile
+	Path = "Well B.txt"
+	TypeName = "WELL"
+END
+
+BEGIN ImportFile
+	Path = "Well C.txt"
+	TypeName = "WELL"
+END
+
+BEGIN ImportFile
+	Path = "Well D.txt"
+	TypeName = "WELL"
+END
+
+BEGIN ImportFile
+	TypeName = "WELLINTERVAL"
+	Path = "Well A Intervals.txt"
+	FirstDataRow = 2
+	ColumnTemplate name = "Well/Borehole ID" abbrev = "ID" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Interval Set ID" abbrev = "IvlSet" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Top Measured Depth" abbrev = "MD_Top" type = 9 value = "Depth" units = "m"
+	ColumnTemplate name = "Bottom Measured Depth" abbrev = "MD_Bot" type = 9 value = "Depth" units = "m"
+	ColumnTemplate name = "Length" abbrev = "Len" type = 9 value = "Length" units = "m"
+	ColumnTemplate name = "Interval Name" abbrev = "IvlName" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Top Z Coord" abbrev = "Z_Top" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+END
+
+BEGIN ImportFile
+	TypeName = "WELLINTERVAL"
+	Path = "Well B Intervals.txt"
+	FirstDataRow = 2
+	ColumnTemplate name = "Well/Borehole ID" abbrev = "ID" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Interval Set ID" abbrev = "IvlSet" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Top Measured Depth" abbrev = "MD_Top" type = 9 value = "Depth" units = "m"
+	ColumnTemplate name = "Bottom Measured Depth" abbrev = "MD_Bot" type = 9 value = "Depth" units = "m"
+	ColumnTemplate name = "Length" abbrev = "Len" type = 9 value = "Length" units = "m"
+	ColumnTemplate name = "Interval Name" abbrev = "IvlName" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Top Z Coord" abbrev = "Z_Top" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+END
+
+BEGIN ImportFile
+	TypeName = "WELLINTERVAL"
+	Path = "Well C Intervals.txt"
+	FirstDataRow = 2
+	ColumnTemplate name = "Well/Borehole ID" abbrev = "ID" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Interval Set ID" abbrev = "IvlSet" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Top Measured Depth" abbrev = "MD_Top" type = 9 value = "Depth" units = "m"
+	ColumnTemplate name = "Bottom Measured Depth" abbrev = "MD_Bot" type = 9 value = "Depth" units = "m"
+	ColumnTemplate name = "Length" abbrev = "Len" type = 9 value = "Length" units = "m"
+	ColumnTemplate name = "Interval Name" abbrev = "IvlName" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Top Z Coord" abbrev = "Z_Top" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+END
+
+BEGIN ImportFile
+	TypeName = "WELLINTERVAL"
+	Path = "Well D Intervals.txt"
+	FirstDataRow = 2
+	ColumnTemplate name = "Well/Borehole ID" abbrev = "ID" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Interval Set ID" abbrev = "IvlSet" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Top Measured Depth" abbrev = "MD_Top" type = 9 value = "Depth" units = "m"
+	ColumnTemplate name = "Bottom Measured Depth" abbrev = "MD_Bot" type = 9 value = "Depth" units = "m"
+	ColumnTemplate name = "Length" abbrev = "Len" type = 9 value = "Length" units = "m"
+	ColumnTemplate name = "Interval Name" abbrev = "IvlName" type = 11 value = "--None--" units = " - "
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Top Z Coord" abbrev = "Z_Top" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+END
+
+
+
+BEGIN ImportFile
+	Path = "Well A Midpoints.ors"
+	TypeName = "BOOTSTRAP"
+	FirstDataRow = 2
+	ColumnTemplate name = "X Coord" abbrev = "X" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Y Coord" abbrev = "Y" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Z Coord" abbrev = "Z" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+END
+
+BEGIN ImportFile
+	Path = "Well B Midpoints.ors"
+	TypeName = "BOOTSTRAP"
+	FirstDataRow = 2
+	ColumnTemplate name = "X Coord" abbrev = "X" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Y Coord" abbrev = "Y" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Z Coord" abbrev = "Z" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+END
+
+BEGIN ImportFile
+	Path = "Well C Midpoints.ors"
+	TypeName = "BOOTSTRAP"
+	FirstDataRow = 2
+	ColumnTemplate name = "X Coord" abbrev = "X" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Y Coord" abbrev = "Y" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Z Coord" abbrev = "Z" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+END
+
+BEGIN ImportFile
+	Path = "Well D Midpoints.ors"
+	TypeName = "BOOTSTRAP"
+	FirstDataRow = 2
+	ColumnTemplate name = "X Coord" abbrev = "X" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Y Coord" abbrev = "Y" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Z Coord" abbrev = "Z" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+END
+
+BEGIN ReparentObject
+	Object = "Well A Midpoints_1"
+	NewParent = "Well A"
+END
+
+BEGIN RenameObject
+	Object = "Well A Midpoints_1"
+	NewName = "Well_A_mid"
+END
+
+BEGIN ReparentObject
+	Object = "Well B Midpoints_1"
+	NewParent = "Well B"
+END
+
+BEGIN RenameObject
+	Object = "Well B Midpoints_1"
+	NewName = "Well_B_mid"
+END
+
+BEGIN ReparentObject
+	Object = "Well C Midpoints_1"
+	NewParent = "Well C"
+END
+
+BEGIN RenameObject
+	Object = "Well C Midpoints_1"
+	NewName = "Well_C_mid"
+END
+
+BEGIN ReparentObject
+	Object = "Well D Midpoints_1"
+	NewParent = "Well D"
+END
+
+BEGIN RenameObject
+	Object = "Well D Midpoints_1"
+	NewName = "Well_D_mid"
+END
+
+BEGIN ImportFile
+	Path = "InducedMicroseismicity.csv"
+	TypeName = "BOOTSTRAP"
+	FirstDataRow = 2
+	ColumnTemplate name = "X Coord" abbrev = "X" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Y Coord" abbrev = "Y" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Z Coord" abbrev = "Z" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Magnitude" abbrev = "Magnitude" type = 9 value = "--None--" units = " - "
+	CustomDelimiters = ","
+END
+
+
+BEGIN ImportFile
+	Path = "N-S Trace.f2d"
+	TypeName = "F2D"
+	UsePole = 1
+	FirstDataRow = 3
+	ColumnTemplate name = "X Start" abbrev = "X1" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Y Start" abbrev = "Y1" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Z Start" abbrev = "Z1" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "X End" abbrev = "X2" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Y End" abbrev = "Y2" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Z End" abbrev = "Z2" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Length" abbrev = "Len" type = 9 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Strike" abbrev = "Str" type = 9 value = "Angle" units = "deg"
+END
+
+BEGIN ImportFile
+	Path = "NNE-SSW Traces.f2d"
+	TypeName = "F2D"
+	UsePole = 1
+	FirstDataRow = 3
+	ColumnTemplate name = "X Start" abbrev = "X1" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Y Start" abbrev = "Y1" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Z Start" abbrev = "Z1" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "X End" abbrev = "X2" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Y End" abbrev = "Y2" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Z End" abbrev = "Z2" type = 10 value = "Length" units = "m"
+	ColumnTemplate name = "Length" abbrev = "Len" type = 9 value = "Length" units = "m"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Ignore"
+	ColumnTemplate name = "Strike" abbrev = "Str" type = 9 value = "Angle" units = "deg"
+END
+
+BEGIN RenameObject
+	Object = "Tracemap: N-S Trace"
+	NewName = "N-S Trace"
+END
+
+
+BEGIN RenameObject
+	Object = "Tracemap: NNE-SSW Traces"
+	NewName = "NNE-SSW Traces"
+END
+
+BEGIN ImportFile
+	Path = "DuvBase.stl"
+	TypeName = "STL"
+END
+
+BEGIN ImportFile
+	Path = "Duvernay.stl"
+	TypeName = "STL"
+END
+
+BEGIN ImportFile
+	Path = "HVIreton.stl"
+	TypeName = "STL"
+END
+
+BEGIN ImportFile
+	Path = "Nisku.stl"
+	TypeName = "STL"
+END
+
+BEGIN ImportFile
+	Path = "Wabamun.stl"
+	TypeName = "STL"
+END
+
+BEGIN DeleteObjects
+	Name = "IntervalSet_3"
+	Name = "IntervalSet"
+	Name = "IntervalSet_1"
+	Name = "IntervalSet_2"
+END
+
+BEGIN CREATEREGION
+	ObjectName = "Base_to_Wab"
+	Type = "Box"
+	Center = -132.83, 1468.08, -2237.985
+	Size = 5000., 5000., 727.09
+END
+
+BEGIN CREATEREGION
+	ObjectName = "HVI_Nisku"
+	Type = "Box"
+	Center = -132.83, 1468.08, -2312.09
+	Size = 5000., 5000., 263.9
+END
+
+BEGIN ImportFile
+	Path = "N-S Fault.fab"
+	TypeName = "FAB"
+END
+
+BEGIN ExportFile
+	Path = "../duvernay_model.frd"
+	TypeName = "FRED"
+END

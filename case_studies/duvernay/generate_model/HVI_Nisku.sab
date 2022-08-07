@@ -1,0 +1,10 @@
+BEGIN COORDinate_system
+    XAxis = East
+END
+
+BEGIN box_region
+    name = "HVI_Nisku"
+    center = -132.828609 1468.079687 -2312.092407
+    length = 5000 5000 263.898
+END
+
