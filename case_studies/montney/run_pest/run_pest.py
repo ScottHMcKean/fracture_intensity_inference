@@ -1,4 +1,3 @@
-# for development only
 from pyfracman.run import FracmanRunner
 from pyfracman.fab import parse_fab_file
 from pyfracman.point_analysis import read_ors_file
@@ -8,8 +7,6 @@ import pandas as pd
 import numpy as np
 from scipy.spatial.distance import cdist
 
-import os
-os.chdir(r"C:\repos\fracture_intensity_inference\case_studies\montney\run_pest")
 
 def run_simulation(macro_filepath):
 
@@ -46,7 +43,7 @@ def run_simulation(macro_filepath):
     # bin simulated events into probability mass function with spec'd bins
     hist = np.histogram(
         dist2well,
-        bins=np.array([0, 100, 200, 300]),
+        bins=np.array([0, 250, 500, 750]),
         density=True,
     )
     bin_width = hist[1][1:] - hist[1][:-1]  # max of bins limits

@@ -1,3 +1,7 @@
+import os
+
+os.chdir(r"C:\repos\fracture_intensity_inference\case_studies\duvernay\run_pest")
+
 # for development only
 from pyfracman.run import FracmanRunner
 from pyfracman.fab import parse_fab_file
@@ -62,5 +66,5 @@ def run_simulation(macro_filepath):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Fracman macro runner")
     parser.add_argument("macro", type=str, nargs=1, help="FracMan macro filename")
-    args = parser.parse_args()
+    args = parser.parse_args(["duvernay.fmf"])
     run_simulation(args.macro[0])

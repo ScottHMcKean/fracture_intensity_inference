@@ -1,1 +1,9 @@
                        PARAMETER SENSITIVITIES: CASE montney
+
+
+ OPTIMISATION ITERATION NO.  1 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        1.000000E-03      102547.    
+   set_b_p32       p32_vals        1.000000E-03      103422.    
+   set_a_min       trunc_lims       200.000          2.22619    
+   set_b_min       trunc_lims       200.000         0.424748    

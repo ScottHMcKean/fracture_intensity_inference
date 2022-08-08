@@ -11,8 +11,8 @@
 
  Case dimensions:-
 
-    Number of parameters                           :     3
-    Number of adjustable parameters                :     3
+    Number of parameters                           :     4
+    Number of adjustable parameters                :     4
     Number of parameter groups                     :     2
     Number of observations                         :    12
     Number of prior estimates                      :     0
@@ -54,21 +54,23 @@
  Param        Increment   Increment   Increment   Forward or   Multiplier  Method
  group        type                    low bound   central      (central)   (central)
  p32_vals     relative    1.0000E-02  1.0000E-04    switch       1.500     parabolic
- trunc_lims   relative    0.1000      1.0000E-04    switch       1.500     parabolic
+ trunc_lims   relative    0.1000      1.0000E-03    switch       1.500     parabolic
 
 
  Parameter definitions:-
 
  Name         Trans-            Change       Initial        Lower          Upper
               formation         limit        value          bound          bound
- p32a         none              relative   5.000000E-02   4.990000E-02   5.010000E-02
- p32b         none              relative   5.000000E-03   1.000000E-04   0.100000    
- truncmin     none              relative    50.0000        10.0000        500.000    
+ set_a_p32    none              relative   1.000000E-03   1.000000E-04   1.000000E-02
+ set_b_p32    none              relative   1.000000E-03   1.000000E-04   1.000000E-02
+ set_a_min    none              relative    200.000        50.0000        599.000    
+ set_b_min    none              relative    200.000        50.0000        599.000    
 
  Name         Group          Scale         Offset        Model command number
- p32a         p32_vals      1.00000        0.00000            1
- p32b         p32_vals      1.00000        0.00000            1
- truncmin     trunc_lims    1.00000        0.00000            1
+ set_a_p32    p32_vals      1.00000        0.00000            1
+ set_b_p32    p32_vals      1.00000        0.00000            1
+ set_a_min    trunc_lims    1.00000        0.00000            1
+ set_b_min    trunc_lims    1.00000        0.00000            1
 
 
  Prior information:-
@@ -140,9 +142,3 @@
     Save multiple PAR files                                      : no
  
  
- 
- ******************************************************************************
- Error condition prevents continued PEST execution:-
-
- Cannot open model output file output.sts.
- ******************************************************************************

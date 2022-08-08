@@ -270,6 +270,6 @@ BEGIN CREATEREGION
 END
 
 BEGIN ExportFile
-	Path = "../montney_model.frd"
+	Path = "../run_pest/montney_model.frd"
 	TypeName = "FRED"
 END

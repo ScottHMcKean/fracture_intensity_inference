@@ -1,0 +1,420 @@
+                        PEST RUN RECORD: CASE test1
+
+
+ PEST Version: 17.3
+
+
+ PEST run mode:-
+
+    Parameter estimation mode
+
+
+ Case dimensions:-
+
+    Number of parameters                           :     4
+    Number of adjustable parameters                :     4
+    Number of parameter groups                     :     2
+    Number of observations                         :    12
+    Number of prior estimates                      :     0
+
+
+ Model command line(s):-
+ 
+    python run_simulation.py test1.fmf
+
+
+ Jacobian command line:-
+
+    na
+
+
+ Model interface files:-
+
+    Templates:
+       test1.ptf
+    for model input files:
+       test1.fmf
+
+    (Parameter values written using single precision protocol.)
+    (Decimal point always included.)
+
+    Instruction files:
+       output.pin
+    for reading model output files:
+       output.sts
+
+
+ PEST-to-model message file:-
+
+    na
+
+
+ Derivatives calculation:-
+
+ Param        Increment   Increment   Increment   Forward or   Multiplier  Method
+ group        type                    low bound   central      (central)   (central)
+ p32_vals     relative    1.0000E-02  1.0000E-04    switch       1.500     parabolic
+ trunc_lims   relative    0.1000      1.0000E-04    switch       1.500     parabolic
+
+
+ Parameter definitions:-
+
+ Name         Trans-            Change       Initial        Lower          Upper
+              formation         limit        value          bound          bound
+ p32a         none              relative   5.000000E-03   1.000000E-04   0.100000    
+ p32b         none              relative   5.000000E-03   1.000000E-04   0.100000    
+ truncmax     none              relative    1000.00        300.000        1600.00    
+ truncmin     none              relative    100.000        50.0000        300.000    
+
+ Name         Group          Scale         Offset        Model command number
+ p32a         p32_vals      1.00000        0.00000            1
+ p32b         p32_vals      1.00000        0.00000            1
+ truncmax     trunc_lims    1.00000        0.00000            1
+ truncmin     trunc_lims    1.00000        0.00000            1
+
+
+ Prior information:-
+
+    No prior information supplied
+
+
+ Observations:-
+
+ Observation name        Observation       Weight       Group
+  total_length            10000.0         0.1000       lineaments  
+  num_lineaments          24.0000          10.00       lineaments  
+  d2wm3s                  9.27957          1.000       d2w         
+  d2wm2s                  16.9391          1.000       d2w         
+  d2wm1s                  43.9195          1.000       d2w         
+  d2w0s                   115.984          1.000       d2w         
+  d2wp1s                  254.844          1.000       d2w         
+  d2wp2s                  404.728          1.000       d2w         
+  d2wp3s                  533.773          1.000       d2w         
+  d2w250                 0.838710          100.0       d2w         
+  d2w500                 0.141577          100.0       d2w         
+  d2w750                 1.971326E-02      100.0       d2w         
+
+
+ Control settings:-
+
+    Initial lambda                                               :  10.000    
+    Lambda adjustment factor                                     : iteration-dependent
+    Value of variable governing adjustment                       : -3.0000    
+    Sufficient new/old phi ratio per optimisation iteration      : 0.30000    
+    Limiting relative phi reduction between lambdas              : 3.00000E-02
+    Maximum trial lambdas per iteration                          :  10
+    Forgive model run failure during lamda testing               : no
+    Forgive model run failure during Jacobian runs               : no
+
+    Perform Broyden's update of Jacobian matrix                  : no
+    Undertake observation re-referencing                         : no
+
+    Maximum  factor  parameter change (factor-limited changes)   : na
+    Maximum relative parameter change (relative-limited changes) :  5.0000
+    Fraction of initial parameter values used in computing
+    change limit for near-zero parameters                        : 1.00000E-03
+    Allow bending of parameter upgrade vector                    : no
+    Allow parameters to stick to their bounds                    : no
+
+    Relative phi reduction below which to begin use of
+    central derivatives                                          : 0.10000             
+    Iteration at which to first consider derivatives switch      :   1
+
+    Relative phi reduction indicating convergence                : 0.50000E-02
+    Number of phi values required within this range              :   4
+    Maximum number of consecutive failures to lower phi          :   4
+    Minimal relative parameter change indicating convergence     : 0.50000E-02
+    Number of consecutive iterations with minimal param change   :   4
+    Maximum number of optimisation iterations                    :  20
+
+    Attempt automatic user intervention                          : no
+
+    Attempt reuse of parameter sensitivities                     : no
+
+    Scale parameters by their bounds                             : no
+
+
+ File saving options: -
+
+    Save best JCO file                                           : yes
+    Save multiple JCO files                                      : no
+    Save multiple REI files                                      : no
+    Save multiple PAR files                                      : no
+ 
+ 
+                             OPTIMISATION RECORD
+
+
+ INITIAL CONDITIONS: 
+    Sum of squared weighted residuals (ie phi)               =  4.73316E+07
+    Contribution to phi from observation group "lineaments"  =  4.72916E+07
+    Contribution to phi from observation group "d2w"         =   40085.    
+ 
+       Current parameter values
+       p32a            5.000000E-03
+       p32b            5.000000E-03
+       truncmax         1000.00    
+       truncmin         100.000    
+
+
+ OPTIMISATION ITERATION NO.        : 1
+    Model calls so far             : 1
+    Starting phi for this iteration                          :  4.73316E+07
+    Contribution to phi from observation group "lineaments"  :  4.72916E+07
+    Contribution to phi from observation group "d2w"         :   40085.    
+
+        Lambda =   10.000     ----->
+           Phi =  7.31691E+06  (  0.155 of starting phi)
+
+    No more lambdas: phi is less than 0.3000 of starting phi
+    Lowest phi this iteration:  7.31691E+06
+
+       Current parameter values                 Previous parameter values
+       p32a            2.676067E-03             p32a             5.000000E-03
+       p32b            5.404697E-03             p32b             5.000000E-03
+       truncmax         999.932                 truncmax          1000.00    
+       truncmin         100.193                 truncmin          100.000    
+    Maximum relative change: 0.4648     ["p32a"]
+
+
+ OPTIMISATION ITERATION NO.        : 2
+    Model calls so far             : 6
+    Starting phi for this iteration                          :  7.31691E+06
+    Contribution to phi from observation group "lineaments"  :  7.28132E+06
+    Contribution to phi from observation group "d2w"         :   35587.    
+
+        Lambda =   4.6416     ----->
+           Phi =  1.49778E+05  (  0.020 of starting phi)
+
+    No more lambdas: phi is less than 0.3000 of starting phi
+    Lowest phi this iteration:  1.49778E+05
+
+       Current parameter values                 Previous parameter values
+       p32a            1.641932E-03             p32a             2.676067E-03
+       p32b            6.259007E-03             p32b             5.404697E-03
+       truncmax         999.944                 truncmax          999.932    
+       truncmin         100.315                 truncmin          100.193    
+    Maximum relative change: 0.3864     ["p32a"]
+
+
+ OPTIMISATION ITERATION NO.        : 3
+    Model calls so far             : 11
+    Starting phi for this iteration                          :  1.49778E+05
+    Contribution to phi from observation group "lineaments"  :  1.08054E+05
+    Contribution to phi from observation group "d2w"         :   41724.    
+
+        Lambda =   2.3208     ----->
+           Phi =  3.57656E+05  (  2.388 times starting phi)
+
+        Lambda =   1.1604     ----->
+           Phi =  2.80078E+05  (  1.870 times starting phi)
+
+        Lambda =  0.58020     ----->
+           Phi =  2.98720E+05  (  1.994 times starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:  2.80078E+05
+    Relative phi reduction between optimisation iterations less than 0.1000
+    Switch to higher order derivatives calculation
+    (restart from best parameters so far - these achieved at iteration    2)
+
+       Current parameter values
+       p32a            1.641932E-03
+       p32b            6.259007E-03
+       truncmax         999.944    
+       truncmin         100.315    
+
+
+ OPTIMISATION ITERATION NO.        : 4
+    Model calls so far             : 18
+    Starting phi for this iteration                          :  1.49778E+05
+    Contribution to phi from observation group "lineaments"  :  1.08054E+05
+    Contribution to phi from observation group "d2w"         :   41724.    
+
+        Lambda =   2.3208     ----->
+           Phi =  4.00028E+05  (  2.671 times starting phi)
+
+        Lambda =   1.1604     ----->
+           Phi =  2.23399E+05  (  1.492 times starting phi)
+
+        Lambda =  0.58020     ----->
+           Phi =  1.61279E+05  (  1.077 times starting phi)
+
+        Lambda =  0.29010     ----->
+           Phi =  1.44821E+05  (  0.967 of starting phi)
+
+        Lambda =  0.14505     ----->
+           Phi =  3.69249E+05  (  2.465 times starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:  1.44821E+05
+
+       Current parameter values                 Previous parameter values
+       p32a            1.299281E-03             p32a             1.641932E-03
+       p32b            7.208674E-03             p32b             6.259007E-03
+       truncmax         988.099                 truncmax          999.944    
+       truncmin         105.923                 truncmin          100.315    
+    Maximum relative change: 0.2087     ["p32a"]
+
+
+ OPTIMISATION ITERATION NO.        : 5
+    Model calls so far             : 31
+    Starting phi for this iteration                          :  1.44821E+05
+    Contribution to phi from observation group "lineaments"  :  1.07801E+05
+    Contribution to phi from observation group "d2w"         :   37020.    
+
+        Lambda =  0.14505     ----->
+           Phi =  2.48469E+05  (  1.716 times starting phi)
+
+        Lambda =  7.25248E-02 ----->
+           Phi =  8.23196E+05  (  5.684 times starting phi)
+
+        Lambda =  0.29010     ----->
+           Phi =  1.76054E+05  (  1.216 times starting phi)
+
+        Lambda =  0.58020     ----->
+           Phi =  1.02839E+05  (  0.710 of starting phi)
+
+        Lambda =   1.1604     ----->
+           Phi =  1.60609E+05  (  1.109 times starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:  1.02839E+05
+
+       Current parameter values                 Previous parameter values
+       p32a            1.156465E-03             p32a             1.299281E-03
+       p32b            1.066376E-02             p32b             7.208674E-03
+       truncmax         1100.26                 truncmax          988.099    
+       truncmin         65.8193                 truncmin          105.923    
+    Maximum relative change: 0.4793     ["p32b"]
+
+
+ OPTIMISATION ITERATION NO.        : 6
+    Model calls so far             : 44
+    Starting phi for this iteration                          :  1.02839E+05
+    Contribution to phi from observation group "lineaments"  :   33663.    
+    Contribution to phi from observation group "d2w"         :   69175.    
+
+        Lambda =  0.58020     ----->
+           Phi =  8.65779E+05  (  8.419 times starting phi)
+
+        Lambda =  0.29010     ----->
+           Phi =  7.99842E+05  (  7.778 times starting phi)
+
+        Lambda =  0.14505     ----->
+           Phi =  8.09345E+05  (  7.870 times starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:  7.99842E+05
+
+       Current parameter values                 Previous parameter values
+       p32a            1.585748E-03             p32a             1.156465E-03
+       p32b            1.229168E-02             p32b             1.066376E-02
+       truncmax         1099.81                 truncmax          1100.26    
+       truncmin         69.8222                 truncmin          65.8193    
+    Maximum relative change: 0.3712     ["p32a"]
+
+
+ OPTIMISATION ITERATION NO.        : 7
+    Model calls so far             : 55
+    Starting phi for this iteration                          :  7.99842E+05
+    Contribution to phi from observation group "lineaments"  :  7.61360E+05
+    Contribution to phi from observation group "d2w"         :   38482.    
+
+        Lambda =  0.14505     ----->
+           Phi =  1.17206E+05  (  0.147 of starting phi)
+
+    No more lambdas: phi is less than 0.3000 of starting phi
+    Lowest phi this iteration:  1.17206E+05
+
+       Current parameter values                 Previous parameter values
+       p32a            1.291431E-03             p32a             1.585748E-03
+       p32b            1.019218E-02             p32b             1.229168E-02
+       truncmax         1015.19                 truncmax          1099.81    
+       truncmin         63.8073                 truncmin          69.8222    
+    Maximum relative change: 0.1856     ["p32a"]
+
+
+ OPTIMISATION ITERATION NO.        : 8
+    Model calls so far             : 64
+    Starting phi for this iteration                          :  1.17206E+05
+    Contribution to phi from observation group "lineaments"  :   80380.    
+    Contribution to phi from observation group "d2w"         :   36825.    
+
+        Lambda =  7.25248E-02 ----->
+           Phi =  1.20262E+05  (  1.026 times starting phi)
+
+        Lambda =  3.02447E-02 ----->
+           Phi =  1.44008E+05  (  1.229 times starting phi)
+
+        Lambda =  0.17391     ----->
+           Phi =   48209.      (  0.411 of starting phi)
+
+        Lambda =  0.41703     ----->
+           Phi =   53022.      (  0.452 of starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:   48209.    
+
+       Current parameter values                 Previous parameter values
+       p32a            1.411277E-03             p32a             1.291431E-03
+       p32b            1.062874E-02             p32b             1.019218E-02
+       truncmax         1020.43                 truncmax          1015.19    
+       truncmin         62.4545                 truncmin          63.8073    
+    Maximum relative change: 9.2801E-02 ["p32a"]
+
+
+ OPTIMISATION ITERATION NO.        : 9
+    Model calls so far             : 76
+    Starting phi for this iteration                          :   48209.    
+    Contribution to phi from observation group "lineaments"  :   9293.8    
+    Contribution to phi from observation group "d2w"         :   38915.    
+
+        Lambda =  0.17391     ----->
+           Phi =   99009.      (  2.054 times starting phi)
+
+        Lambda =  8.69550E-02 ----->
+           Phi =   89925.      (  1.865 times starting phi)
+
+        Lambda =  4.34775E-02 ----->
+           Phi =   89861.      (  1.864 times starting phi)
+
+    No more lambdas: relative phi reduction between lambdas less than 0.0300
+    Lowest phi this iteration:   89861.    
+
+       Current parameter values                 Previous parameter values
+       p32a            1.345793E-03             p32a             1.411277E-03
+       p32b            1.065269E-02             p32b             1.062874E-02
+       truncmax         1020.61                 truncmax          1020.43    
+       truncmin         60.2026                 truncmin          62.4545    
+    Maximum relative change: 4.6400E-02 ["p32a"]
+
+
+ OPTIMISATION ITERATION NO.        : 10
+    Model calls so far             : 87
+    Starting phi for this iteration                          :   89861.    
+    Contribution to phi from observation group "lineaments"  :   44022.    
+    Contribution to phi from observation group "d2w"         :   45838.    
+
+        Lambda =  2.17387E-02 ----->
+           Phi =  8.96581E+05  (  9.977 times starting phi)
+
+        Lambda =  6.06707E-03 ----->
+           Phi =  8.96581E+05  (  9.977 times starting phi)
+
+    No more lambdas: relative phi reduction between lambdas less than 0.0300
+    Lowest phi this iteration:  8.96581E+05
+
+       Current parameter values                 Previous parameter values
+       p32a            1.000000E-04             p32a             1.345793E-03
+       p32b            1.000000E-04             p32b             1.065269E-02
+       truncmax         1011.47                 truncmax          1020.61    
+       truncmin         50.0000                 truncmin          60.2026    
+    Maximum relative change: 0.9906     ["p32b"]
+
+
+ OPTIMISATION ITERATION NO.        : 11
+    Model calls so far             : 97
+    Starting phi for this iteration                          :  8.96581E+05
+    Contribution to phi from observation group "lineaments"  :  8.57889E+05
+    Contribution to phi from observation group "d2w"         :   38693.    

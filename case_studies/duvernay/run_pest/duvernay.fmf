@@ -7,7 +7,7 @@
 # Well paths, stages, and induced seismicity points in .frd file
 #=================================================================
 BEGIN ImportFile
-	Path = "..\duvernay_model.frd"
+	Path = "duvernay_model.frd"
 	TypeName = "FRED"
 END
  
@@ -486,7 +486,7 @@ BEGIN DefineFractureSetDefinition
 	BEGIN LengthDistribution
 		ValueType "Length" Units "m"
 		Type = "POWERLAW"
-		Parameter "Xmin" =    1.0000000E+02 [m] #NNE_SSW_X
+		Parameter "Xmin" =    1.1000000E+02 [m] #NNE_SSW_X
 		Parameter "D" =     2.0000000E+00 #NNE_SSW_D
 		MinValue =       2.0000000E+02 [m] #NNE_SSW_MIN
 		MaxValue = 1000 [m] #NNE_SSW_MAX

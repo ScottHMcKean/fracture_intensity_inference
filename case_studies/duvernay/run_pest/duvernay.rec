@@ -155,3 +155,30 @@
     Save multiple PAR files                                      : no
  
  
+                             OPTIMISATION RECORD
+
+
+ INITIAL CONDITIONS: 
+    Sum of squared weighted residuals (ie phi)               =  1.57586E+06
+    Contribution to phi from observation group "lineaments"  =  1.52165E+06
+    Contribution to phi from observation group "d2w"         =   54215.    
+ 
+       Current parameter values
+       ne_sw_p32       1.000000E-03
+       nw_se_p32       1.000000E-03
+       regional_d       2.00000    
+       regional_min     300.000    
+       regional_x       250.000    
+       regional_max     1000.00    
+       nne_ssw_p32     5.000000E-03
+       nne_ssw_d        2.00000    
+       nne_ssw_x        100.000    
+       nne_ssw_min      200.000    
+
+
+ OPTIMISATION ITERATION NO.        : 1
+    Model calls so far             : 1
+    Starting phi for this iteration                          :  1.57586E+06
+    Contribution to phi from observation group "lineaments"  :  1.52165E+06
+    Contribution to phi from observation group "d2w"         :   54215.    
+    Run failure - PEST is repeating model run.

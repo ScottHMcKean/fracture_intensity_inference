@@ -1,3 +1,16 @@
+# PEST output files
+*.drf
+*.jac
+*.jco
+*.jst
+*.mtt
+*.par
+*.rei
+*.res
+*.sen
+*.rst
+*.seo
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

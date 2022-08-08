@@ -8,7 +8,7 @@ ptf $
 # Well paths, stages, and induced seismicity points in .frd file
 #=================================================================
 BEGIN ImportFile
-	Path = "..\montney_model.frd"
+	Path = "montney_model.frd"
 	TypeName = "FRED"
 END
  
@@ -51,7 +51,7 @@ END
 		END
 	END
 	#** Intensity
-		P32 = $p32a      $ [1/m]
+		P32 = $SET_A_P32      $ [1/m]
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -66,7 +66,7 @@ END
 		Type = "POWERLAW"
 		Parameter "Xmin" = 10 [m]
 		Parameter "D" = 1.01
-		MinValue = $truncmin   $ [m]
+		MinValue = $SET_A_MIN   $ [m]
 		MaxValue = 1000 [m]
 	END
 	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "
@@ -113,7 +113,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 = $p32b      $ [1/m]
+		P32 = $SET_B_P32      $ [1/m]
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -128,7 +128,7 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" = 10 [m]
 		Parameter "D" = 1.01
-		MinValue = $truncmin   $ [m]
+		MinValue = $SET_B_MIN   $ [m]
 		MaxValue = 1000 [m]
 	END
 	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "

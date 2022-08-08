@@ -1,7 +1,7 @@
 pcf
 * control data
 restart estimation
-3  12  2  0  2
+4  12  2  0  2
 1  1  single  point  1  0  0
 10  -3.0  0.3  0.03  19  0
 5.0  5.0  1.0e-3
@@ -10,11 +10,12 @@ restart estimation
 1  1  1
 * parameter groups
 p32_vals  relative  1E-2  1E-4  switch  1.50  parabolic
-trunc_lims  relative  0.1  1E-4  switch  1.50  parabolic
+trunc_lims  relative  1E-1  1E-3  switch  1.50  parabolic
 * parameter data
-p32a  none  relative 5E-2  4.99E-2  5.01E-2  p32_vals  1.0  0.0  1
-p32b  none  relative  0.005  1E-4  1E-1  p32_vals  1.0  0.0  1
-truncmin  none  relative  50  10  500  trunc_lims  1.0  0.0  1
+SET_A_P32  none  relative  0.001  1E-4  0.01  p32_vals  1.0  0.0  1
+SET_B_P32  none  relative  0.001  1E-4  0.01  p32_vals  1.0  0.0  1
+SET_A_MIN  none  relative  200  50  599  trunc_lims  1.0  0.0  1
+SET_B_MIN  none  relative  200  50  599  trunc_lims  1.0  0.0  1
 * observation groups
 lineaments
 d2w

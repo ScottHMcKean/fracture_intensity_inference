@@ -341,6 +341,6 @@ BEGIN ImportFile
 END
 
 BEGIN ExportFile
-	Path = "../duvernay_model.frd"
+	Path = "../run_pest/duvernay_model.frd"
 	TypeName = "FRED"
 END

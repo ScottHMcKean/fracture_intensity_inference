@@ -8,7 +8,7 @@ ptf $
 # Well paths, stages, and induced seismicity points in .frd file
 #=================================================================
 BEGIN ImportFile
-	Path = "..\duvernay_model.frd"
+	Path = "duvernay_model.frd"
 	TypeName = "FRED"
 END
  

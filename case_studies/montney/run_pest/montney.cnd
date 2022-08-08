@@ -1,1 +1,21 @@
  RECORD OF "NORMAL MATRIX" CONDITION NUMBERS: CASE montney
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    1
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     10.0    
+           MATRIX CONDITION NUMBER =   82512.    
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     4.64    
+           MATRIX CONDITION NUMBER =   48801.    
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     21.5    
+           MATRIX CONDITION NUMBER =  1.55300E+05
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    2
