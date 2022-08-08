@@ -3,7 +3,106 @@
 
  OPTIMISATION ITERATION NO.  1 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        1.000000E-03      102547.    
-   set_b_p32       p32_vals        1.000000E-03      103422.    
-   set_a_min       trunc_lims       200.000          2.22619    
-   set_b_min       trunc_lims       200.000         0.424748    
+   set_a_p32       p32_vals        5.000000E-03      176383.    
+   set_b_p32       p32_vals        5.000000E-03      45119.9    
+   set_a_min       trunc_lims       100.000          5.35256    
+   set_b_min       trunc_lims       100.000          36.6253    
+
+
+ OPTIMISATION ITERATION NO.  2 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        5.073870E-03      252908.    
+   set_b_p32       p32_vals        3.884596E-03      824567.    
+   set_a_min       trunc_lims       102.338          6.41867    
+   set_b_min       trunc_lims       88.8652          21.3040    
+
+
+ OPTIMISATION ITERATION NO.  3 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        5.073870E-03      650451.    
+   set_b_p32       p32_vals        3.884596E-03      416308.    
+   set_a_min       trunc_lims       102.338          2.21934    
+   set_b_min       trunc_lims       88.8652          6.19146    
+
+
+ OPTIMISATION ITERATION NO.  4 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        5.126632E-03      474580.    
+   set_b_p32       p32_vals        3.508120E-03      68584.9    
+   set_a_min       trunc_lims       102.388          2.22177    
+   set_b_min       trunc_lims       88.8229          5.65503    
+
+
+ OPTIMISATION ITERATION NO.  5 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        5.504760E-03      48649.4    
+   set_b_p32       p32_vals        1.842065E-03      45010.3    
+   set_a_min       trunc_lims       102.442          2.74493    
+   set_b_min       trunc_lims       88.6549         0.935316    
+
+
+ OPTIMISATION ITERATION NO.  6 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        4.557639E-03      60583.6    
+   set_b_p32       p32_vals        5.600320E-04      74840.6    
+   set_a_min       trunc_lims       102.643          1.00674    
+   set_b_min       trunc_lims       88.6357         0.112881    
+
+
+ OPTIMISATION ITERATION NO.  7 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        4.386669E-03      59609.3    
+   set_b_p32       p32_vals        6.911837E-04      55711.0    
+   set_a_min       trunc_lims       102.447          1.11637    
+   set_b_min       trunc_lims       88.6521         0.241166    
+
+
+ OPTIMISATION ITERATION NO.  8 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        4.504053E-03      80476.7    
+   set_b_p32       p32_vals        6.360540E-04      50855.2    
+   set_a_min       trunc_lims       102.439          1.31325    
+   set_b_min       trunc_lims       88.6499         0.257264    
+
+
+ OPTIMISATION ITERATION NO.  9 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        4.478502E-03      84975.8    
+   set_b_p32       p32_vals        6.614202E-04      55961.1    
+   set_a_min       trunc_lims       102.437          1.09429    
+   set_b_min       trunc_lims       88.6502         0.231892    
+
+
+
+                        COMPLETION OF OPTIMISATION PROCESS
+
+ Composite sensitivities for observation group "lineaments" ----->
+
+ Number of observations with non-zero weight =     2
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        4.557639E-03      191629.    
+   set_b_p32       p32_vals        5.600320E-04      217951.    
+   set_a_min       trunc_lims       102.643          16.1479    
+   set_b_min       trunc_lims       88.6357          4.46421    
+
+
+
+ Composite sensitivities for observation group "d2w" ----->
+
+ Number of observations with non-zero weight =    10
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        4.557639E-03      44037.2    
+   set_b_p32       p32_vals        5.600320E-04      31893.9    
+   set_a_min       trunc_lims       102.643         0.647810    
+   set_b_min       trunc_lims       88.6357         0.680125    
+
+
+
+ Composite sensitivities for all observations/prior info ----->
+
+ Number of observations with non-zero weight =    12
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        4.557639E-03      48649.4    
+   set_b_p32       p32_vals        5.600320E-04      45010.3    
+   set_a_min       trunc_lims       102.643          2.74493    
+   set_b_min       trunc_lims       88.6357         0.935316    

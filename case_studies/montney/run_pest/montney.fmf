@@ -50,7 +50,7 @@ END
 		END
 	END
 	#** Intensity
-		P32 =     1.0000000E-04 [1/m]
+		P32 =     4.5576388E-03 [1/m]
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -65,7 +65,7 @@ END
 		Type = "POWERLAW"
 		Parameter "Xmin" = 10 [m]
 		Parameter "D" = 1.01
-		MinValue =  1.9667163E+02 [m]
+		MinValue =  1.0264319E+02 [m]
 		MaxValue = 1000 [m]
 	END
 	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "
@@ -112,7 +112,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 =     3.1496303E-03 [1/m]
+		P32 =     5.6003196E-04 [1/m]
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -127,7 +127,7 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" = 10 [m]
 		Parameter "D" = 1.01
-		MinValue =  1.9160635E+02 [m]
+		MinValue =  8.8635660E+01 [m]
 		MaxValue = 1000 [m]
 	END
 	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "

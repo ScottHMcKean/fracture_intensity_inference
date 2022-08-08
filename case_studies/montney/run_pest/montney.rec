@@ -61,10 +61,10 @@
 
  Name         Trans-            Change       Initial        Lower          Upper
               formation         limit        value          bound          bound
- set_a_p32    none              relative   1.000000E-03   1.000000E-04   1.000000E-02
- set_b_p32    none              relative   1.000000E-03   1.000000E-04   1.000000E-02
- set_a_min    none              relative    200.000        50.0000        599.000    
- set_b_min    none              relative    200.000        50.0000        599.000    
+ set_a_p32    none              relative   5.000000E-03   1.000000E-04   0.100000    
+ set_b_p32    none              relative   5.000000E-03   1.000000E-04   0.100000    
+ set_a_min    none              relative    100.000        25.0000        499.000    
+ set_b_min    none              relative    100.000        25.0000        499.000    
 
  Name         Group          Scale         Offset        Model command number
  set_a_p32    p32_vals      1.00000        0.00000            1
@@ -81,18 +81,18 @@
  Observations:-
 
  Observation name        Observation       Weight       Group
-  total_length            10000.0         0.1000       lineaments  
-  num_lineaments          24.0000          10.00       lineaments  
-  d2wm3s                  9.27957          1.000       d2w         
-  d2wm2s                  16.9391          1.000       d2w         
-  d2wm1s                  43.9195          1.000       d2w         
+  total_length            7847.00         0.1000       lineaments  
+  num_lineaments          30.0000          10.00       lineaments  
+  d2wm3s                  6.32770          1.000       d2w         
+  d2wm2s                  19.6310          1.000       d2w         
+  d2wm1s                  46.1852          1.000       d2w         
   d2w0s                   115.984          1.000       d2w         
-  d2wp1s                  254.844          1.000       d2w         
-  d2wp2s                  404.728          1.000       d2w         
-  d2wp3s                  533.773          1.000       d2w         
-  d2w250                 0.838710          100.0       d2w         
-  d2w500                 0.141577          100.0       d2w         
-  d2w750                 1.971326E-02      100.0       d2w         
+  d2wp1s                  289.202          1.000       d2w         
+  d2wp2s                  420.088          1.000       d2w         
+  d2wp3s                  535.529          1.000       d2w         
+  d2w250                 0.774000          100.0       d2w         
+  d2w500                 0.206000          100.0       d2w         
+  d2w750                 2.000000E-02      100.0       d2w         
 
 
  Control settings:-
@@ -125,7 +125,7 @@
     Maximum number of consecutive failures to lower phi          :   4
     Minimal relative parameter change indicating convergence     : 0.50000E-02
     Number of consecutive iterations with minimal param change   :   4
-    Maximum number of optimisation iterations                    :  10
+    Maximum number of optimisation iterations                    :  20
 
     Attempt automatic user intervention                          : no
 
@@ -142,3 +142,409 @@
     Save multiple PAR files                                      : no
  
  
+                             OPTIMISATION RECORD
+
+
+ INITIAL CONDITIONS: 
+    Sum of squared weighted residuals (ie phi)               =  2.60928E+07
+    Contribution to phi from observation group "lineaments"  =  2.52578E+07
+    Contribution to phi from observation group "d2w"         =  8.34939E+05
+ 
+       Current parameter values
+       set_a_p32       5.000000E-03
+       set_b_p32       5.000000E-03
+       set_a_min        100.000    
+       set_b_min        100.000    
+
+
+ OPTIMISATION ITERATION NO.        : 1
+    Model calls so far             : 1
+    Starting phi for this iteration                          :  2.60928E+07
+    Contribution to phi from observation group "lineaments"  :  2.52578E+07
+    Contribution to phi from observation group "d2w"         :  8.34939E+05
+
+        Lambda =   10.000     ----->
+           Phi =  8.77582E+06  (  0.336 of starting phi)
+
+        Lambda =   4.6416     ----->
+           Phi =  4.49454E+06  (  0.172 of starting phi)
+
+    No more lambdas: phi is less than 0.3000 of starting phi
+    Lowest phi this iteration:  4.49454E+06
+
+       Current parameter values                 Previous parameter values
+       set_a_p32       5.073870E-03             set_a_p32        5.000000E-03
+       set_b_p32       3.884596E-03             set_b_p32        5.000000E-03
+       set_a_min        102.338                 set_a_min         100.000    
+       set_b_min        88.8652                 set_b_min         100.000    
+    Maximum relative change: 0.2231     ["set_b_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 2
+    Model calls so far             : 7
+    Starting phi for this iteration                          :  4.49454E+06
+    Contribution to phi from observation group "lineaments"  :  4.08425E+06
+    Contribution to phi from observation group "d2w"         :  4.10289E+05
+
+        Lambda =   2.1544     ----->
+           Phi =  3.73067E+07  (  8.300 times starting phi)
+
+        Lambda =   1.0772     ----->
+           Phi =  3.79744E+07  (  8.449 times starting phi)
+
+        Lambda =   4.3089     ----->
+           Phi =  3.58356E+07  (  7.973 times starting phi)
+
+        Lambda =   8.6177     ----->
+           Phi =  3.51827E+07  (  7.828 times starting phi)
+
+    No more lambdas: relative phi reduction between lambdas less than 0.0300
+    Lowest phi this iteration:  3.51827E+07
+    Relative phi reduction between optimisation iterations less than 0.1000
+    Switch to higher order derivatives calculation
+    (restart from best parameters so far - these achieved at iteration    1)
+
+       Current parameter values
+       set_a_p32       5.073870E-03
+       set_b_p32       3.884596E-03
+       set_a_min        102.338    
+       set_b_min        88.8652    
+
+
+ OPTIMISATION ITERATION NO.        : 3
+    Model calls so far             : 15
+    Starting phi for this iteration                          :  4.49454E+06
+    Contribution to phi from observation group "lineaments"  :  4.08425E+06
+    Contribution to phi from observation group "d2w"         :  4.10289E+05
+
+        Lambda =   2.3208     ----->
+           Phi =  8.28346E+06  (  1.843 times starting phi)
+
+        Lambda =   1.1604     ----->
+           Phi =  1.64233E+07  (  3.654 times starting phi)
+
+        Lambda =   4.6416     ----->
+           Phi =  6.01928E+06  (  1.339 times starting phi)
+
+        Lambda =   9.2832     ----->
+           Phi =  5.69356E+06  (  1.267 times starting phi)
+
+        Lambda =   18.566     ----->
+           Phi =  5.65810E+06  (  1.259 times starting phi)
+
+    No more lambdas: relative phi reduction between lambdas less than 0.0300
+    Lowest phi this iteration:  5.65810E+06
+
+       Current parameter values                 Previous parameter values
+       set_a_p32       5.126632E-03             set_a_p32        5.073870E-03
+       set_b_p32       3.508120E-03             set_b_p32        3.884596E-03
+       set_a_min        102.388                 set_a_min         102.338    
+       set_b_min        88.8229                 set_b_min         88.8652    
+    Maximum relative change: 9.6915E-02 ["set_b_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 4
+    Model calls so far             : 28
+    Starting phi for this iteration                          :  5.65810E+06
+    Contribution to phi from observation group "lineaments"  :  4.86455E+06
+    Contribution to phi from observation group "d2w"         :  7.93549E+05
+
+        Lambda =   18.566     ----->
+           Phi =  5.86452E+06  (  1.036 times starting phi)
+
+        Lambda =   7.0116     ----->
+           Phi =  1.06205E+07  (  1.877 times starting phi)
+
+        Lambda =   49.163     ----->
+           Phi =  4.34213E+06  (  0.767 of starting phi)
+
+        Lambda =   130.18     ----->
+           Phi =  1.71863E+06  (  0.304 of starting phi)
+
+        Lambda =   344.71     ----->
+           Phi =  1.71128E+06  (  0.302 of starting phi)
+
+    No more lambdas: relative phi reduction between lambdas less than 0.0300
+    Lowest phi this iteration:  1.71128E+06
+
+       Current parameter values                 Previous parameter values
+       set_a_p32       5.504760E-03             set_a_p32        5.126632E-03
+       set_b_p32       1.842065E-03             set_b_p32        3.508120E-03
+       set_a_min        102.442                 set_a_min         102.388    
+       set_b_min        88.6549                 set_b_min         88.8229    
+    Maximum relative change: 0.4749     ["set_b_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 5
+    Model calls so far             : 41
+    Starting phi for this iteration                          :  1.71128E+06
+    Contribution to phi from observation group "lineaments"  :  1.45687E+06
+    Contribution to phi from observation group "d2w"         :  2.54406E+05
+
+        Lambda =   344.71     ----->
+           Phi =   37029.      (  0.022 of starting phi)
+
+    No more lambdas: phi is less than 0.3000 of starting phi
+    Lowest phi this iteration:   37029.    
+
+       Current parameter values                 Previous parameter values
+       set_a_p32       4.557639E-03             set_a_p32        5.504760E-03
+       set_b_p32       5.600320E-04             set_b_p32        1.842065E-03
+       set_a_min        102.643                 set_a_min         102.442    
+       set_b_min        88.6357                 set_b_min         88.6549    
+    Maximum relative change: 0.6960     ["set_b_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 6
+    Model calls so far             : 50
+    Starting phi for this iteration                          :   37029.    
+    Contribution to phi from observation group "lineaments"  :   8702.8    
+    Contribution to phi from observation group "d2w"         :   28326.    
+
+        Lambda =   49.163     ----->
+           Phi =   67717.      (  1.829 times starting phi)
+
+        Lambda =   13.420     ----->
+           Phi =   91278.      (  2.465 times starting phi)
+
+        Lambda =   180.10     ----->
+           Phi =   37478.      (  1.012 times starting phi)
+
+        Lambda =   659.77     ----->
+           Phi =   53804.      (  1.453 times starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:   37478.    
+
+       Current parameter values                 Previous parameter values
+       set_a_p32       4.386669E-03             set_a_p32        4.557639E-03
+       set_b_p32       6.911837E-04             set_b_p32        5.600320E-04
+       set_a_min        102.447                 set_a_min         102.643    
+       set_b_min        88.6521                 set_b_min         88.6357    
+    Maximum relative change: 0.2342     ["set_b_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 7
+    Model calls so far             : 62
+    Starting phi for this iteration                          :   37478.    
+    Contribution to phi from observation group "lineaments"  :   3996.5    
+    Contribution to phi from observation group "d2w"         :   33482.    
+
+        Lambda =   180.10     ----->
+           Phi =   91315.      (  2.436 times starting phi)
+
+        Lambda =   31.892     ----->
+           Phi =  1.52065E+05  (  4.057 times starting phi)
+
+        Lambda =   1017.1     ----->
+           Phi =   56191.      (  1.499 times starting phi)
+
+        Lambda =   5743.7     ----->
+           Phi =   53046.      (  1.415 times starting phi)
+
+        Lambda =   32436.     ----->
+           Phi =   56201.      (  1.500 times starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:   53046.    
+
+       Current parameter values                 Previous parameter values
+       set_a_p32       4.504053E-03             set_a_p32        4.386669E-03
+       set_b_p32       6.360540E-04             set_b_p32        6.911837E-04
+       set_a_min        102.439                 set_a_min         102.447    
+       set_b_min        88.6499                 set_b_min         88.6521    
+    Maximum relative change: 7.9761E-02 ["set_b_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 8
+    Model calls so far             : 75
+    Starting phi for this iteration                          :   53046.    
+    Contribution to phi from observation group "lineaments"  :   14972.    
+    Contribution to phi from observation group "d2w"         :   38075.    
+
+        Lambda =   5743.7     ----->
+           Phi =   58925.      (  1.111 times starting phi)
+
+        Lambda =   320.72     ----->
+           Phi =   61390.      (  1.157 times starting phi)
+
+        Lambda =  1.02862E+05 ----->
+           Phi =   59293.      (  1.118 times starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:   58925.    
+
+       Current parameter values                 Previous parameter values
+       set_a_p32       4.478502E-03             set_a_p32        4.504053E-03
+       set_b_p32       6.614202E-04             set_b_p32        6.360540E-04
+       set_a_min        102.437                 set_a_min         102.439    
+       set_b_min        88.6502                 set_b_min         88.6499    
+    Maximum relative change: 3.9881E-02 ["set_b_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 9
+    Model calls so far             : 86
+    Starting phi for this iteration                          :   58925.    
+    Contribution to phi from observation group "lineaments"  :   7021.1    
+    Contribution to phi from observation group "d2w"         :   51904.    
+
+        Lambda =   5743.7     ----->
+           Phi =   51791.      (  0.879 of starting phi)
+
+        Lambda =   320.72     ----->
+           Phi =  2.04014E+05  (  3.462 times starting phi)
+
+        Lambda =  1.02862E+05 ----->
+           Phi =   51763.      (  0.878 of starting phi)
+
+    No more lambdas: relative phi reduction between lambdas less than 0.0300
+    Lowest phi this iteration:   51763.    
+
+       Current parameter values                 Previous parameter values
+       set_a_p32       4.251553E-03             set_a_p32        4.478502E-03
+       set_b_p32       1.014051E-03             set_b_p32        6.614202E-04
+       set_a_min        102.436                 set_a_min         102.437    
+       set_b_min        88.6504                 set_b_min         88.6502    
+    Maximum relative change: 0.5331     ["set_b_p32"]
+
+    Optimisation complete:   4 optimisation iterations have elapsed since lowest
+                           phi was achieved.
+    Total model calls:     97
+
+    The model has been run one final time using best parameters. 
+    Thus all model input files contain best parameter values, and model 
+    output files contain model results based on these parameters.
+
+
+                             OPTIMISATION RESULTS
+
+
+ Parameters ----->
+
+ Parameter        Estimated         95% percent confidence limits
+                  value             lower limit       upper limit
+  set_a_p32      4.557639E-03       3.778473E-03      5.336805E-03
+  set_b_p32      5.600320E-04      -2.267098E-04      1.346774E-03
+  set_a_min       102.643            92.9051           112.381    
+  set_b_min       88.6357            33.3580           143.913    
+
+ Note: confidence limits provide only an indication of parameter uncertainty.
+       They rely on a linearity assumption which  may not extend as far in 
+       parameter space as the confidence limits themselves - see PEST manual.
+
+ See file montney.sen for parameter sensitivities.
+
+
+ Observations ----->
+
+ Observation            Measured       Calculated     Residual       Weight     Group
+                        value          value
+ total_length           7847.00        8730.33       -883.335       0.1000      lineaments  
+ num_lineaments         30.0000        27.0000        3.00000        10.00      lineaments  
+ d2wm3s                 6.32770        12.9809       -6.65316        1.000      d2w         
+ d2wm2s                 19.6310        23.0334       -3.40241        1.000      d2w         
+ d2wm1s                 46.1852        47.8804       -1.69515        1.000      d2w         
+ d2w0s                  115.984        121.604       -5.61929        1.000      d2w         
+ d2wp1s                 289.202        199.429        89.7725        1.000      d2w         
+ d2wp2s                 420.088        341.675        78.4132        1.000      d2w         
+ d2wp3s                 535.529        418.123        117.406        1.000      d2w         
+ d2w250                0.774000       0.893082      -0.119082        100.0      d2w         
+ d2w500                0.206000       0.106918       9.908176E-02    100.0      d2w         
+ d2w750                2.000000E-02    0.00000       2.000000E-02    100.0      d2w         
+
+ See file montney.res for more details of residuals in graph-ready format.
+
+ See file montney.seo for composite observation sensitivities.
+
+
+ Objective function ----->
+
+   Sum of squared weighted residuals (ie phi)                =   37029.    
+   Contribution to phi from observation group "lineaments"   =   8702.8    
+   Contribution to phi from observation group "d2w"          =   28326.    
+
+
+ Correlation Coefficient ----->
+
+   Correlation coefficient                                   =  0.97640    
+
+
+ Analysis of residuals ----->
+
+   All residuals:-
+      Number of residuals with non-zero weight                       =    12
+      Mean value of non-zero weighted residuals                      =   17.49    
+      Maximum weighted residual [observation "d2wp3s"]               =   117.4    
+      Minimum weighted residual [observation "total_length"]         =  -88.33    
+      Standard variance of weighted residuals                        =   4629.    
+      Standard error of weighted residuals                           =   68.03    
+
+      Note: the above variance was obtained by dividing the objective 
+      function by the number of system degrees of freedom (ie. number of 
+      observations with non-zero weight plus number of prior information 
+      articles with non-zero weight minus the number of adjustable parameters.)
+      If the degrees of freedom is negative the divisor becomes 
+      the number of observations with non-zero weight plus the number of 
+      prior information items with non-zero weight.
+
+   Residuals for observation group "lineaments":-
+      Number of residuals with non-zero weight                       =     2
+      Mean value of non-zero weighted residuals                      =  -29.17    
+      Maximum weighted residual [observation "num_lineaments"]       =   30.00    
+      Minimum weighted residual [observation "total_length"]         =  -88.33    
+      "Variance" of weighted residuals                               =   4351.    
+      "Standard error" of weighted residuals                         =   65.97    
+
+      Note: the above "variance" was obtained by dividing the sum of squared 
+      residuals by the number of items with non-zero weight.
+
+   Residuals for observation group "d2w":-
+      Number of residuals with non-zero weight                       =    10
+      Mean value of non-zero weighted residuals                      =   26.82    
+      Maximum weighted residual [observation "d2wp3s"]               =   117.4    
+      Minimum weighted residual [observation "d2w250"]               =  -11.91    
+      "Variance" of weighted residuals                               =   2833.    
+      "Standard error" of weighted residuals                         =   53.22    
+
+      Note: the above "variance" was obtained by dividing the sum of squared 
+      residuals by the number of items with non-zero weight.
+ 
+
+ K-L information statistics ----->
+
+ 
+   AIC   =   106.4146    
+   AICC  =   116.4146    
+   BIC   =   108.8391    
+   KIC   =   116.2978    
+
+ Parameter covariance matrix ----->
+
+               set_a_p32    set_b_p32    set_a_min    set_b_min  
+ set_a_p32      1.1417E-07  -1.6133E-08  -3.4772E-04  -5.7022E-03
+ set_b_p32     -1.6133E-08   1.1640E-07   3.9635E-04  -3.3924E-03
+ set_a_min     -3.4772E-04   3.9635E-04    17.83        43.97    
+ set_b_min     -5.7022E-03  -3.3924E-03    43.97        574.6    
+
+
+ Parameter correlation coefficient matrix ----->
+
+               set_a_p32    set_b_p32    set_a_min    set_b_min  
+ set_a_p32       1.000      -0.1399      -0.2437      -0.7040    
+ set_b_p32     -0.1399        1.000       0.2751      -0.4148    
+ set_a_min     -0.2437       0.2751        1.000       0.4343    
+ set_b_min     -0.7040      -0.4148       0.4343        1.000    
+
+
+ Normalized eigenvectors of parameter covariance matrix ----->
+
+               Vector_1     Vector_2     Vector_3     Vector_4   
+ set_a_p32      0.7378       0.6750       6.9167E-06  -9.8811E-06
+ set_b_p32      0.6750      -0.7378       4.5927E-05  -5.7969E-06
+ set_a_min     -3.5116E-05   2.9316E-05   0.9969       7.8239E-02
+ set_b_min      1.3994E-05   9.8998E-08  -7.8239E-02   0.9969    
+
+
+ Eigenvalues ----->
+
+                7.8107E-09   1.1586E-07    14.38        578.1    
