@@ -2,3 +2,156 @@
 
 
  PEST Version: 17.3
+
+
+ PEST run mode:-
+
+    Parameter estimation mode
+
+
+ Case dimensions:-
+
+    Number of parameters                           :    10
+    Number of adjustable parameters                :    10
+    Number of parameter groups                     :     3
+    Number of observations                         :    12
+    Number of prior estimates                      :     0
+
+
+ Model command line(s):-
+ 
+    python run_pest.py duvernay.fmf
+
+
+ Jacobian command line:-
+
+    na
+
+
+ Model interface files:-
+
+    Templates:
+       duvernay.ptf
+    for model input files:
+       duvernay.fmf
+
+    (Parameter values written using single precision protocol.)
+    (Decimal point always included.)
+
+    Instruction files:
+       output.pin
+    for reading model output files:
+       output.sts
+
+
+ PEST-to-model message file:-
+
+    na
+
+
+ Derivatives calculation:-
+
+ Param        Increment   Increment   Increment   Forward or   Multiplier  Method
+ group        type                    low bound   central      (central)   (central)
+ p32_vals     relative    1.0000E-02  1.0000E-04    switch       1.500     parabolic
+ power_law_d  relative    1.0000E-02  1.0000E-04    switch       1.500     parabolic
+ power_law_l  relative    0.1000      1.0000E-03    switch       1.500     parabolic
+
+
+ Parameter definitions:-
+
+ Name         Trans-            Change       Initial        Lower          Upper
+              formation         limit        value          bound          bound
+ ne_sw_p32    none              relative   1.000000E-03   1.000000E-05   1.000000E-02
+ nw_se_p32    none              relative   1.000000E-03   1.000000E-05   1.000000E-02
+ regional_d   none              relative    2.00000        1.01000        3.99000    
+ regional_min none              relative    300.000        100.000        599.000    
+ regional_x   none              relative    250.000        50.0000        250.000    
+ regional_max none              relative    1000.00        600.000        3000.00    
+ nne_ssw_p32  none              relative   5.000000E-03   1.000000E-04   0.100000    
+ nne_ssw_d    none              relative    2.00000        1.01000        3.99000    
+ nne_ssw_x    none              relative    100.000        10.0000        300.000    
+ nne_ssw_min  none              relative    200.000        100.000        499.000    
+
+ Name         Group          Scale         Offset        Model command number
+ ne_sw_p32    p32_vals      1.00000        0.00000            1
+ nw_se_p32    p32_vals      1.00000        0.00000            1
+ regional_d   power_law_d   1.00000        0.00000            1
+ regional_min power_law_l   1.00000        0.00000            1
+ regional_x   power_law_l   1.00000        0.00000            1
+ regional_max power_law_l   1.00000        0.00000            1
+ nne_ssw_p32  p32_vals      1.00000        0.00000            1
+ nne_ssw_d    power_law_d   1.00000        0.00000            1
+ nne_ssw_x    power_law_l   1.00000        0.00000            1
+ nne_ssw_min  power_law_l   1.00000        0.00000            1
+
+
+ Prior information:-
+
+    No prior information supplied
+
+
+ Observations:-
+
+ Observation name        Observation       Weight       Group
+  total_length            6150.00         0.1000       lineaments  
+  num_lineaments          18.0000          10.00       lineaments  
+  d2wm3s                  6.59179          1.000       d2w         
+  d2wm2s                  19.4598          1.000       d2w         
+  d2wm1s                  37.6725          1.000       d2w         
+  d2w0s                   70.9953          1.000       d2w         
+  d2wp1s                  145.450          1.000       d2w         
+  d2wp2s                  370.649          1.000       d2w         
+  d2wp3s                  578.664          1.000       d2w         
+  d2w100                 0.743967          100.0       d2w         
+  d2w200                 0.227223          100.0       d2w         
+  d2w300                 2.881002E-02      100.0       d2w         
+
+
+ Control settings:-
+
+    Initial lambda                                               :  10.000    
+    Lambda adjustment factor                                     : iteration-dependent
+    Value of variable governing adjustment                       : -3.0000    
+    Sufficient new/old phi ratio per optimisation iteration      : 0.30000    
+    Limiting relative phi reduction between lambdas              : 3.00000E-02
+    Maximum trial lambdas per iteration                          :  10
+    Forgive model run failure during lamda testing               : no
+    Forgive model run failure during Jacobian runs               : no
+
+    Perform Broyden's update of Jacobian matrix                  : no
+    Undertake observation re-referencing                         : no
+
+    Maximum  factor  parameter change (factor-limited changes)   : na
+    Maximum relative parameter change (relative-limited changes) :  5.0000
+    Fraction of initial parameter values used in computing
+    change limit for near-zero parameters                        : 1.00000E-03
+    Allow bending of parameter upgrade vector                    : no
+    Allow parameters to stick to their bounds                    : no
+
+    Relative phi reduction below which to begin use of
+    central derivatives                                          : 0.10000             
+    Iteration at which to first consider derivatives switch      :   1
+
+    Relative phi reduction indicating convergence                : 0.50000E-02
+    Number of phi values required within this range              :   4
+    Maximum number of consecutive failures to lower phi          :   4
+    Minimal relative parameter change indicating convergence     : 0.50000E-02
+    Number of consecutive iterations with minimal param change   :   4
+    Maximum number of optimisation iterations                    :  10
+
+    Attempt automatic user intervention                          : no
+
+    Attempt reuse of parameter sensitivities                     : no
+
+    Scale parameters by their bounds                             : no
+
+
+ File saving options: -
+
+    Save best JCO file                                           : yes
+    Save multiple JCO files                                      : no
+    Save multiple REI files                                      : no
+    Save multiple PAR files                                      : no
+ 
+ 
