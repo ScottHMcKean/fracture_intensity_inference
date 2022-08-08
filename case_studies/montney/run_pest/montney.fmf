@@ -15,7 +15,7 @@ BEGIN SetSeed
 	Seed = 100
 END
  
-
+ 
 #=================================================================
 #Generate two stochastic fracture sets: Set A and Set B
 #=================================================================
@@ -50,7 +50,7 @@ END
 		END
 	END
 	#** Intensity
-		P32 = .00108039921 [1/m]
+		P32 = .05000000000 [1/m]
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -65,8 +65,8 @@ END
 		Type = "POWERLAW"
 		Parameter "Xmin" = 10 [m]
 		Parameter "D" = 1.01
-		MinValue = 2.4999000E+02 [m]
-		MaxValue = 1.0001000E+03 [m]
+		MinValue = 5.0000000E+01 [m]
+		MaxValue = 1000 [m]
 	END
 	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "
 	#** Shape
@@ -76,7 +76,7 @@ END
 	NumSides = 4
 	Termination = 0
 END
-
+ 
 BEGIN GenerateFractureSet
 	DefinitionName = "Set A"
 END
@@ -112,7 +112,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 = .01135948571 [1/m]
+		P32 = .00500000000 [1/m]
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -127,8 +127,8 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" = 10 [m]
 		Parameter "D" = 1.01
-		MinValue = 2.4999000E+02 [m]
-		MaxValue = 1.0001000E+03 [m]
+		MinValue = 5.0000000E+01 [m]
+		MaxValue = 1000 [m]
 	END
 	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "
 	#** Shape
@@ -142,8 +142,8 @@ END
 BEGIN GenerateFractureSet
 	DefinitionName = "Set B"
 END
-
-
+ 
+ 
 #=================================================================
 ### Hydraulic Fractures
 # Generate hydraulic fractures from stage centres
@@ -349,7 +349,7 @@ BEGIN GenerateFractureSet
 	DefinitionName = "Well_6_fracs"
 	#FractureSet_Name = "Set_Name"  #Optional name for generated set - (replaces existing objects!)
 END
-
+ 
 #=============================================
 # Create Set_Name property for filtering
 # Fracs = 1, NE fracs=2, NW fracs=3
@@ -460,7 +460,7 @@ END
 BEGIN WellIntersectingFractures
 	Name = "Intersection"
 END
-
+ 
 BEGIN DefineFilter
 	Name = "ConnectedFracs"
 	ElementType = "Fractures"
@@ -616,5 +616,5 @@ BEGIN ExportFile
 	TypeName = "BOOTSTRAP"
 	Object = "SubsampledEvents_0"
 END
-
+ 
 EXIT

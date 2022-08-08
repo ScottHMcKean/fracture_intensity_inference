@@ -8,6 +8,8 @@ import pandas as pd
 import numpy as np
 from scipy.spatial.distance import cdist
 
+import os
+os.chdir(r"C:\repos\fracture_intensity_inference\case_studies\montney\run_pest")
 
 def run_simulation(macro_filepath):
 
