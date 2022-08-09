@@ -3,72 +3,57 @@
 
  OPTIMISATION ITERATION NO.  1 ----->
  Parameter name    Group          Current value    Sensitivity
-   ne_sw_p32       p32_vals        1.000000E-03      36461.0    
-   nw_se_p32       p32_vals        1.000000E-03      36480.7    
-   nne_ssw_p32     p32_vals        5.000000E-03      44857.2    
-   regional_d      power_law_d      2.00000          83.2839    
-   regional_min    power_law_l      200.000         1.987455E-02
-   regional_x      power_law_l      250.000         0.325061    
-   regional_max    power_law_l      1000.00         9.025322E-03
-   nne_ssw_d       power_law_d      2.00000          149.338    
-   nne_ssw_x       power_law_l      100.000          1.23440    
-   nne_ssw_min     power_law_l      100.000          1.23430    
+   nne_ssw_p32     p32_vals        5.000000E-03      26071.3    
+   nne_ssw_min     power_law_l      100.000          0.00000    
+   ne_sw_p32       p32_vals        1.000000E-03      57180.3    
+   nw_se_p32       p32_vals        1.000000E-03      57180.3    
+   regional_min    power_law_l      200.000          0.00000    
+   power_law_d     power_law_d      1.75000          658.533    
+   power_law_x     power_law_l      250.000         0.720582    
 
 
  OPTIMISATION ITERATION NO.  2 ----->
  Parameter name    Group          Current value    Sensitivity
-   ne_sw_p32       p32_vals        2.904765E-03      17589.9    
-   nw_se_p32       p32_vals        1.000000E-05      24100.6    
-   nne_ssw_p32     p32_vals        2.246576E-03      63737.8    
-   regional_d      power_law_d      2.00792          64.6928    
-   regional_min    power_law_l      203.822         4.446836E-03
-   regional_x      power_law_l      250.000         0.577043    
-   regional_max    power_law_l      1014.01         1.725842E-02
-   nne_ssw_d       power_law_d      1.89262          74.4888    
-   nne_ssw_x       power_law_l      133.685         0.294548    
-   nne_ssw_min     power_law_l      111.950         8.096107E-03
+   nne_ssw_p32     p32_vals        9.558658E-04      182869.    
+   nne_ssw_min     power_law_l      100.000          0.00000    
+   ne_sw_p32       p32_vals        2.571850E-03      113477.    
+   nw_se_p32       p32_vals        2.571850E-03      134123.    
+   regional_min    power_law_l      200.000          0.00000    
+   power_law_d     power_law_d      1.78137          114.055    
+   power_law_x     power_law_l      250.604          1.00123    
 
 
  OPTIMISATION ITERATION NO.  3 ----->
  Parameter name    Group          Current value    Sensitivity
-   ne_sw_p32       p32_vals        2.904765E-03      21836.4    
-   nw_se_p32       p32_vals        1.000000E-05      38075.9    
-   nne_ssw_p32     p32_vals        2.246576E-03      31903.4    
-   regional_d      power_law_d      2.00792          25.4538    
-   regional_min    power_law_l      203.822          0.00000    
-   regional_x      power_law_l      250.000         0.387560    
-   regional_max    power_law_l      1014.01         2.291013E-02
-   nne_ssw_d       power_law_d      1.89262          31.5522    
-   nne_ssw_x       power_law_l      133.685         0.993692    
-   nne_ssw_min     power_law_l      111.950         5.430324E-15
+   nne_ssw_p32     p32_vals        9.558658E-04      144630.    
+   nne_ssw_min     power_law_l      100.000         2.682498E-03
+   ne_sw_p32       p32_vals        2.571850E-03      117171.    
+   nw_se_p32       p32_vals        2.571850E-03      128502.    
+   regional_min    power_law_l      200.000         2.438637E-03
+   power_law_d     power_law_d      1.78137          89.5450    
+   power_law_x     power_law_l      250.604         0.227845    
 
 
  OPTIMISATION ITERATION NO.  4 ----->
  Parameter name    Group          Current value    Sensitivity
-   ne_sw_p32       p32_vals        2.904765E-03      53137.3    
-   nw_se_p32       p32_vals        1.000000E-05      398946.    
-   nne_ssw_p32     p32_vals        2.246576E-03      11620.1    
-   regional_d      power_law_d      2.00792          583.856    
-   regional_min    power_law_l      203.822          0.00000    
-   regional_x      power_law_l      250.000         0.251064    
-   regional_max    power_law_l      1014.01         5.060574E-02
-   nne_ssw_d       power_law_d      1.89262          476.774    
-   nne_ssw_x       power_law_l      133.685          0.00000    
-   nne_ssw_min     power_law_l      499.000         0.583870    
+   nne_ssw_p32     p32_vals        1.148740E-04      48861.3    
+   nne_ssw_min     power_law_l      117.024         7.482770E-03
+   ne_sw_p32       p32_vals        1.696080E-03      54516.4    
+   nw_se_p32       p32_vals        4.093050E-03      58482.6    
+   regional_min    power_law_l      240.378         0.134817    
+   power_law_d     power_law_d      1.82442          416.771    
+   power_law_x     power_law_l      206.198         0.156924    
 
 
  OPTIMISATION ITERATION NO.  5 ----->
  Parameter name    Group          Current value    Sensitivity
-   ne_sw_p32       p32_vals        3.273778E-03      85016.6    
-   nw_se_p32       p32_vals        6.000000E-05      106223.    
-   nne_ssw_p32     p32_vals        2.718353E-03      69695.2    
-   regional_d      power_law_d      1.91429          79.7574    
-   regional_min    power_law_l      203.822         1.289461E-03
-   regional_x      power_law_l      250.000         0.586677    
-   regional_max    power_law_l      1014.38         3.065488E-02
-   nne_ssw_d       power_law_d      2.07246          292.067    
-   nne_ssw_x       power_law_l      133.685         4.825829E-02
-   nne_ssw_min     power_law_l      499.000          1.22626    
+   nne_ssw_p32     p32_vals        1.000000E-04      297217.    
+   nne_ssw_min     power_law_l      88.9588         3.718296E-04
+   ne_sw_p32       p32_vals        2.623286E-03      94438.0    
+   nw_se_p32       p32_vals        3.417897E-03      49478.1    
+   regional_min    power_law_l      25.0000         3.969265E-03
+   power_law_d     power_law_d      1.81012          598.294    
+   power_law_x     power_law_l      350.000          1.45116    
 
 
 
@@ -78,16 +63,13 @@
 
  Number of observations with non-zero weight =     2
  Parameter name    Group          Current value    Sensitivity
-   ne_sw_p32       p32_vals        2.904765E-03      199341.    
-   nw_se_p32       p32_vals        1.000000E-05      199341.    
-   nne_ssw_p32     p32_vals        2.246576E-03      267190.    
-   regional_d      power_law_d      2.00792          367.811    
-   regional_min    power_law_l      203.822          0.00000    
-   regional_x      power_law_l      250.000          1.51669    
-   regional_max    power_law_l      1014.01         1.000000E-06
-   nne_ssw_d       power_law_d      1.89262          583.102    
-   nne_ssw_x       power_law_l      133.685          7.21194    
-   nne_ssw_min     power_law_l      111.950          7.21195    
+   nne_ssw_p32     p32_vals        9.558658E-04      0.00000    
+   nne_ssw_min     power_law_l      100.000          0.00000    
+   ne_sw_p32       p32_vals        2.571850E-03      295085.    
+   nw_se_p32       p32_vals        2.571850E-03      295085.    
+   regional_min    power_law_l      200.000          0.00000    
+   power_law_d     power_law_d      1.78137          3389.26    
+   power_law_x     power_law_l      250.604          4.05422    
 
 
 
@@ -95,16 +77,13 @@
 
  Number of observations with non-zero weight =    10
  Parameter name    Group          Current value    Sensitivity
-   ne_sw_p32       p32_vals        2.904765E-03      18024.4    
-   nw_se_p32       p32_vals        1.000000E-05      18081.7    
-   nne_ssw_p32     p32_vals        2.246576E-03      6472.83    
-   regional_d      power_law_d      2.00792          67.6515    
-   regional_min    power_law_l      203.822         2.384946E-02
-   regional_x      power_law_l      250.000         0.245242    
-   regional_max    power_law_l      1014.01         1.083039E-02
-   nne_ssw_d       power_law_d      1.89262          136.068    
-   nne_ssw_x       power_law_l      133.685         0.337216    
-   nne_ssw_min     power_law_l      111.950         0.336684    
+   nne_ssw_p32     p32_vals        9.558658E-04      31285.6    
+   nne_ssw_min     power_law_l      100.000          0.00000    
+   ne_sw_p32       p32_vals        2.571850E-03      35002.8    
+   nw_se_p32       p32_vals        2.571850E-03      35002.8    
+   regional_min    power_law_l      200.000          0.00000    
+   power_law_d     power_law_d      1.78137          406.196    
+   power_law_x     power_law_l      250.604         0.300393    
 
 
 
@@ -112,13 +91,10 @@
 
  Number of observations with non-zero weight =    12
  Parameter name    Group          Current value    Sensitivity
-   ne_sw_p32       p32_vals        2.904765E-03      36461.0    
-   nw_se_p32       p32_vals        1.000000E-05      36480.7    
-   nne_ssw_p32     p32_vals        2.246576E-03      44857.2    
-   regional_d      power_law_d      2.00792          83.2839    
-   regional_min    power_law_l      203.822         1.987455E-02
-   regional_x      power_law_l      250.000         0.325061    
-   regional_max    power_law_l      1014.01         9.025322E-03
-   nne_ssw_d       power_law_d      1.89262          149.338    
-   nne_ssw_x       power_law_l      133.685          1.23440    
-   nne_ssw_min     power_law_l      111.950          1.23430    
+   nne_ssw_p32     p32_vals        9.558658E-04      26071.3    
+   nne_ssw_min     power_law_l      100.000          0.00000    
+   ne_sw_p32       p32_vals        2.571850E-03      57180.3    
+   nw_se_p32       p32_vals        2.571850E-03      57180.3    
+   regional_min    power_law_l      200.000          0.00000    
+   power_law_d     power_law_d      1.78137          658.533    
+   power_law_x     power_law_l      250.604         0.720582    

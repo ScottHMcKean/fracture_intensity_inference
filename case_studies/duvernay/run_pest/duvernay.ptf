@@ -361,8 +361,8 @@ BEGIN DefineFractureSetDefinition
 	BEGIN LengthDistribution
 		ValueType "Length" Units "m"
 		Type = "POWERLAW"
-		Parameter "Xmin" =  $REGIONAL_X      $ [m] #NE_SW_X
-		Parameter "D" = $REGIONAL_D      $ #NE_SW_D
+		Parameter "Xmin" =  $POWER_LAW_X      $ [m] #NE_SW_X
+		Parameter "D" = $POWER_LAW_D      $ #NE_SW_D
 		MinValue = $REGIONAL_MIN      $ #NE_SW_MIN
 		MaxValue = 1000 [m] #NE_SW_MAX
 	END
@@ -424,10 +424,10 @@ BEGIN DefineFractureSetDefinition
 	BEGIN LengthDistribution
 		ValueType "Length" Units "m"
 		Type = "POWERLAW"
-		Parameter "Xmin" = $REGIONAL_X      $ [m] #NW_SE_X
-		Parameter "D" = $REGIONAL_D      $ #NW_SE_D
+		Parameter "Xmin" = $POWER_LAW_X      $ [m] #NW_SE_X
+		Parameter "D" = $POWER_LAW_D      $ #NW_SE_D
 		MinValue = $REGIONAL_MIN      $ [m] #NW_SE_MIN
-		MaxValue = $REGIONAL_MAX      $ [m] #NW_SE_MAX
+		MaxValue = 1000 [m] #NW_SE_MAX
 	END
 	BEGIN HeightDistribution
 		ValueType "Length" Units "m"
@@ -487,8 +487,8 @@ BEGIN DefineFractureSetDefinition
 	BEGIN LengthDistribution
 		ValueType "Length" Units "m"
 		Type = "POWERLAW"
-		Parameter "Xmin" = $NNE_SSW_X     $ [m] #NNE_SSW_X
-		Parameter "D" = $NNE_SSW_D      $ #NNE_SSW_D
+		Parameter "Xmin" = $POWER_LAW_X     $ [m] #NNE_SSW_X
+		Parameter "D" = $POWER_LAW_D      $ #NNE_SSW_D
 		MinValue = $NNE_SSW_MIN      $ [m] #NNE_SSW_MIN
 		MaxValue = 1000 [m] #NNE_SSW_MAX
 	END

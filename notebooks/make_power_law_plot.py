@@ -42,18 +42,19 @@ f, ax = plt.subplots(figsize=(5, 5))
 # bin lengths for power law plot
 sns.scatterplot(data=combined_counts, x="lengths", y="comp_count", hue="Set", ax=ax)
 
-xmin = 200
-X = np.linspace(xmin, 15000, 100)
-D = 1.8
-Y = (xmin / X) ** D
-Ymin = 3.5
-Y = Y / Y.min() * Ymin
+ymax = 7000
+for xmin, D in zip(np.random.uniform(150, 350, 50), np.random.uniform(1.5, 2.0, 50)):
+    X = np.linspace(xmin, 15000, 100)
+    Y = (xmin / X) ** D
+    Y = Y * ymax
 
-sns.lineplot(x=X, y=Y, color="black", ax=ax)
+    sns.lineplot(x=X, y=Y, color="black", ax=ax, alpha=0.1)
+
+X = np.linspace(200, 15000, 100)
+sns.lineplot(x=X, y=(200 / X) ** 1.8 * ymax, color="black", ax=ax)
 ax.grid(b=True, which="major", color="black", linewidth=0.075)
 ax.grid(b=True, which="minor", color="black", linewidth=0.075)
-
-ax.text(2000, 400, f"Y = ({xmin}/X)^{D}", fontsize=10, weight="bold")
+ax.text(2000, 400, f"Y = ({200}/X)^{1.8}", fontsize=10, weight="bold")
 plt.xscale("log")
 plt.yscale("log")
 plt.ylabel("Normalized Complementary Cumulative Number")
@@ -140,7 +141,6 @@ plt.xlabel("Fracture Length (m)")
 plt.show()
 
 
-
 ### Strike Rose Diagram
 is_faults = (nne_ssw_faults.strike).to_numpy()
 bin_edges = np.arange(-5, 366, 10)
@@ -173,4 +173,3 @@ ax.set_theta_direction(-1)
 ax.set_thetagrids(np.arange(0, 360, 15), labels=np.arange(0, 360, 15))
 ax.set_rgrids(np.arange(1, seismic_two_halves.max(), 5), angle=0)
 plt.show()
-
