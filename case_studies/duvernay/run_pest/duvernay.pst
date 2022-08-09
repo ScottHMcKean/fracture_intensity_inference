@@ -1,7 +1,7 @@
 pcf
 * control data
 restart estimation
-10  12  3  0  2
+9  12  3  0  2
 1  1  single  point  1  0  0
 10  -3.0  0.3  0.03  10  0
 5.0  5.0  1.0e-3
@@ -19,7 +19,6 @@ NNE_SSW_P32  none  relative  0.005  1E-4  0.1  p32_vals  1.0  0.0  1
 REGIONAL_D  none  relative  2  1.01  3.99  power_law_d  1.0  0.0  1
 REGIONAL_MIN  none  relative  200  25  599  power_law_l  1.0  0.0  1
 REGIONAL_X  none  relative  250  50  250  power_law_l  1.0  0.0  1
-REGIONAL_MAX  none  relative  1000  600  3000  power_law_l  1.0  0.0  1
 NNE_SSW_D  none  relative  2  1.01  3.99  power_law_d  1.0  0.0  1
 NNE_SSW_X  none  relative  100  10  300  power_law_l  1.0  0.0  1
 NNE_SSW_MIN  none  relative  100  25  499  power_law_l  1.0  0.0  1

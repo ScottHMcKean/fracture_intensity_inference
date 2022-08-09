@@ -364,7 +364,7 @@ BEGIN DefineFractureSetDefinition
 		Parameter "Xmin" =  $REGIONAL_X      $ [m] #NE_SW_X
 		Parameter "D" = $REGIONAL_D      $ #NE_SW_D
 		MinValue = $REGIONAL_MIN      $ #NE_SW_MIN
-		MaxValue = $REGIONAL_MAX      $ [m] #NE_SW_MAX
+		MaxValue = 1000 [m] #NE_SW_MAX
 	END
 	BEGIN HeightDistribution
 		ValueType "Length" Units "m"
