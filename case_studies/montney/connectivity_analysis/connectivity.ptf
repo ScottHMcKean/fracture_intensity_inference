@@ -1,0 +1,199 @@
+#=================================================================
+# Montney Connectivity Analysis
+#==================================================================
+ 
+#=================================================================
+### Load Data
+# Well paths, stages, and induced seismicity points in .frd file
+#=================================================================
+BEGIN IgnoreMacroErrors
+	Ignore = 1
+END
+
+BEGIN ImportFile
+	Path = "montney_model.frd"
+	TypeName = "FRED"
+END
+ 
+BEGIN SetSeed
+	Seed = 100
+END
+ 
+ 
+#=================================================================
+#Generate two stochastic fracture sets: Set A and Set B
+#=================================================================
+ BEGIN DefineFractureSetDefinition
+	DefinitionName = "Set A"
+	FractureModel = "REGION"
+	RegionName = "Lower_Montney"
+	ClipToRegion = 1
+	UseSurfacePoints = 1     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Permeability"
+		BEGIN Distribution
+			ValueType "Permeability" Units "mD"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 100 [mD]
+			Parameter "Std Dev." = 100 [mD]
+			MinValue = 0 [mD]
+		END
+		Name = "Compressibility"
+		BEGIN Distribution
+			ValueType "Compressibility" Units "1/kPa"
+			Type = "CONSTANT"
+			Parameter "Value" = 0.001 [1/kPa]
+			MinValue = 0 [1/kPa]
+		END
+	END
+	#** Intensity
+		P32 = $ p32 $ [1/m]
+		AdjustedByTruncation = 1
+	#** Orientation
+		UsePole = 1
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+			Parameter "Mean Trend" = 153 [deg]
+			Parameter "Mean Plunge" = 0 [deg]
+		END
+	#** Size
+	BEGIN LengthDistribution
+		ValueType "Length" Units "m"
+		Type = "POWERLAW"
+		Parameter "Xmin" = 10 [m]
+		Parameter "D" = 1.01
+		MinValue = $ min_length $ [m]
+		MaxValue = 1000 [m]
+	END
+	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "
+	#** Shape
+	NumSides = 4
+	Termination = 0
+	#** Shape
+	NumSides = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "Set A"
+END
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "Set B"
+	FractureModel = "REGION"
+	RegionName = "Lower_Montney"
+	ClipToRegion = 1
+	UseSurfacePoints = 1     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Permeability"
+		BEGIN Distribution
+			ValueType "Permeability" Units "mD"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 100 [mD]
+			Parameter "Std Dev." = 100 [mD]
+			MinValue = 0 [mD]
+		END
+		Name = "Compressibility"
+		BEGIN Distribution
+			ValueType "Compressibility" Units "1/kPa"
+			Type = "CONSTANT"
+			Parameter "Value" = 0.001 [1/kPa]
+			MinValue = 0 [1/kPa]
+		END
+	END
+	#** Intensity
+		P32 = $ p32 $ [1/m]
+		AdjustedByTruncation = 1
+	#** Orientation
+		UsePole = 1
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+			Parameter "Mean Trend" = 200 [deg]
+			Parameter "Mean Plunge" = 0 [deg]
+		END
+	#** Size
+	BEGIN LengthDistribution
+		ValueType "Length" Units "m"
+		Type = "POWERLAW"
+		Parameter "Xmin" = 10 [m]
+		Parameter "D" = 1.01
+		MinValue = $ min_length $ [m]
+		MaxValue = 1000 [m]
+	END
+	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "
+	#** Shape
+	NumSides = 4
+	Termination = 0
+	#** Shape
+	NumSides = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "Set B"
+END
+
+BEGIN ComputeHeightWidth
+	Object = "Set A_1"
+END
+
+BEGIN ComputeHeightWidth
+	Object = "Set B_1"
+END
+
+BEGIN DefineClusterAnalysis
+	Name = "ClusterAnalysis_1"
+	MinimumSetSize = 5
+	RetainClusters = 1
+	ComputeHulls = 0
+	ComputeHullProj = 0
+	RetainHullObjects = 0
+	SaveStats = 0
+	ClusterDetails = 0
+	SaveToFab = "cluster_fractures_$ run $.fab"
+END
+
+BEGIN RunClusterAnalysis
+	Name = "ClusterAnalysis_1"
+END
+
+BEGIN SelectObject
+	Action = 1     #1=replace, 2=add, 3=rem, 4=toggle
+	Object = "Set A_1"
+END
+
+BEGIN SetObjectOption
+	Object = "Set A_1"
+	WireColor = 192, 192, 192
+END
+
+BEGIN SelectObject
+	Action = 1     #1=replace, 2=add, 3=rem, 4=toggle
+	Object = "Set B_1"
+END
+
+BEGIN SetObjectOption
+	Object = "Set B_1"
+	WireColor = 192, 192, 192
+END
+
+BEGIN ExportFile
+	Path = "clusters_$ run $.frd"
+	TypeName = "FRED"
+END
+
+EXIT

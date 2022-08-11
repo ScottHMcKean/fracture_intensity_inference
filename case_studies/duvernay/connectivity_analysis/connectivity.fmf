@@ -1,0 +1,283 @@
+#=================================================================
+# Montney Connectivity Analysis
+#==================================================================
+ 
+#=================================================================
+### Load Data
+# Well paths, stages, and induced seismicity points in .frd file
+#=================================================================
+BEGIN IgnoreMacroErrors
+	Ignore = 1
+END
+
+BEGIN ImportFile
+	Path = "duvernay_model.frd"
+	TypeName = "FRED"
+END
+ 
+BEGIN SetSeed
+	Seed = 100
+END
+
+#=================================================================
+### Natural Fractures
+# Generate three sets
+#==================================================================
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "NE-SW"
+	FractureModel = "REGION"
+	RegionName = "Base_to_Wab"
+	ClipToRegion = 1
+	UseSurfacePoints = 1     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Intensity
+		P32 = 0.001 [1/m] #NE_SW_P32
+		AdjustedByTruncation = 1
+	#** Orientation
+		UsePole = 1
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+			Parameter "Mean Trend" = 145 [deg]
+			Parameter "Mean Plunge" = 0 [deg]
+		END
+	#** Size
+	BEGIN LengthDistribution
+		ValueType "Length" Units "m"
+		Type = "POWERLAW"
+		Parameter "Xmin" =  210 [m] #NE_SW_X
+		Parameter "D" = 1.8 #NE_SW_D
+		MinValue = 25.0 #NE_SW_MIN
+		MaxValue = 1000 [m] #NE_SW_MAX
+	END
+	BEGIN HeightDistribution
+		ValueType "Length" Units "m"
+		Type = "CONSTANT"
+		Parameter "Value" = 2000 [m]
+	END
+	#** Shape
+	NumSides = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "NE-SW"
+END
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "NW-SE"
+	FractureModel = "REGION"
+	RegionName = "Base_to_Wab"
+	ClipToRegion = 1
+	UseSurfacePoints = 1     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Intensity
+		P32 = 0.001 #NW_SE_P32
+		AdjustedByTruncation = 1
+	#** Orientation
+		UsePole = 1
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+			Parameter "Mean Trend" = 225 [deg]
+			Parameter "Mean Plunge" = 0 [deg]
+		END
+	#** Size
+	BEGIN LengthDistribution
+		ValueType "Length" Units "m"
+		Type = "POWERLAW"
+		Parameter "Xmin" = 210 [m] #NW_SE_X
+		Parameter "D" = 1.8 #NW_SE_D
+		MinValue = 25.0 [m] #NW_SE_MIN
+		MaxValue = 1000 [m] #NW_SE_MAX
+	END
+	BEGIN HeightDistribution
+		ValueType "Length" Units "m"
+		Type = "CONSTANT"
+		Parameter "Value" = 2000 [m]
+	END
+	#** Shape
+	NumSides = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "NW-SE"
+END
+ 
+BEGIN DefineFractureSetDefinition
+	DefinitionName = "NNE-SSW"
+	FractureModel = "REGION"
+	RegionName = "HVI_Nisku"
+	ClipToRegion = 1
+	UseSurfacePoints = 1     #0=centers, 1=surfacePts, 2=cellcenter (geocell only)
+	BEGIN Properties
+		Name = "Aperture"
+		BEGIN Distribution
+			ValueType "Aperture" Units "m"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 0.0001 [m]
+			MinValue = 0 [m]
+		END
+		Name = "Transmissivity"
+		BEGIN Distribution
+			ValueType "Transmissivity" Units "m2/s"
+			Type = "LOGNORMAL"
+			Parameter "Mean" = 1e-06 [m2/s]
+			Parameter "Std Dev." = 1e-06 [m2/s]
+			MinValue = 0 [m2/s]
+		END
+		Name = "Storativity"
+		BEGIN Distribution
+			ValueType "Storativity" Units "-"
+			Type = "EXPONENTIAL"
+			Parameter "Mean" = 1e-06 [-]
+			MinValue = 0 [-]
+		END
+	END
+	#** Intensity
+		P32 = 0.001 [1/m] #NNE_SSW_P32
+		AdjustedByTruncation = 1
+	#** Orientation
+		UsePole = 1
+		BEGIN OrientationDistribution
+			Type = "CONSTANT"
+			Parameter "Mean Trend" = 110 [deg]
+			Parameter "Mean Plunge" = 0 [deg]
+		END
+	#** Size
+	BEGIN LengthDistribution
+		ValueType "Length" Units "m"
+		Type = "POWERLAW"
+		Parameter "Xmin" = 210 [m] #NNE_SSW_X
+		Parameter "D" = 1.8 #NNE_SSW_D
+		MinValue = 25.0 [m] #NNE_SSW_MIN
+		MaxValue = 1000 [m] #NNE_SSW_MAX
+	END
+	BEGIN HeightDistribution
+		ValueType "Length" Units "m"
+		Type = "CONSTANT"
+		Parameter "Value" = 1000 [m]
+	END
+	#** Shape
+	NumSides = 4
+	Termination = 0
+END
+ 
+BEGIN GenerateFractureSet
+	DefinitionName = "NNE-SSW"
+END
+ 
+BEGIN ComputeHeightWidth
+	Object = "NE-SW_1"
+END
+
+BEGIN ComputeHeightWidth
+	Object = "NW-SE_1"
+END
+
+BEGIN ComputeHeightWidth
+	Object = "NNE-SSW_1"
+END
+
+BEGIN ComputeHeightWidth
+	Object = "N-S Fault"
+END
+
+BEGIN DefineClusterAnalysis
+	Name = "ClusterAnalysis_1"
+	MinimumSetSize = 5
+	RetainClusters = 1
+	ComputeHulls = 0
+	ComputeHullProj = 0
+	RetainHullObjects = 0
+	SaveStats = 0
+	ClusterDetails = 0
+	SaveToFab = "cluster_fractures_0.fab"
+END
+
+BEGIN RunClusterAnalysis
+	Name = "ClusterAnalysis_1"
+END
+
+BEGIN SelectObject
+	Action = 1     #1=replace, 2=add, 3=rem, 4=toggle
+	Object = "NE-SW_1"
+END
+
+BEGIN SetObjectOption
+	Object = "NE-SW_1"
+	WireColor = 192, 192, 192
+END
+
+BEGIN SelectObject
+	Action = 1     #1=replace, 2=add, 3=rem, 4=toggle
+	Object = "NW-SE_1"
+END
+
+BEGIN SetObjectOption
+	Object = "NW-SE_1"
+	WireColor = 192, 192, 192
+END
+
+BEGIN SelectObject
+	Action = 1     #1=replace, 2=add, 3=rem, 4=toggle
+	Object = "NNE-SSW_1"
+END
+
+BEGIN SetObjectOption
+	Object = "NNE-SSW_1"
+	WireColor = 192, 192, 192
+END
+
+BEGIN ExportFile
+	Path = "clusters_0.frd"
+	TypeName = "FRED"
+END
+
+EXIT

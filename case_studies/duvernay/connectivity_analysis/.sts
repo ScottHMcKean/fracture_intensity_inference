@@ -1,0 +1,26 @@
+Cluster Count                            	            4 	
+Total Clustered Fractures                	           22 	
+Total Area of Clustered Fractures [m2]   	    7710543.4 	
+Total Volume of Clustered Fractures [m3] 	    943.87108 	
+Min Fractures Per Cluster                	            5 	
+Max Fractures Per Cluster                	            7 	
+Mean Fractures Per Cluster               	          5.5 	
+Std Dev Fractures Per Cluster            	            1 	
+Min Fracture Area Per Cluster [m2]       	    1092593.1 	
+Max Fracture Area Per Cluster [m2]       	    4230502.2 	
+Mean Fracture Area Per Cluster [m2]      	    1927635.8 	
+Std Dev Fracture Area Per Cluster [m2]   	    1537869.7 	
+Min Fracture Volume Per Cluster [m3]     	    109.03209 	
+Max Fracture Volume Per Cluster [m3]     	    434.22487 	
+Mean Fracture Volume Per Cluster [m3]    	    235.96777 	
+Std Dev Fracture Volume Per Cluster [m3] 	    139.69969 	
+Total Box Volume of Clusters [m3]        	5.5557809e+10 	
+Min Box Volume of Clusters [m3]          	 4.948365e+09 	
+Max Box Volume of Clusters [m3]          	2.3525151e+10 	
+Mean Box Volume of Clusters [m3]         	1.3889452e+10 	
+Std Dev Box Volume of Clusters [m3]      	8.4425333e+09 	
+Min Box P32 [1/m]                        	5.4705761e-05 	
+Max Box P32 [1/m]                        	0.00046872182 	
+Mean Box P32 [1/m]                       	0.00020158099 	
+Std Dev Box P32 [1/m]                    	0.00019431325 	
+

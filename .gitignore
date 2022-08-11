@@ -7,9 +7,12 @@
 *.par
 *.rei
 *.res
-*.sen
 *.rst
 *.seo
+
+# Fracman models (can regenerate)
+*.frd
+*.fab
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
