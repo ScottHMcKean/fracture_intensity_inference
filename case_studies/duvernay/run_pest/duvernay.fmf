@@ -6,13 +6,11 @@
 ### Load Data
 # Well paths, stages, and induced seismicity points in .frd file
 #=================================================================
+BEGIN_LOOP(1,10,1)
+ 
 BEGIN ImportFile
 	Path = "duvernay_model.frd"
 	TypeName = "FRED"
-END
- 
-BEGIN SetSeed
-	Seed = 100
 END
  
 #=================================================================
@@ -347,7 +345,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 =     6.0000000E-05 [1/m] #NE_SW_P32
+		P32 =     8.7963374E-04 [1/m] #NE_SW_P32
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -362,7 +360,7 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" =  210 [m] #NE_SW_X
 		Parameter "D" = 1.8 #NE_SW_D
-		MinValue =        2.5000000E+01 #NE_SW_MIN
+		MinValue =        9.6567323E+01 #NE_SW_MIN
 		MaxValue = 1000 [m] #NE_SW_MAX
 	END
 	BEGIN HeightDistribution
@@ -410,7 +408,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 =    2.5702051E-03 #NW_SE_P32
+		P32 =    3.5519706E-03 #NW_SE_P32
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -425,7 +423,7 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" = 210 [m] #NW_SE_X
 		Parameter "D" = 1.8 #NW_SE_D
-		MinValue =        2.5000000E+01 [m] #NW_SE_MIN
+		MinValue =        9.6567323E+01 [m] #NW_SE_MIN
 		MaxValue = 1000 [m] #NW_SE_MAX
 	END
 	BEGIN HeightDistribution
@@ -473,7 +471,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 =     8.9906201E-04 [1/m] #NNE_SSW_P32
+		P32 =     3.9083543E-03 [1/m] #NNE_SSW_P32
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -488,7 +486,7 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" = 210 [m] #NNE_SSW_X
 		Parameter "D" = 1.8 #NNE_SSW_D
-		MinValue =       2.1673595E+02 [m] #NNE_SSW_MIN
+		MinValue =       9.4383095E+01 [m] #NNE_SSW_MIN
 		MaxValue = 1000 [m] #NNE_SSW_MAX
 	END
 	BEGIN HeightDistribution
@@ -689,17 +687,17 @@ END
  
 BEGIN CreateReferenceSet
 	Filter = "ConnectedFracs"
-	ObjectName = "ConnectedFracs_%d"
+	ObjectName = "ConnectedFracs"
 END
  
 BEGIN ConvertReferenceSet
-	Object = "ConnectedFracs_%d"
-	ObjectName = "ConnectedFracs_%d"
+	Object = "ConnectedFracs"
+	ObjectName = "ConnectedFracs"
 	MergeTessFracs = 0
 END
  
 BEGIN AddProperty
-	Object = "ConnectedFracs_%d"
+	Object = "ConnectedFracs"
 	ToObject = "Well A"
 	ToObject = "Well D"
 	ToObject = "Well B"
@@ -722,7 +720,7 @@ END
 #=========================================================================
  
 BEGIN ComputeHeightWidth
-	Object = "ConnectedFracs_%d"
+	Object = "ConnectedFracs"
 END
  
 BEGIN DefineFilter
@@ -731,7 +729,7 @@ BEGIN DefineFilter
 	FilterType = "Fracture Sets"
 	Property Name = "Set_Name"  MinValue = "4"  MaxValue = "5" Bool = "AND"
 	#Property Name = "Distance2Well"  MaxValue = "600" Bool = "AND"
-	Object = "ConnectedFracs_%d"
+	Object = "ConnectedFracs"
 END
  
 BEGIN CreateFracturesSubset
@@ -739,30 +737,30 @@ BEGIN CreateFracturesSubset
 END
  
 BEGIN RenameObject
-	Object = "ConnectedFracs_%d_Seismogenic"
-	NewName = "SeismogenicFracs_%d"
+	Object = "ConnectedFracs_Seismogenic"
+	NewName = "SeismogenicFracs"
 END
  
 BEGIN ConvertReferenceSet
-	Object = "SeismogenicFracs_%d"
-	ObjectName = "SeismogenicFracs_%d"
+	Object = "SeismogenicFracs"
+	ObjectName = "SeismogenicFracs"
 	MergeTessFracs = 0
 END
  
 BEGIN ReparentObject
-	Object = "SeismogenicFracs_%d"
+	Object = "SeismogenicFracs"
 	NewParent = "Fracture Sets"
 END
  
 # Tessellating fractures from seismogenic set
 BEGIN TessellateFracs
-	Object = "SeismogenicFracs_%d"
+	Object = "SeismogenicFracs"
 	ElementSize = 50 [m]
 END
  
 BEGIN ConvertObjectToPoints
-	Object = "SeismogenicFracs_%d_tess_1"
-	Name = "SimulatedEvents_%d"
+	Object = "SeismogenicFracs_tess_1"
+	Name = "SimulatedEvents"
 	ElementType = 2     #1=Vert, 2=Face, 4=Cell
 	MergePoints = 1
 END
@@ -774,17 +772,17 @@ BEGIN DefineFilter
 	FilterType = "Point Data"
 	Region Name = "HVI_Nisku"  CenterInside Bool = "AND"
 	Percent = 20
-	Object = "SimulatedEvents_%d"
+	Object = "SimulatedEvents"
 END
  
 BEGIN CreatePointSubset
-	Object = "SimulatedEvents_%d"
-	Name = "SubsampledEvents_%d"
+	Object = "SimulatedEvents"
+	Name = "SubsampledEvents"
 	Filter = "SubsampleEvents"
 END
  
 BEGIN ReparentObject
-	Object = "SubsampledEvents_%d"
+	Object = "SubsampledEvents"
 	NewParent = "Point Data"
 END
  
@@ -793,15 +791,15 @@ END
 #==============================================================================
  
 BEGIN ComputeHeightWidth
-	Object = "SeismogenicFracs_%d_tess_1"
+	Object = "SeismogenicFracs_tess_1"
 END
  
 BEGIN DefineSurfaceIntersect
 	DefName = "FaultIntensitySearch"
 	ObjectName = "Duvernay"
-	FractureSet = "SeismogenicFracs_%d_tess_1"
+	FractureSet = "SeismogenicFracs_tess_1"
 	ComputeTraces = 1
-	NewObjectName = "SeismogenicFaultTraces_%d"     #optional specify new object name
+	NewObjectName = "SeismogenicFaultTraces"     #optional specify new object name
 	ComputeFracs = 0
 	ComputeConnected = 0
 	ExportConnected = 0
@@ -811,7 +809,7 @@ BEGIN DefineSurfaceIntersect
 	MaxConnLev = 0
 	ComputeStats = 1
 	ExportStats = 1
-	StatsPath = "SeismogenicFaultIntensity.sts"
+	StatsPath = "SeismogenicFaultIntensity_%d.sts"
 END
  
 BEGIN RunSurfaceIntersect
@@ -823,15 +821,17 @@ END
 #=============================================
  
 BEGIN ExportFile
-	Path = "SeismogenicFracs.fab"
+	Path = "SeismogenicFracs_%d.fab"
 	TypeName = "FAB"
-	Object = "SeismogenicFracs_0"
+	Object = "SeismogenicFracs"
 END
  
 BEGIN ExportFile
-	Path = "SubsampledEvents.ors"
+	Path = "SubsampledEvents_%d.ors"
 	TypeName = "BOOTSTRAP"
-	Object = "SubsampledEvents_0"
+	Object = "SubsampledEvents"
 END
  
-# EXIT
+END_LOOP
+ 
+EXIT

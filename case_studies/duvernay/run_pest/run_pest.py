@@ -22,15 +22,17 @@ def run_simulation(macro_filepath):
 
     # POSTPROCESS
     # read scenario .fab file to get seismic length
-    fab_info = parse_fab_file("SeismogenicFracs.fab")
-    total_length = fab_info["property_df"].FractureLength.sum()
-    num_lineaments = fab_info["property_df"].shape[0]
-    print(str(total_length))
-    print(str(num_lineaments))
+    total_length_list = []
+    num_lineaments_list = []
+    for fab_file in Path(".").rglob("SeismogenicFracs_*.fab"):
+        fab_info = parse_fab_file(fab_file)
+        total_length = fab_info["property_df"].FractureLength.sum()
+        num_lineaments = fab_info["property_df"].shape[0]
+        total_length_list.append(total_length)
+        num_lineaments_list.append(num_lineaments)
 
-    # read simulated .ors file for microseismic events
-    # compare against stage centres
-    simulated_events = read_ors_file("SubsampledEvents.ors")
+    print(np.mean(total_length_list))
+    print(np.mean(num_lineaments))
 
     stages = pd.concat(
         [
@@ -38,21 +40,34 @@ def run_simulation(macro_filepath):
             for f in Path("../generate_model/").glob("Well*Midpoints.ors")
         ]
     )
-    event_xy = simulated_events[["X[m]", "Y[m]"]].values
     stage_xy = stages[["X[m]", "Y[m]"]].values
-    dist2well = cdist(event_xy, stage_xy).min(axis=1)
 
-    # get quantiles
-    d2w_quantiles = np.quantile(dist2well, [0.01, 0.05, 0.15, 0.50, 0.85, 0.95, 0.99])
+    dist2well_list = []
+    d2w_quantiles_list = []
+    prob_mass_list = []
+    for sim_event_file in Path(".").glob("SubsampledEvents_*.ors"):
+        simulated_events = read_ors_file(sim_event_file)
+        event_xy = simulated_events[["X[m]", "Y[m]"]].values
+        dist2well = cdist(event_xy, stage_xy).min(axis=1)
+        dist2well_list.append(dist2well)
+        # get quantiles
+        d2w_quantiles = np.quantile(
+            dist2well, [0.01, 0.05, 0.15, 0.50, 0.85, 0.95, 0.99]
+        )
+        d2w_quantiles_list.append(d2w_quantiles)
 
-    # bin simulated events into probability mass function with spec'd bins
-    hist = np.histogram(
-        dist2well,
-        bins=np.array([0, 100, 200, 300]),
-        density=True,
-    )
-    bin_width = hist[1][1:] - hist[1][:-1]  # max of bins limits
-    prob_mass = hist[0] * bin_width  # values in bin
+        # bin simulated events into probability mass function with spec'd bins
+        hist = np.histogram(
+            dist2well,
+            bins=np.array([0, 100, 200, 300]),
+            density=True,
+        )
+        bin_width = hist[1][1:] - hist[1][:-1]  # max of bins limits
+        prob_mass = hist[0] * bin_width  # values in bin
+        prob_mass_list.append(prob_mass)
+
+    d2w_quantiles = np.vstack([np.array(i) for i in d2w_quantiles_list]).mean(axis=0)
+    prob_mass = np.vstack([np.array(i) for i in prob_mass_list]).mean(axis=0)
 
     with open("output.sts", "w") as f:
         f.write(f"{total_length}\n")
