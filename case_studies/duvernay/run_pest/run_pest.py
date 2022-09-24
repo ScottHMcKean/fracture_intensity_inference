@@ -12,10 +12,20 @@ import pandas as pd
 import numpy as np
 from scipy.spatial.distance import cdist
 
-
 def run_simulation(macro_filepath):
 
     # PREPROCESS
+    for fab_file in Path(".").rglob("SeismogenicFracs_*.fab"):
+        try:
+            fab_file.unlink()
+        except OSError as e:
+            print(f"Error {fab_file.name}")
+
+    for sim_event_file in Path(".").glob("SubsampledEvents_*.ors"):
+        try:
+            sim_event_file.unlink()
+        except OSError as e:
+            print(f"Error {sim_event_file.name}")
 
     # RUN AND MONITOR
     FracmanRunner().Run(macro_filepath)
@@ -31,8 +41,10 @@ def run_simulation(macro_filepath):
         total_length_list.append(total_length)
         num_lineaments_list.append(num_lineaments)
 
-    print(np.mean(total_length_list))
-    print(np.mean(num_lineaments))
+    total_length = np.mean(total_length_list)
+    print(total_length)
+    num_lineaments = np.mean(num_lineaments_list)
+    print(num_lineaments)
 
     stages = pd.concat(
         [

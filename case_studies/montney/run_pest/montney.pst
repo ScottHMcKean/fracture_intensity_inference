@@ -6,7 +6,7 @@ restart estimation
 10  -3.0  0.3  0.03  19  0
 5.0  5.0  1.0e-3
 0.1  noaui
-20 .005  4  4  .005  4
+10 .005  4  4  .005  4
 1  1  1
 * parameter groups
 p32_vals  relative  1E-2  1E-4  switch  1.50  parabolic
@@ -21,7 +21,7 @@ lineaments
 d2w
 * observation data
 total_length  7847  0.1  lineaments
-num_lineaments 30  10  lineaments
+num_lineaments 30  100  lineaments
 d2wm3s  6.3277  1  d2w
 d2wm2s  19.6310  1  d2w
 d2wm1s  46.1852  1  d2w

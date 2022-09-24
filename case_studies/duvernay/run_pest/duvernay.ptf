@@ -7,7 +7,7 @@ ptf $
 ### Load Data
 # Well paths, stages, and induced seismicity points in .frd file
 #=================================================================
-BEGIN_LOOP(1,10,1)
+BEGIN_LOOP(1,30,1)
 
 BEGIN ImportFile
 	Path = "duvernay_model.frd"

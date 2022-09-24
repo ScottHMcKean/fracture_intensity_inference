@@ -1,0 +1,28 @@
+pcf
+* control data
+restart estimation
+4  1  2  0  2
+1  1  single  point  1  0  0
+10  -3.0  0.3  0.03  19  0
+5.0  5.0  1.0e-3
+0.1  noaui
+10 .005  4  4  .005  4
+1  1  1
+* parameter groups
+p32_vals  relative  1E-2  1E-4  switch  1.50  parabolic
+trunc_lims  relative  1E-1  1E-3  switch  1.50  parabolic
+* parameter data
+SET_A_P32  none  relative  0.005  1E-4  0.1  p32_vals  1.0  0.0  1
+SET_B_P32  none  relative  0.005  1E-4  0.1  p32_vals  1.0  0.0  1
+SET_A_MIN  none  relative  45  44.9  45.1  trunc_lims  1.0  0.0  1
+SET_B_MIN  none  relative  90  89.9  90.1  trunc_lims  1.0  0.0  1
+* observation groups
+lineaments
+d2w
+* observation data
+total_length  7847  0.1  lineaments
+* model command line
+python run_pest.py montney.fmf
+* model input/output
+montney.ptf  montney.fmf
+output.pin  output.sts

@@ -24,6 +24,10 @@ D = 1.8
 # xmin = 100
 # D = 1.01
 
+color_values = []
+color_list = sns.color_palette("Set1")
+for color in color_list:
+    color_values.append([value * 255 for value in color])
 
 faults = read_f2d_trace_file(root_dir / case_path / "generate_model" / fault_file)
 
@@ -37,7 +41,7 @@ counts = pd.DataFrame(
 
 # POSTPROCESS
 # read scenario .fab file to get seismic length
-fab_info = parse_fab_file(root_dir / case_path / "run_pest" / "SeismogenicFracs.fab")
+fab_info = parse_fab_file(root_dir / case_path / "run_pest" / "SeismogenicFracs_1.fab")
 total_length = fab_info["property_df"].FractureLength.sum()
 num_lineaments = fab_info["property_df"].shape[0]
 
@@ -53,6 +57,7 @@ combined_counts = pd.concat([simulated_counts, counts])
 
 sns.set_style("whitegrid")
 sns.set_palette("Set1")
+
 f, ax = plt.subplots(figsize=(5, 5))
 
 # bin lengths for power law plot

@@ -1,0 +1,278 @@
+Definition                                                                      	                                  FaultIntensitySearch 	
+Tracemap Statistics                                                             	                                                       	
+Object                                                                          	LowerMontneyIntersection_SeismogenicFaultTraces_tmap_1 	
+Intersection Count                                                              	                                                    10 	
+Number of Segments                                                              	                                                   149 	
+Total Length [m]                                                                	                                             3662.5123 	
+Trace Length Mean [m]                                                           	                                             366.25123 	
+Trace Length Min                                                                	                                             106.55045 	
+Trace Length Max                                                                	                                             681.38516 	
+Trace Length StdDev                                                             	                                             187.81476 	
+Segment Length Mean [m]                                                         	                                             24.580619 	
+Segment Length Min                                                              	                                             8.4101868 	
+Segment Length Max                                                              	                                             44.865093 	
+Segment Length StdDev                                                           	                                             10.454113 	
+Generated from surface                                                          	                              LowerMontneyIntersection 	
+Surface Area [m2]                                                               	                                               5999996 	
+Number of intersecting fractures / area                                         	                                         1.6666678e-06 	
+Intensity (P21) [m/m2]                                                          	                                         0.00061041912 	
+Number of Xs against LowerMontneyIntersection_SeismogenicFaultTraces_tmap_1     	                                                     0 	
+Number of Ts against LowerMontneyIntersection_SeismogenicFaultTraces_tmap_1     	                                                     0 	
+Number of Vs against LowerMontneyIntersection_SeismogenicFaultTraces_tmap_1     	                                                     0 	
+(Xs + Ts) / Area against LowerMontneyIntersection_SeismogenicFaultTraces_tmap_1 	                                                     0 	
+Number of Free Ends (Is)                                                        	                                                     0 	
+Number of Domain Ends                                                           	                                                     1 	
+Number of Isolated Ends                                                         	                                                    19 	
+TerminationType                                                                 	                                                    -  	
+TerminationType Mean                                                            	                                            0.87421384 	
+TerminationType Std. Dev                                                        	                                             2.3132588 	
+TerminationType Min                                                             	                                                     0 	
+TerminationType Max                                                             	                                                     7 	
+TerminationType Sum                                                             	                                                   139 	
+TerminationType Valid                                                           	                                                   159 	
+Segment_Length                                                                  	                                                meters 	
+Segment_Length Mean                                                             	                                             24.580619 	
+Segment_Length Std. Dev                                                         	                                             10.454113 	
+Segment_Length Min                                                              	                                             8.4101868 	
+Segment_Length Max                                                              	                                             44.865093 	
+Segment_Length Sum                                                              	                                             3662.5123 	
+Segment_Length Valid                                                            	                                                   149 	
+Trace_Segment                                                                   	                                                    -  	
+Trace_Segment Mean                                                              	                                              9.738255 	
+Trace_Segment Std. Dev                                                          	                                                     0 	
+Trace_Segment Min                                                               	                                                     0 	
+Trace_Segment Max                                                               	                                                    28 	
+Trace_Segment Sum                                                               	                                                  1451 	
+Trace_Segment Valid                                                             	                                                   149 	
+Seg_X0                                                                          	                                                meters 	
+Seg_X0 Mean                                                                     	                                              824.7298 	
+Seg_X0 Std. Dev                                                                 	                                             2066.7876 	
+Seg_X0 Min                                                                      	                                              -208.664 	
+Seg_X0 Max                                                                      	                                             1858.1236 	
+Seg_X0 Sum                                                                      	                                                     0 	
+Seg_X0 Valid                                                                    	                                                   149 	
+Seg_Y0                                                                          	                                                meters 	
+Seg_Y0 Mean                                                                     	                                            -416.39611 	
+Seg_Y0 Std. Dev                                                                 	                                             825.04401 	
+Seg_Y0 Min                                                                      	                                            -828.91811 	
+Seg_Y0 Max                                                                      	                                            -3.8741042 	
+Seg_Y0 Sum                                                                      	                                                     0 	
+Seg_Y0 Valid                                                                    	                                                   149 	
+Seg_Z0                                                                          	                                                meters 	
+Seg_Z0 Mean                                                                     	                                                -208.6 	
+Seg_Z0 Std. Dev                                                                 	                                         5.6843419e-14 	
+Seg_Z0 Min                                                                      	                                                -208.6 	
+Seg_Z0 Max                                                                      	                                                -208.6 	
+Seg_Z0 Sum                                                                      	                                                     0 	
+Seg_Z0 Valid                                                                    	                                                   149 	
+Seg_X1                                                                          	                                                meters 	
+Seg_X1 Mean                                                                     	                                              824.7298 	
+Seg_X1 Std. Dev                                                                 	                                             2066.7876 	
+Seg_X1 Min                                                                      	                                              -208.664 	
+Seg_X1 Max                                                                      	                                             1858.1236 	
+Seg_X1 Sum                                                                      	                                                     0 	
+Seg_X1 Valid                                                                    	                                                   149 	
+Seg_Y1                                                                          	                                                meters 	
+Seg_Y1 Mean                                                                     	                                            -416.39611 	
+Seg_Y1 Std. Dev                                                                 	                                             825.04401 	
+Seg_Y1 Min                                                                      	                                            -828.91811 	
+Seg_Y1 Max                                                                      	                                            -3.8741042 	
+Seg_Y1 Sum                                                                      	                                                     0 	
+Seg_Y1 Valid                                                                    	                                                   149 	
+Seg_Z1                                                                          	                                                meters 	
+Seg_Z1 Mean                                                                     	                                                -208.6 	
+Seg_Z1 Std. Dev                                                                 	                                         5.6843419e-14 	
+Seg_Z1 Min                                                                      	                                                -208.6 	
+Seg_Z1 Max                                                                      	                                                -208.6 	
+Seg_Z1 Sum                                                                      	                                                     0 	
+Seg_Z1 Valid                                                                    	                                                   149 	
+Aperture                                                                        	                                            meters (m) 	
+Aperture Mean                                                                   	                                         9.7796439e-05 	
+Aperture Std. Dev                                                               	                                         6.9041029e-05 	
+Aperture Min                                                                    	                                         2.1696937e-05 	
+Aperture Max                                                                    	                                            0.00022982 	
+Aperture Sum                                                                    	                                           0.014571669 	
+Aperture Valid                                                                  	                                                   149 	
+Permeability                                                                    	                                       milidarcys (mD) 	
+Permeability Mean                                                               	                                             92.876147 	
+Permeability Std. Dev                                                           	                                             93.270718 	
+Permeability Min                                                                	                                             17.812681 	
+Permeability Max                                                                	                                             349.42386 	
+Permeability Sum                                                                	                                             13838.546 	
+Permeability Valid                                                              	                                                   149 	
+Compressibility                                                                 	                                                 1/kPa 	
+Compressibility Mean                                                            	                                                 0.001 	
+Compressibility Std. Dev                                                        	                                                     0 	
+Compressibility Min                                                             	                                                 0.001 	
+Compressibility Max                                                             	                                                 0.001 	
+Compressibility Sum                                                             	                                            0.14900001 	
+Compressibility Valid                                                           	                                                   149 	
+Transmissivity                                                                  	                                                m2/sec 	
+Transmissivity Mean                                                             	                                          9.414675e-11 	
+Transmissivity Std. Dev                                                         	                                         1.8778169e-10 	
+Transmissivity Min                                                              	                                                     0 	
+Transmissivity Max                                                              	                                         6.9182593e-10 	
+Transmissivity Sum                                                              	                                         1.4027866e-08 	
+Transmissivity Valid                                                            	                                                   149 	
+Storativity                                                                     	                                                     - 	
+Storativity Mean                                                                	                                         7.6733735e-07 	
+Storativity Std. Dev                                                            	                                         6.2996642e-07 	
+Storativity Min                                                                 	                                                     0 	
+Storativity Max                                                                 	                                         2.2555646e-06 	
+Storativity Sum                                                                 	                                         0.00011433327 	
+Storativity Valid                                                               	                                                   149 	
+FractureX                                                                       	                                                meters 	
+FractureX Mean                                                                  	                                             849.85738 	
+FractureX Std. Dev                                                              	                                             614.65932 	
+FractureX Min                                                                   	                                            -66.765869 	
+FractureX Max                                                                   	                                             1624.1636 	
+FractureX Sum                                                                   	                                             126628.75 	
+FractureX Valid                                                                 	                                                   149 	
+FractureY                                                                       	                                                meters 	
+FractureY Mean                                                                  	                                            -371.60813 	
+FractureY Std. Dev                                                              	                                             189.59662 	
+FractureY Min                                                                   	                                            -674.24695 	
+FractureY Max                                                                   	                                            -77.966141 	
+FractureY Sum                                                                   	                                            -55369.611 	
+FractureY Valid                                                                 	                                                   149 	
+FractureZ                                                                       	                                                meters 	
+FractureZ Mean                                                                  	                                            -216.75091 	
+FractureZ Std. Dev                                                              	                                             10.736754 	
+FractureZ Min                                                                   	                                             -230.0005 	
+FractureZ Max                                                                   	                                            -194.89957 	
+FractureZ Sum                                                                   	                                            -32295.885 	
+FractureZ Valid                                                                 	                                                   149 	
+Area                                                                            	                                    square meters (m2) 	
+Area Mean                                                                       	                                             68324.847 	
+Area Std. Dev                                                                   	                                             36650.409 	
+Area Min                                                                        	                                             4549.3188 	
+Area Max                                                                        	                                             133616.45 	
+Area Sum                                                                        	                                              10180402 	
+Area Valid                                                                      	                                                   149 	
+EquivRadius                                                                     	                                                meters 	
+EquivRadius Mean                                                                	                                             141.41755 	
+EquivRadius Std. Dev                                                            	                                             41.968673 	
+EquivRadius Min                                                                 	                                             38.053818 	
+EquivRadius Max                                                                 	                                             206.23151 	
+EquivRadius Sum                                                                 	                                             21071.216 	
+EquivRadius Valid                                                               	                                                   149 	
+Trend                                                                           	                                         degrees (deg) 	
+Trend Mean                                                                      	                                                   333 	
+Trend Std. Dev                                                                  	                                         7.9220117e-06 	
+Trend Min                                                                       	                                             332.99997 	
+Trend Max                                                                       	                                             333.00003 	
+Trend Sum                                                                       	                                                 49617 	
+Trend Valid                                                                     	                                                   149 	
+Plunge                                                                          	                                         degrees (deg) 	
+Plunge Mean                                                                     	                                                     0 	
+Plunge Std. Dev                                                                 	                                                     0 	
+Plunge Min                                                                      	                                                     0 	
+Plunge Max                                                                      	                                                     0 	
+Plunge Sum                                                                      	                                                     0 	
+Plunge Valid                                                                    	                                                   149 	
+Strike                                                                          	                                         degrees (deg) 	
+Strike Mean                                                                     	                                             62.999996 	
+Strike Std. Dev                                                                 	                                         7.8518973e-06 	
+Strike Min                                                                      	                                             62.999981 	
+Strike Max                                                                      	                                             63.000019 	
+Strike Sum                                                                      	                                             9386.9995 	
+Strike Valid                                                                    	                                                   149 	
+Dip_Angle                                                                       	                                         degrees (deg) 	
+Dip_Angle Mean                                                                  	                                                    90 	
+Dip_Angle Std. Dev                                                              	                                                     0 	
+Dip_Angle Min                                                                   	                                                    90 	
+Dip_Angle Max                                                                   	                                                    90 	
+Dip_Angle Sum                                                                   	                                                 13410 	
+Dip_Angle Valid                                                                 	                                                   149 	
+FractureRadius                                                                  	                                                meters 	
+FractureRadius Mean                                                             	                                             141.41755 	
+FractureRadius Std. Dev                                                         	                                             41.968673 	
+FractureRadius Min                                                              	                                             38.053818 	
+FractureRadius Max                                                              	                                             206.23151 	
+FractureRadius Sum                                                              	                                             21071.216 	
+FractureRadius Valid                                                            	                                                   149 	
+Fracture Geometry                                                               	                                                    -  	
+Fracture Geometry Mean                                                          	                                                     0 	
+Fracture Geometry Std. Dev                                                      	                                                     0 	
+Fracture Geometry Min                                                           	                                                     0 	
+Fracture Geometry Max                                                           	                                                     0 	
+Fracture Geometry Sum                                                           	                                                     0 	
+Fracture Geometry Valid                                                         	                                                   149 	
+Set_Name                                                                        	                                                    -  	
+Set_Name Mean                                                                   	                                                     2 	
+Set_Name Std. Dev                                                               	                                                     0 	
+Set_Name Min                                                                    	                                                     2 	
+Set_Name Max                                                                    	                                                     2 	
+Set_Name Sum                                                                    	                                                   298 	
+Set_Name Valid                                                                  	                                                   149 	
+Distance2Well                                                                   	                                                meters 	
+Distance2Well Mean                                                              	                                             119.75693 	
+Distance2Well Std. Dev                                                          	                                             81.195669 	
+Distance2Well Min                                                               	                                             23.600199 	
+Distance2Well Max                                                               	                                             281.98041 	
+Distance2Well Sum                                                               	                                             17843.783 	
+Distance2Well Valid                                                             	                                                   149 	
+FractureLength                                                                  	                                                meters 	
+FractureLength Mean                                                             	                                             501.29614 	
+FractureLength Std. Dev                                                         	                                             234.79859 	
+FractureLength Min                                                              	                                             106.55045 	
+FractureLength Max                                                              	                                             890.77637 	
+FractureLength Sum                                                              	                                             74693.125 	
+FractureLength Valid                                                            	                                                   149 	
+FractureHeight                                                                  	                                                meters 	
+FractureHeight Mean                                                             	                                             130.53082 	
+FractureHeight Std. Dev                                                         	                                              24.91914 	
+FractureHeight Min                                                              	                                             42.696381 	
+FractureHeight Max                                                              	                                                   150 	
+FractureHeight Sum                                                              	                                             19449.092 	
+FractureHeight Valid                                                            	                                                   149 	
+FractureIndex                                                                   	                                                    -  	
+FractureIndex Mean                                                              	                                             6.5704698 	
+FractureIndex Std. Dev                                                          	                                             4.6835754 	
+FractureIndex Min                                                               	                                                     0 	
+FractureIndex Max                                                               	                                                    13 	
+FractureIndex Sum                                                               	                                                   979 	
+FractureIndex Valid                                                             	                                                   149 	
+FractureSet                                                                     	                                                    -  	
+FractureSet Mean                                                                	                                                     0 	
+FractureSet Std. Dev                                                            	                                                     0 	
+FractureSet Min                                                                 	                                                     0 	
+FractureSet Max                                                                 	                                                     0 	
+FractureSet Sum                                                                 	                                                     0 	
+FractureSet Valid                                                               	                                                   149 	
+TriangleIndex                                                                   	                                                    -  	
+TriangleIndex Mean                                                              	                                            0.61073826 	
+TriangleIndex Std. Dev                                                          	                                            0.48922732 	
+TriangleIndex Min                                                               	                                                     0 	
+TriangleIndex Max                                                               	                                                     1 	
+TriangleIndex Sum                                                               	                                                    91 	
+TriangleIndex Valid                                                             	                                                   149 	
+IntersectionType                                                                	                                                    -  	
+IntersectionType Mean                                                           	                                                     0 	
+IntersectionType Std. Dev                                                       	                                                     0 	
+IntersectionType Min                                                            	                                                     0 	
+IntersectionType Max                                                            	                                                     0 	
+IntersectionType Sum                                                            	                                                     0 	
+IntersectionType Valid                                                          	                                                   149 	
+Trace_Length                                                                    	                                                meters 	
+Trace_Length Mean                                                               	                                             366.25123 	
+Trace_Length Std. Dev                                                           	                                             187.81476 	
+Trace_Length Min                                                                	                                             106.55045 	
+Trace_Length Max                                                                	                                             681.38516 	
+Trace_Length Sum                                                                	                                             3662.5123 	
+Trace_Length Valid                                                              	                                                    10 	
+Segment_Count                                                                   	                                                    -  	
+Segment_Count Mean                                                              	                                                  14.9 	
+Segment_Count Std. Dev                                                          	                                             7.6948756 	
+Segment_Count Min                                                               	                                                     4 	
+Segment_Count Max                                                               	                                                    28 	
+Segment_Count Sum                                                               	                                                   149 	
+Segment_Count Valid                                                             	                                                    10 	
+TriangleCount                                                                   	                                                    -  	
+TriangleCount Mean                                                              	                                                     1 	
+TriangleCount Std. Dev                                                          	                                                     0 	
+TriangleCount Min                                                               	                                                     1 	
+TriangleCount Max                                                               	                                                     1 	
+TriangleCount Sum                                                               	                                                    10 	
+TriangleCount Valid                                                             	                                                    10 	
+

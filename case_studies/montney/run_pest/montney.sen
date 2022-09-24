@@ -3,74 +3,106 @@
 
  OPTIMISATION ITERATION NO.  1 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        5.000000E-03      176383.    
-   set_b_p32       p32_vals        5.000000E-03      45119.9    
-   set_a_min       trunc_lims       100.000          5.35256    
-   set_b_min       trunc_lims       100.000          36.6253    
+   set_a_p32       p32_vals        5.000000E-03      848041.    
+   set_b_p32       p32_vals        5.000000E-03     1.598334E+06
+   set_a_min       trunc_lims       100.000          21.9721    
+   set_b_min       trunc_lims       100.000          11.4414    
 
 
  OPTIMISATION ITERATION NO.  2 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        5.073870E-03      252908.    
-   set_b_p32       p32_vals        3.884596E-03      824567.    
-   set_a_min       trunc_lims       102.338          6.41867    
-   set_b_min       trunc_lims       88.8652          21.3040    
+   set_a_p32       p32_vals        5.000000E-03      90234.7    
+   set_b_p32       p32_vals        5.000000E-03     1.735996E+06
+   set_a_min       trunc_lims       100.000          7.10904    
+   set_b_min       trunc_lims       100.000          13.1262    
 
 
  OPTIMISATION ITERATION NO.  3 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        5.073870E-03      650451.    
-   set_b_p32       p32_vals        3.884596E-03      416308.    
-   set_a_min       trunc_lims       102.338          2.21934    
-   set_b_min       trunc_lims       88.8652          6.19146    
+   set_a_p32       p32_vals        5.036405E-03      287921.    
+   set_b_p32       p32_vals        3.894373E-03     1.004178E+06
+   set_a_min       trunc_lims       100.176          2.83419    
+   set_b_min       trunc_lims       99.8391          1.44805    
 
 
  OPTIMISATION ITERATION NO.  4 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        5.126632E-03      474580.    
-   set_b_p32       p32_vals        3.508120E-03      68584.9    
-   set_a_min       trunc_lims       102.388          2.22177    
-   set_b_min       trunc_lims       88.8229          5.65503    
+   set_a_p32       p32_vals        7.009194E-03      842392.    
+   set_b_p32       p32_vals        2.283780E-03      161153.    
+   set_a_min       trunc_lims       87.7145          11.9218    
+   set_b_min       trunc_lims       95.0639          4.95065    
 
 
  OPTIMISATION ITERATION NO.  5 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        5.504760E-03      48649.4    
-   set_b_p32       p32_vals        1.842065E-03      45010.3    
-   set_a_min       trunc_lims       102.442          2.74493    
-   set_b_min       trunc_lims       88.6549         0.935316    
+   set_a_p32       p32_vals        5.953503E-03      162336.    
+   set_b_p32       p32_vals        2.172797E-03      56581.0    
+   set_a_min       trunc_lims       86.4097          3.54725    
+   set_b_min       trunc_lims       93.1723          3.06298    
 
 
  OPTIMISATION ITERATION NO.  6 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        4.557639E-03      60583.6    
-   set_b_p32       p32_vals        5.600320E-04      74840.6    
-   set_a_min       trunc_lims       102.643          1.00674    
-   set_b_min       trunc_lims       88.6357         0.112881    
+   set_a_p32       p32_vals        3.465278E-03      148495.    
+   set_b_p32       p32_vals        1.712718E-03      236984.    
+   set_a_min       trunc_lims       66.8194         0.767830    
+   set_b_min       trunc_lims       118.904         0.759015    
 
 
  OPTIMISATION ITERATION NO.  7 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        4.386669E-03      59609.3    
-   set_b_p32       p32_vals        6.911837E-04      55711.0    
-   set_a_min       trunc_lims       102.447          1.11637    
-   set_b_min       trunc_lims       88.6521         0.241166    
+   set_a_p32       p32_vals        3.265624E-03      316422.    
+   set_b_p32       p32_vals        1.632477E-03      77779.9    
+   set_a_min       trunc_lims       80.8137          1.38166    
+   set_b_min       trunc_lims       115.387         0.331781    
 
 
  OPTIMISATION ITERATION NO.  8 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        4.504053E-03      80476.7    
-   set_b_p32       p32_vals        6.360540E-04      50855.2    
-   set_a_min       trunc_lims       102.439          1.31325    
-   set_b_min       trunc_lims       88.6499         0.257264    
+   set_a_p32       p32_vals        3.172883E-03      56559.2    
+   set_b_p32       p32_vals        1.921676E-03      62632.5    
+   set_a_min       trunc_lims       86.9766         0.293913    
+   set_b_min       trunc_lims       133.006          1.36224    
 
 
  OPTIMISATION ITERATION NO.  9 ----->
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        4.478502E-03      84975.8    
-   set_b_p32       p32_vals        6.614202E-04      55961.1    
-   set_a_min       trunc_lims       102.437          1.09429    
-   set_b_min       trunc_lims       88.6502         0.231892    
+   set_a_p32       p32_vals        3.478678E-03      146125.    
+   set_b_p32       p32_vals        1.536178E-03      131806.    
+   set_a_min       trunc_lims       34.8826          2.68007    
+   set_b_min       trunc_lims       94.5636         0.457757    
+
+
+ OPTIMISATION ITERATION NO. 10 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        3.114416E-03      82086.5    
+   set_b_p32       p32_vals        1.369015E-03      171227.    
+   set_a_min       trunc_lims       45.3289          2.89328    
+   set_b_min       trunc_lims       90.7745          1.56035    
+
+
+ OPTIMISATION ITERATION NO. 11 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        4.022186E-03      50779.3    
+   set_b_p32       p32_vals        7.411096E-04      247410.    
+   set_a_min       trunc_lims       53.7498         0.737071    
+   set_b_min       trunc_lims       105.466         0.248651    
+
+
+ OPTIMISATION ITERATION NO. 12 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        2.598935E-03      36566.4    
+   set_b_p32       p32_vals        7.310383E-04      34334.3    
+   set_a_min       trunc_lims       134.535         0.216392    
+   set_b_min       trunc_lims       87.9554         8.902696E-02
+
+
+ OPTIMISATION ITERATION NO. 13 ----->
+ Parameter name    Group          Current value    Sensitivity
+   set_a_p32       p32_vals        3.958146E-03      41128.4    
+   set_b_p32       p32_vals        1.000000E-04      150499.    
+   set_a_min       trunc_lims       25.0000          8.28334    
+   set_b_min       trunc_lims       113.209         0.124409    
 
 
 
@@ -80,10 +112,10 @@
 
  Number of observations with non-zero weight =     2
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        4.557639E-03      191629.    
-   set_b_p32       p32_vals        5.600320E-04      217951.    
-   set_a_min       trunc_lims       102.643          16.1479    
-   set_b_min       trunc_lims       88.6357          4.46421    
+   set_a_p32       p32_vals        3.114416E-03      876104.    
+   set_b_p32       p32_vals        1.369015E-03      785515.    
+   set_a_min       trunc_lims       45.3289          15.5298    
+   set_b_min       trunc_lims       90.7745          2.54488    
 
 
 
@@ -91,10 +123,10 @@
 
  Number of observations with non-zero weight =    10
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        4.557639E-03      44037.2    
-   set_b_p32       p32_vals        5.600320E-04      31893.9    
-   set_a_min       trunc_lims       102.643         0.647810    
-   set_b_min       trunc_lims       88.6357         0.680125    
+   set_a_p32       p32_vals        3.114416E-03      6725.26    
+   set_b_p32       p32_vals        1.369015E-03      18318.0    
+   set_a_min       trunc_lims       45.3289         0.834374    
+   set_b_min       trunc_lims       90.7745         0.206596    
 
 
 
@@ -102,7 +134,7 @@
 
  Number of observations with non-zero weight =    12
  Parameter name    Group          Current value    Sensitivity
-   set_a_p32       p32_vals        4.557639E-03      48649.4    
-   set_b_p32       p32_vals        5.600320E-04      45010.3    
-   set_a_min       trunc_lims       102.643          2.74493    
-   set_b_min       trunc_lims       88.6357         0.935316    
+   set_a_p32       p32_vals        3.114416E-03      146125.    
+   set_b_p32       p32_vals        1.369015E-03      131806.    
+   set_a_min       trunc_lims       45.3289          2.68007    
+   set_b_min       trunc_lims       90.7745         0.457757    

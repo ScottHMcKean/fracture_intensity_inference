@@ -7,15 +7,12 @@ ptf $
 ### Load Data
 # Well paths, stages, and induced seismicity points in .frd file
 #=================================================================
+BEGIN_LOOP(1,50,1)
+
 BEGIN ImportFile
 	Path = "montney_model.frd"
 	TypeName = "FRED"
 END
- 
-BEGIN SetSeed
-	Seed = 100
-END
- 
 
 #=================================================================
 #Generate two stochastic fracture sets: Set A and Set B
@@ -473,17 +470,17 @@ END
  
 BEGIN CreateReferenceSet
 	Filter = "ConnectedFracs"
-	ObjectName = "ConnectedFracs_%d"
+	ObjectName = "ConnectedFracs"
 END
  
 BEGIN ConvertReferenceSet
-	Object = "ConnectedFracs_%d"
-	ObjectName = "ConnectedFracs_%d"
+	Object = "ConnectedFracs"
+	ObjectName = "ConnectedFracs"
 	MergeTessFracs = 0
 END
  
 BEGIN AddProperty
-	Object = "ConnectedFracs_%d"
+	Object = "ConnectedFracs"
 	ToObject = "Well 2"
 	ToObject = "Well 4"
 	ToObject = "Well 6"
@@ -505,7 +502,7 @@ END
 #=========================================================================
  
 BEGIN ComputeHeightWidth
-	Object = "ConnectedFracs_%d"
+	Object = "ConnectedFracs"
 END
  
 BEGIN DefineFilter
@@ -515,7 +512,7 @@ BEGIN DefineFilter
 	Property Name = "FractureLength"  MinValue = "100" Bool = "AND"
 	Property Name = "Set_Name"  MinValue = "2"  MaxValue = "2" Bool = "AND"
 	#Property Name = "Distance2Well"  MaxValue = "600" Bool = "AND"
-	Object = "ConnectedFracs_%d"
+	Object = "ConnectedFracs"
 END
  
 BEGIN CreateFracturesSubset
@@ -523,30 +520,30 @@ BEGIN CreateFracturesSubset
 END
  
 BEGIN RenameObject
-	Object = "ConnectedFracs_%d_Seismogenic"
-	NewName = "SeismogenicFracs_%d"
+	Object = "ConnectedFracs_Seismogenic"
+	NewName = "SeismogenicFracs"
 END
  
 BEGIN ConvertReferenceSet
-	Object = "SeismogenicFracs_%d"
-	ObjectName = "SeismogenicFracs_%d"
+	Object = "SeismogenicFracs"
+	ObjectName = "SeismogenicFracs"
 	MergeTessFracs = 0
 END
  
 BEGIN ReparentObject
-	Object = "SeismogenicFracs_%d"
+	Object = "SeismogenicFracs"
 	NewParent = "Fracture Sets"
 END
  
 # Tessellating fractures from seismogenic set
 BEGIN TessellateFracs
-	Object = "SeismogenicFracs_%d"
+	Object = "SeismogenicFracs"
 	ElementSize = 50 [m]
 END
  
 BEGIN ConvertObjectToPoints
-	Object = "SeismogenicFracs_%d_tess_1"
-	Name = "SimulatedEvents_%d"
+	Object = "SeismogenicFracs_tess_1"
+	Name = "SimulatedEvents"
 	ElementType = 2     #1=Vert, 2=Face, 4=Cell
 	MergePoints = 1
 END
@@ -558,17 +555,17 @@ BEGIN DefineFilter
 	FilterType = "Point Data"
 	Region Name = "Lower_Montney"  CenterInside Bool = "AND"
 	Percent = 20
-	Object = "SimulatedEvents_%d"
+	Object = "SimulatedEvents"
 END
  
 BEGIN CreatePointSubset
-	Object = "SimulatedEvents_%d"
-	Name = "SubsampledEvents_%d"
+	Object = "SimulatedEvents"
+	Name = "SubsampledEvents"
 	Filter = "SubsampleEvents"
 END
  
 BEGIN ReparentObject
-	Object = "SubsampledEvents_%d"
+	Object = "SubsampledEvents"
 	NewParent = "Point Data"
 END
  
@@ -577,15 +574,15 @@ END
 #==============================================================================
  
 BEGIN ComputeHeightWidth
-	Object = "SeismogenicFracs_%d_tess_1"
+	Object = "SeismogenicFracs_tess_1"
 END
  
 BEGIN DefineSurfaceIntersect
 	DefName = "FaultIntensitySearch"
 	ObjectName = "LowerMontneyIntersection"
-	FractureSet = "SeismogenicFracs_%d_tess_1"
+	FractureSet = "SeismogenicFracs_tess_1"
 	ComputeTraces = 1
-	NewObjectName = "SeismogenicFaultTraces_%d"     #optional specify new object name
+	NewObjectName = "SeismogenicFaultTraces"     #optional specify new object name
 	ComputeFracs = 0
 	ComputeConnected = 0
 	ExportConnected = 0
@@ -595,7 +592,7 @@ BEGIN DefineSurfaceIntersect
 	MaxConnLev = 0
 	ComputeStats = 1
 	ExportStats = 1
-	StatsPath = "SeismogenicFaultIntensity.sts"
+	StatsPath = "SeismogenicFaultIntensity_%d.sts"
 END
  
 BEGIN RunSurfaceIntersect
@@ -607,15 +604,17 @@ END
 #=============================================
  
 BEGIN ExportFile
-	Path = "SeismogenicFracs.fab"
+	Path = "SeismogenicFracs_%d.fab"
 	TypeName = "FAB"
-	Object = "SeismogenicFracs_0"
+	Object = "SeismogenicFracs"
 END
  
 BEGIN ExportFile
-	Path = "SubsampledEvents.ors"
+	Path = "SubsampledEvents_%d.ors"
 	TypeName = "BOOTSTRAP"
-	Object = "SubsampledEvents_0"
+	Object = "SubsampledEvents"
 END
+
+END_LOOP
 
 EXIT

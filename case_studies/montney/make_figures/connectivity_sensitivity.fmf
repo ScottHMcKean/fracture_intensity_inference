@@ -1,0 +1,85 @@
+# Set Region
+BEGIN EDITREGION
+	ObjectName = "Lower_Montney"
+	Type = "Box"
+	Center = 1000., -250., -200.
+	Size = 2999., 2499., 150.
+END
+
+BEGIN VISIBLEREGION
+	Region = "Lower_Montney"
+END
+
+BEGIN FRACWORLDREGION
+	Region = "Lower_Montney"
+END
+
+BEGIN DEFINE_VIEW
+	Name = "PlanView"
+	Projection = 1     #0=perspective, 1=orthographic
+	ViewType = "Matrix"
+	ModelScale = 1., 1., 1.
+	ModelPosition = 1324.91000959458, -471.910782054463, 808.7775585
+	ModelRotation = 0., 0., 0.
+	ViewDistance = 6065.0794800258
+	ViewPosition = 3270.05, 829.99, 808.7775585
+	ClipRegion = "Lower_Montney"
+	FracWorldRegion = ""
+END
+
+BEGIN EXECUTE_VIEW
+	Name = "PlanView"
+END
+
+# Turn off objects
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "Regions"
+END
+
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "Surfaces"
+END
+
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "Trace Maps"
+END
+
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "Point Data"
+END
+
+BEGIN SetObjectOption
+	Object = "Set A_1"
+	WireColor = 240, 240, 240
+END
+
+BEGIN SetObjectOption
+	Object = "Set B_1"
+	WireColor = 240, 240, 240
+END
+
+# Turn on and clean up stage points
+BEGIN SetObjectOption
+	Object = "Well_2_mid"
+	PointSize = 3
+    FillColor = 0, 0, 0
+    Visible = 1
+END
+
+BEGIN SetObjectOption
+	Object = "Well_4_mid"
+	PointSize = 3
+    FillColor = 0, 0, 0
+    Visible = 1
+END
+
+BEGIN SetObjectOption
+	Object = "Well_6_mid"
+	PointSize = 3
+    FillColor = 0, 0, 0
+    Visible = 1
+END

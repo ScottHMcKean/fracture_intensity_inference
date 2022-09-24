@@ -63,7 +63,7 @@
               formation         limit        value          bound          bound
  nne_ssw_p32  none              relative   5.000000E-03   1.000000E-04   1.000000E-02
  nne_ssw_min  none              relative    50.0000        25.0000        250.000    
- ne_sw_p32    none              relative   1.000000E-03   1.000000E-05   1.000000E-02
+ ne_sw_p32    none              relative   5.000000E-04   1.000000E-05   1.000000E-02
  nw_se_p32    none              relative   1.000000E-03   1.000000E-05   1.000000E-02
  regional_min none              relative    100.000        25.0000        250.000    
 
@@ -84,7 +84,7 @@
 
  Observation name        Observation       Weight       Group
   total_length            6150.00         0.1000       lineaments  
-  num_lineaments          18.0000          10.00       lineaments  
+  num_lineaments          18.0000          100.0       lineaments  
   d2wm3s                  6.59179          1.000       d2w         
   d2wm2s                  19.4598          1.000       d2w         
   d2wm1s                  37.6725          1.000       d2w         
@@ -148,35 +148,35 @@
 
 
  INITIAL CONDITIONS: 
-    Sum of squared weighted residuals (ie phi)               =  2.67697E+06
-    Contribution to phi from observation group "lineaments"  =  2.63114E+06
-    Contribution to phi from observation group "d2w"         =   45822.    
+    Sum of squared weighted residuals (ie phi)               =  1.97591E+07
+    Contribution to phi from observation group "lineaments"  =  1.97169E+07
+    Contribution to phi from observation group "d2w"         =   42172.    
  
        Current parameter values
        nne_ssw_p32     5.000000E-03
        nne_ssw_min      50.0000    
-       ne_sw_p32       1.000000E-03
+       ne_sw_p32       5.000000E-04
        nw_se_p32       1.000000E-03
        regional_min     100.000    
 
 
  OPTIMISATION ITERATION NO.        : 1
     Model calls so far             : 1
-    Starting phi for this iteration                          :  2.67697E+06
-    Contribution to phi from observation group "lineaments"  :  2.63114E+06
-    Contribution to phi from observation group "d2w"         :   45822.    
+    Starting phi for this iteration                          :  1.97591E+07
+    Contribution to phi from observation group "lineaments"  :  1.97169E+07
+    Contribution to phi from observation group "d2w"         :   42172.    
 
         Lambda =   10.000     ----->
-           Phi =  4.40274E+06  (  1.645 times starting phi)
+           Phi =  2.02655E+07  (  1.026 times starting phi)
 
         Lambda =   4.6416     ----->
-           Phi =  3.26238E+06  (  1.219 times starting phi)
+           Phi =  2.37483E+07  (  1.202 times starting phi)
 
-        Lambda =   2.1544     ----->
-           Phi =  5.06157E+06  (  1.891 times starting phi)
+        Lambda =   21.544     ----->
+           Phi =  2.16372E+07  (  1.095 times starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  3.26238E+06
+    Lowest phi this iteration:  2.02655E+07
     Relative phi reduction between optimisation iterations less than 0.1000
     Switch to higher order derivatives calculation
     (restart from best parameters so far - these achieved at iteration    0)
@@ -184,322 +184,533 @@
        Current parameter values
        nne_ssw_p32     5.000000E-03
        nne_ssw_min      50.0000    
-       ne_sw_p32       1.000000E-03
+       ne_sw_p32       5.000000E-04
        nw_se_p32       1.000000E-03
        regional_min     100.000    
 
 
  OPTIMISATION ITERATION NO.        : 2
     Model calls so far             : 9
-    Starting phi for this iteration                          :  2.67697E+06
-    Contribution to phi from observation group "lineaments"  :  2.63114E+06
-    Contribution to phi from observation group "d2w"         :   45822.    
+    Starting phi for this iteration                          :  1.97591E+07
+    Contribution to phi from observation group "lineaments"  :  1.97169E+07
+    Contribution to phi from observation group "d2w"         :   42172.    
 
         Lambda =   10.000     ----->
-           Phi =  3.59047E+06  (  1.341 times starting phi)
+           Phi =  2.96649E+06  (  0.150 of starting phi)
 
-        Lambda =   4.6416     ----->
-           Phi =  4.85368E+06  (  1.813 times starting phi)
-
-        Lambda =   21.544     ----->
-           Phi =  3.49005E+06  (  1.304 times starting phi)
-
-    No more lambdas: relative phi reduction between lambdas less than 0.0300
-    Lowest phi this iteration:  3.49005E+06
+    No more lambdas: phi is less than 0.3000 of starting phi
+    Lowest phi this iteration:  2.96649E+06
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     5.195665E-03             nne_ssw_p32      5.000000E-03
-       nne_ssw_min      50.0186                 nne_ssw_min       50.0000    
-       ne_sw_p32       1.071208E-03             ne_sw_p32        1.000000E-03
-       nw_se_p32       1.943091E-03             nw_se_p32        1.000000E-03
-       regional_min     100.079                 regional_min      100.000    
-    Maximum relative change: 0.9431     ["nw_se_p32"]
+       nne_ssw_p32     1.000000E-04             nne_ssw_p32      5.000000E-03
+       nne_ssw_min      48.0443                 nne_ssw_min       50.0000    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        5.000000E-04
+       nw_se_p32       2.230439E-03             nw_se_p32        1.000000E-03
+       regional_min     100.091                 regional_min      100.000    
+    Maximum relative change:  1.230     ["nw_se_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 3
-    Model calls so far             : 22
-    Starting phi for this iteration                          :  3.49005E+06
-    Contribution to phi from observation group "lineaments"  :  3.44999E+06
-    Contribution to phi from observation group "d2w"         :   40063.    
+    Model calls so far             : 20
+    Starting phi for this iteration                          :  2.96649E+06
+    Contribution to phi from observation group "lineaments"  :  2.56062E+06
+    Contribution to phi from observation group "d2w"         :  4.05874E+05
+        param "ne_sw_p32" frozen: gradient and update vectors out of bounds
 
-        Lambda =   21.544     ----->
-           Phi =  3.78454E+06  (  1.084 times starting phi)
+        Lambda =   4.6416     ----->
+           Phi =  1.14630E+06  (  0.386 of starting phi)
 
-        Lambda =   7.7426     ----->
-           Phi =  1.30849E+06  (  0.375 of starting phi)
+        Lambda =   2.3208     ----->
+           Phi =  1.16815E+06  (  0.394 of starting phi)
 
-        Lambda =   2.7826     ----->
-           Phi =  5.48402E+06  (  1.571 times starting phi)
+        Lambda =   9.2832     ----->
+           Phi =  1.03811E+06  (  0.350 of starting phi)
+
+        Lambda =   18.566     ----->
+           Phi =  1.34506E+06  (  0.453 of starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  1.30849E+06
+    Lowest phi this iteration:  1.03811E+06
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     5.412903E-03             nne_ssw_p32      5.195665E-03
-       nne_ssw_min      54.3280                 nne_ssw_min       50.0186    
-       ne_sw_p32       1.874394E-03             ne_sw_p32        1.071208E-03
-       nw_se_p32       1.275674E-03             nw_se_p32        1.943091E-03
-       regional_min     99.9635                 regional_min      100.079    
-    Maximum relative change: 0.7498     ["ne_sw_p32"]
+       nne_ssw_p32     6.000000E-04             nne_ssw_p32      1.000000E-04
+       nne_ssw_min      73.3050                 nne_ssw_min       48.0443    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       2.074531E-03             nw_se_p32        2.230439E-03
+       regional_min     91.7403                 regional_min      100.091    
+    Maximum relative change:  5.000     ["nne_ssw_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 4
-    Model calls so far             : 35
-    Starting phi for this iteration                          :  1.30849E+06
-    Contribution to phi from observation group "lineaments"  :  1.28085E+06
-    Contribution to phi from observation group "d2w"         :   27642.    
+    Model calls so far             : 34
+    Starting phi for this iteration                          :  1.03811E+06
+    Contribution to phi from observation group "lineaments"  :  7.83131E+05
+    Contribution to phi from observation group "d2w"         :  2.54980E+05
+    All frozen parameters freed.
+        param "ne_sw_p32" frozen: gradient and update vectors out of bounds
 
-        Lambda =   2.7826     ----->
-           Phi =  3.65231E+06  (  2.791 times starting phi)
+        Lambda =   9.2832     ----->
+           Phi =  1.38454E+06  (  1.334 times starting phi)
 
-        Lambda =   1.3913     ----->
-           Phi =  2.44375E+06  (  1.868 times starting phi)
+        Lambda =   4.4170     ----->
+           Phi =  1.01188E+06  (  0.975 of starting phi)
 
-        Lambda =  0.69564     ----->
-           Phi =  2.03493E+06  (  1.555 times starting phi)
-
-        Lambda =  0.34782     ----->
-           Phi =  5.10000E+06  (  3.898 times starting phi)
+        Lambda =   2.1017     ----->
+           Phi =  1.17885E+06  (  1.136 times starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  2.03493E+06
+    Lowest phi this iteration:  1.01188E+06
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     5.029269E-03             nne_ssw_p32      5.412903E-03
-       nne_ssw_min      79.1827                 nne_ssw_min       54.3280    
-       ne_sw_p32       1.645847E-03             ne_sw_p32        1.874394E-03
-       nw_se_p32       1.444263E-03             nw_se_p32        1.275674E-03
-       regional_min     109.697                 regional_min      99.9635    
-    Maximum relative change: 0.4575     ["nne_ssw_min"]
+       nne_ssw_p32     2.149311E-03             nne_ssw_p32      6.000000E-04
+       nne_ssw_min      42.9159                 nne_ssw_min       73.3050    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       3.438506E-03             nw_se_p32        2.074531E-03
+       regional_min     87.8288                 regional_min      91.7403    
+    Maximum relative change:  2.582     ["nne_ssw_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 5
-    Model calls so far             : 49
-    Starting phi for this iteration                          :  2.03493E+06
-    Contribution to phi from observation group "lineaments"  :  2.00518E+06
-    Contribution to phi from observation group "d2w"         :   29744.    
+    Model calls so far             : 47
+    Starting phi for this iteration                          :  1.01188E+06
+    Contribution to phi from observation group "lineaments"  :  9.17488E+05
+    Contribution to phi from observation group "d2w"         :   94396.    
+    All frozen parameters freed.
 
-        Lambda =  0.34782     ----->
-           Phi =  3.15643E+06  (  1.551 times starting phi)
+        Lambda =   2.1017     ----->
+           Phi =  5.91304E+05  (  0.584 of starting phi)
 
-        Lambda =  0.17391     ----->
-           Phi =  2.39783E+06  (  1.178 times starting phi)
+        Lambda =   1.0508     ----->
+           Phi =  1.16768E+06  (  1.154 times starting phi)
 
-        Lambda =  8.69550E-02 ----->
-           Phi =  3.17381E+06  (  1.560 times starting phi)
+        Lambda =   4.2033     ----->
+           Phi =  7.60724E+05  (  0.752 of starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  2.39783E+06
+    Lowest phi this iteration:  5.91304E+05
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     4.130344E-03             nne_ssw_p32      5.029269E-03
-       nne_ssw_min      80.6824                 nne_ssw_min       79.1827    
-       ne_sw_p32       1.506928E-03             ne_sw_p32        1.645847E-03
-       nw_se_p32       2.679742E-03             nw_se_p32        1.444263E-03
-       regional_min     110.980                 regional_min      109.697    
-    Maximum relative change: 0.8554     ["nw_se_p32"]
+       nne_ssw_p32     1.929411E-03             nne_ssw_p32      2.149311E-03
+       nne_ssw_min      43.0858                 nne_ssw_min       42.9159    
+       ne_sw_p32       6.000000E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       3.636010E-03             nw_se_p32        3.438506E-03
+       regional_min     87.4614                 regional_min      87.8288    
+    Maximum relative change:  5.000     ["ne_sw_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 6
-    Model calls so far             : 62
-    Starting phi for this iteration                          :  2.39783E+06
-    Contribution to phi from observation group "lineaments"  :  2.33086E+06
-    Contribution to phi from observation group "d2w"         :   66973.    
+    Model calls so far             : 60
+    Starting phi for this iteration                          :  5.91304E+05
+    Contribution to phi from observation group "lineaments"  :  4.99923E+05
+    Contribution to phi from observation group "d2w"         :   91381.    
 
-        Lambda =  8.69550E-02 ----->
-           Phi =  1.58046E+06  (  0.659 of starting phi)
+        Lambda =   2.1017     ----->
+           Phi =  4.39378E+05  (  0.743 of starting phi)
 
-        Lambda =  3.85235E-02 ----->
-           Phi =  2.41659E+06  (  1.008 times starting phi)
+        Lambda =   1.0508     ----->
+           Phi =  2.96321E+05  (  0.501 of starting phi)
 
-        Lambda =  0.19627     ----->
-           Phi =  5.76032E+06  (  2.402 times starting phi)
+        Lambda =  0.52542     ----->
+           Phi =  5.16398E+05  (  0.873 of starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  1.58046E+06
+    Lowest phi this iteration:  2.96321E+05
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     3.797605E-03             nne_ssw_p32      4.130344E-03
-       nne_ssw_min      80.9950                 nne_ssw_min       80.6824    
-       ne_sw_p32       8.076768E-04             ne_sw_p32        1.506928E-03
-       nw_se_p32       3.486887E-03             nw_se_p32        2.679742E-03
-       regional_min     94.4911                 regional_min      110.980    
-    Maximum relative change: 0.4640     ["ne_sw_p32"]
+       nne_ssw_p32     1.760612E-03             nne_ssw_p32      1.929411E-03
+       nne_ssw_min      45.3610                 nne_ssw_min       43.0858    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        6.000000E-05
+       nw_se_p32       3.309614E-03             nw_se_p32        3.636010E-03
+       regional_min     84.5252                 regional_min      87.4614    
+    Maximum relative change: 0.8333     ["ne_sw_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 7
-    Model calls so far             : 75
-    Starting phi for this iteration                          :  1.58046E+06
-    Contribution to phi from observation group "lineaments"  :  1.53158E+06
-    Contribution to phi from observation group "d2w"         :   48877.    
+    Model calls so far             : 73
+    Starting phi for this iteration                          :  2.96321E+05
+    Contribution to phi from observation group "lineaments"  :  1.59080E+05
+    Contribution to phi from observation group "d2w"         :  1.37240E+05
 
-        Lambda =  8.69550E-02 ----->
-           Phi =  9.85342E+05  (  0.623 of starting phi)
+        Lambda =  0.52542     ----->
+           Phi =  4.72808E+05  (  1.596 times starting phi)
 
-        Lambda =  3.85235E-02 ----->
-           Phi =  1.96737E+06  (  1.245 times starting phi)
+        Lambda =  0.26271     ----->
+           Phi =  3.77323E+05  (  1.273 times starting phi)
 
-        Lambda =  0.19627     ----->
-           Phi =  1.08464E+06  (  0.686 of starting phi)
+        Lambda =  0.13135     ----->
+           Phi =  5.35731E+05  (  1.808 times starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  9.85342E+05
+    Lowest phi this iteration:  3.77323E+05
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     3.865743E-03             nne_ssw_p32      3.797605E-03
-       nne_ssw_min      95.7354                 nne_ssw_min       80.9950    
-       ne_sw_p32       9.950677E-04             ne_sw_p32        8.076768E-04
-       nw_se_p32       3.505553E-03             nw_se_p32        3.486887E-03
-       regional_min     89.6391                 regional_min      94.4911    
-    Maximum relative change: 0.2320     ["ne_sw_p32"]
+       nne_ssw_p32     1.729997E-03             nne_ssw_p32      1.760612E-03
+       nne_ssw_min      45.2144                 nne_ssw_min       45.3610    
+       ne_sw_p32       2.250000E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       3.223536E-03             nw_se_p32        3.309614E-03
+       regional_min     84.2165                 regional_min      84.5252    
+    Maximum relative change:  1.250     ["ne_sw_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 8
-    Model calls so far             : 88
-    Starting phi for this iteration                          :  9.85342E+05
-    Contribution to phi from observation group "lineaments"  :  9.26756E+05
-    Contribution to phi from observation group "d2w"         :   58586.    
+    Model calls so far             : 86
+    Starting phi for this iteration                          :  3.77323E+05
+    Contribution to phi from observation group "lineaments"  :  2.45093E+05
+    Contribution to phi from observation group "d2w"         :  1.32231E+05
 
-        Lambda =  8.69550E-02 ----->
-           Phi =  4.17832E+06  (  4.240 times starting phi)
+        Lambda =  0.13135     ----->
+           Phi =  3.65933E+05  (  0.970 of starting phi)
 
-        Lambda =  3.85235E-02 ----->
-           Phi =  6.93773E+05  (  0.704 of starting phi)
+        Lambda =  6.56773E-02 ----->
+           Phi =  3.17196E+05  (  0.841 of starting phi)
 
-        Lambda =  1.70670E-02 ----->
-           Phi =  1.07853E+06  (  1.095 times starting phi)
+        Lambda =  3.28387E-02 ----->
+           Phi =  3.72724E+05  (  0.988 of starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  6.93773E+05
+    Lowest phi this iteration:  3.17196E+05
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     3.908354E-03             nne_ssw_p32      3.865743E-03
-       nne_ssw_min      94.3831                 nne_ssw_min       95.7354    
-       ne_sw_p32       8.796337E-04             ne_sw_p32        9.950677E-04
-       nw_se_p32       3.551971E-03             nw_se_p32        3.505553E-03
-       regional_min     96.5673                 regional_min      89.6391    
-    Maximum relative change: 0.1160     ["ne_sw_p32"]
+       nne_ssw_p32     1.753289E-03             nne_ssw_p32      1.729997E-03
+       nne_ssw_min      45.1512                 nne_ssw_min       45.2144    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        2.250000E-05
+       nw_se_p32       3.154116E-03             nw_se_p32        3.223536E-03
+       regional_min     81.0772                 regional_min      84.2165    
+    Maximum relative change: 0.5556     ["ne_sw_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 9
-    Model calls so far             : 101
-    Starting phi for this iteration                          :  6.93773E+05
-    Contribution to phi from observation group "lineaments"  :  6.27883E+05
-    Contribution to phi from observation group "d2w"         :   65890.    
+    Model calls so far             : 99
+    Starting phi for this iteration                          :  3.17196E+05
+    Contribution to phi from observation group "lineaments"  :  1.93539E+05
+    Contribution to phi from observation group "d2w"         :  1.23657E+05
 
-        Lambda =  1.70670E-02 ----->
-           Phi =  2.39723E+06  (  3.455 times starting phi)
+        Lambda =  3.28387E-02 ----->
+           Phi =  2.05693E+06  (  6.485 times starting phi)
 
-        Lambda =  4.39417E-03 ----->
-           Phi =  5.80886E+06  (  8.373 times starting phi)
+        Lambda =  1.05159E-02 ----->
+           Phi =  4.78615E+05  (  1.509 times starting phi)
 
-        Lambda =  6.62885E-02 ----->
-           Phi =  1.62235E+06  (  2.338 times starting phi)
+        Lambda =  3.36751E-03 ----->
+           Phi =  4.18967E+05  (  1.321 times starting phi)
 
-        Lambda =  0.25747     ----->
-           Phi =  1.97932E+06  (  2.853 times starting phi)
+        Lambda =  1.07838E-03 ----->
+           Phi =  5.10690E+05  (  1.610 times starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  1.62235E+06
+    Lowest phi this iteration:  4.18967E+05
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     4.250923E-03             nne_ssw_p32      3.908354E-03
-       nne_ssw_min      141.134                 nne_ssw_min       94.3831    
-       ne_sw_p32       1.191066E-03             ne_sw_p32        8.796337E-04
-       nw_se_p32       3.893957E-03             nw_se_p32        3.551971E-03
-       regional_min     91.7337                 regional_min      96.5673    
-    Maximum relative change: 0.4953     ["nne_ssw_min"]
+       nne_ssw_p32     1.758432E-03             nne_ssw_p32      1.753289E-03
+       nne_ssw_min      46.1478                 nne_ssw_min       45.1512    
+       ne_sw_p32       1.312500E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       3.155855E-03             nw_se_p32        3.154116E-03
+       regional_min     82.8416                 regional_min      81.0772    
+    Maximum relative change: 0.3125     ["ne_sw_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 10
-    Model calls so far             : 115
-    Starting phi for this iteration                          :  1.62235E+06
-    Contribution to phi from observation group "lineaments"  :  1.56782E+06
-    Contribution to phi from observation group "d2w"         :   54530.    
+    Model calls so far             : 113
+    Starting phi for this iteration                          :  4.18967E+05
+    Contribution to phi from observation group "lineaments"  :  3.04938E+05
+    Contribution to phi from observation group "d2w"         :  1.14029E+05
 
-        Lambda =  6.62885E-02 ----->
-           Phi =  2.57072E+06  (  1.585 times starting phi)
+        Lambda =  1.07838E-03 ----->
+           Phi =  4.51778E+05  (  1.078 times starting phi)
 
-        Lambda =  2.68278E-02 ----->
-           Phi =  2.86980E+06  (  1.769 times starting phi)
+        Lambda =  1.10585E-04 ----->
+           Phi =  5.08936E+05  (  1.215 times starting phi)
 
-        Lambda =  0.16379     ----->
-           Phi =  4.68801E+06  (  2.890 times starting phi)
+        Lambda =  1.05159E-02 ----->
+           Phi =  4.34969E+05  (  1.038 times starting phi)
+
+        Lambda =  0.10255     ----->
+           Phi =  2.69328E+05  (  0.643 of starting phi)
+
+        Lambda =   1.0000     ----->
+           Phi =  3.06600E+05  (  0.732 of starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  2.57072E+06
+    Lowest phi this iteration:  2.69328E+05
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     4.232783E-03             nne_ssw_p32      4.250923E-03
-       nne_ssw_min      146.383                 nne_ssw_min       141.134    
-       ne_sw_p32       7.363451E-04             ne_sw_p32        1.191066E-03
-       nw_se_p32       4.258026E-03             nw_se_p32        3.893957E-03
-       regional_min     72.7432                 regional_min      91.7337    
-    Maximum relative change: 0.3818     ["ne_sw_p32"]
+       nne_ssw_p32     1.681109E-03             nne_ssw_p32      1.758432E-03
+       nne_ssw_min      36.3311                 nne_ssw_min       46.1478    
+       ne_sw_p32       7.875000E-05             ne_sw_p32        1.312500E-05
+       nw_se_p32       3.169076E-03             nw_se_p32        3.155855E-03
+       regional_min     99.2655                 regional_min      82.8416    
+    Maximum relative change:  5.000     ["ne_sw_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 11
     Model calls so far             : 128
-    Starting phi for this iteration                          :  2.57072E+06
-    Contribution to phi from observation group "lineaments"  :  2.53033E+06
-    Contribution to phi from observation group "d2w"         :   40389.    
+    Starting phi for this iteration                          :  2.69328E+05
+    Contribution to phi from observation group "lineaments"  :  1.28152E+05
+    Contribution to phi from observation group "d2w"         :  1.41176E+05
 
-        Lambda =  6.62885E-02 ----->
-           Phi =  4.57247E+06  (  1.779 times starting phi)
+        Lambda =  0.10255     ----->
+           Phi =  1.87205E+05  (  0.695 of starting phi)
 
-        Lambda =  2.68278E-02 ----->
-           Phi =  1.79131E+06  (  0.697 of starting phi)
+        Lambda =  4.79989E-02 ----->
+           Phi =  1.77941E+05  (  0.661 of starting phi)
 
-        Lambda =  1.08575E-02 ----->
-           Phi =  1.45802E+06  (  0.567 of starting phi)
-
-        Lambda =  4.39417E-03 ----->
-           Phi =  8.81309E+05  (  0.343 of starting phi)
-
-        Lambda =  1.77837E-03 ----->
-           Phi =  3.70271E+06  (  1.440 times starting phi)
+        Lambda =  2.24667E-02 ----->
+           Phi =  2.02070E+05  (  0.750 of starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  8.81309E+05
+    Lowest phi this iteration:  1.77941E+05
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     4.075075E-03             nne_ssw_p32      4.232783E-03
-       nne_ssw_min      155.303                 nne_ssw_min       146.383    
-       ne_sw_p32       8.769047E-04             ne_sw_p32        7.363451E-04
-       nw_se_p32       4.260482E-03             nw_se_p32        4.258026E-03
-       regional_min     75.7561                 regional_min      72.7432    
-    Maximum relative change: 0.1909     ["ne_sw_p32"]
+       nne_ssw_p32     1.400996E-03             nne_ssw_p32      1.681109E-03
+       nne_ssw_min      29.5692                 nne_ssw_min       36.3311    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        7.875000E-05
+       nw_se_p32       2.524071E-03             nw_se_p32        3.169076E-03
+       regional_min     81.0718                 regional_min      99.2655    
+    Maximum relative change: 0.8730     ["ne_sw_p32"]
 
 
  OPTIMISATION ITERATION NO.        : 12
-    Model calls so far             : 143
-    Starting phi for this iteration                          :  8.81309E+05
-    Contribution to phi from observation group "lineaments"  :  8.46103E+05
-    Contribution to phi from observation group "d2w"         :   35206.    
+    Model calls so far             : 141
+    Starting phi for this iteration                          :  1.77941E+05
+    Contribution to phi from observation group "lineaments"  :   20541.    
+    Contribution to phi from observation group "d2w"         :  1.57400E+05
+        param "ne_sw_p32" frozen: gradient and update vectors out of bounds
 
-        Lambda =  1.77837E-03 ----->
-           Phi =  7.08685E+05  (  0.804 of starting phi)
+        Lambda =  2.24667E-02 ----->
+           Phi =  2.97733E+06  ( 16.732 times starting phi)
 
-        Lambda =  2.15458E-04 ----->
-           Phi =  3.32122E+06  (  3.769 times starting phi)
+        Lambda =  6.33947E-03 ----->
+           Phi =  3.06954E+06  ( 17.250 times starting phi)
 
-        Lambda =  1.46785E-02 ----->
-           Phi =  9.64976E+05  (  1.095 times starting phi)
+        Lambda =  7.96208E-02 ----->
+           Phi =  1.73019E+06  (  9.723 times starting phi)
+
+        Lambda =  0.28217     ----->
+           Phi =  1.76949E+06  (  9.944 times starting phi)
 
     No more lambdas: phi rising
-    Lowest phi this iteration:  7.08685E+05
+    Lowest phi this iteration:  1.73019E+06
 
        Current parameter values                 Previous parameter values
-       nne_ssw_p32     3.849806E-03             nne_ssw_p32      4.075075E-03
-       nne_ssw_min      88.7254                 nne_ssw_min       155.303    
-       ne_sw_p32       6.711028E-04             ne_sw_p32        8.769047E-04
-       nw_se_p32       3.364886E-03             nw_se_p32        4.260482E-03
-       regional_min     107.311                 regional_min      75.7561    
-    Maximum relative change: 0.4287     ["nne_ssw_min"]
+       nne_ssw_p32     4.090442E-04             nne_ssw_p32      1.400996E-03
+       nne_ssw_min      71.8897                 nne_ssw_min       29.5692    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       2.629206E-03             nw_se_p32        2.524071E-03
+       regional_min     25.0000                 regional_min      81.0718    
+    Maximum relative change:  1.431     ["nne_ssw_min"]
+
+
+ OPTIMISATION ITERATION NO.        : 13
+    Model calls so far             : 155
+    Starting phi for this iteration                          :  1.73019E+06
+    Contribution to phi from observation group "lineaments"  :  1.45602E+06
+    Contribution to phi from observation group "d2w"         :  2.74172E+05
+    All frozen parameters freed.
+        param "regional_min" frozen: - update vector out of bounds
+
+        Lambda =  7.96208E-02 ----->
+           Phi =  1.20706E+06  (  0.698 of starting phi)
+
+        Lambda =  3.42533E-02 ----->
+           Phi =  1.33209E+06  (  0.770 of starting phi)
+
+        Lambda =  0.18508     ----->
+           Phi =  1.22600E+06  (  0.709 of starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:  1.20706E+06
+
+       Current parameter values                 Previous parameter values
+       nne_ssw_p32     5.972981E-04             nne_ssw_p32      4.090442E-04
+       nne_ssw_min      79.0000                 nne_ssw_min       71.8897    
+       ne_sw_p32       6.000000E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       2.491222E-03             nw_se_p32        2.629206E-03
+       regional_min     25.0000                 regional_min      25.0000    
+    Maximum relative change:  5.000     ["ne_sw_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 14
+    Model calls so far             : 168
+    Starting phi for this iteration                          :  1.20706E+06
+    Contribution to phi from observation group "lineaments"  :  9.51143E+05
+    Contribution to phi from observation group "d2w"         :  2.55922E+05
+    All frozen parameters freed.
+        param "regional_min" frozen: - update vector out of bounds
+
+        Lambda =  7.96208E-02 ----->
+           Phi =  3.18442E+05  (  0.264 of starting phi)
+
+    No more lambdas: phi is less than 0.3000 of starting phi
+    Lowest phi this iteration:  3.18442E+05
+
+       Current parameter values                 Previous parameter values
+       nne_ssw_p32     1.160406E-03             nne_ssw_p32      5.972981E-04
+       nne_ssw_min      152.603                 nne_ssw_min       79.0000    
+       ne_sw_p32       2.098188E-04             ne_sw_p32        6.000000E-05
+       nw_se_p32       7.923153E-04             nw_se_p32        2.491222E-03
+       regional_min     25.0000                 regional_min      25.0000    
+    Maximum relative change:  2.497     ["ne_sw_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 15
+    Model calls so far             : 179
+    Starting phi for this iteration                          :  3.18442E+05
+    Contribution to phi from observation group "lineaments"  :  1.38023E+05
+    Contribution to phi from observation group "d2w"         :  1.80419E+05
+    All frozen parameters freed.
+        param "regional_min" frozen: - update vector out of bounds
+
+        Lambda =  3.42533E-02 ----->
+           Phi =  2.55233E+05  (  0.802 of starting phi)
+
+        Lambda =  1.11242E-02 ----->
+           Phi =  1.76150E+05  (  0.553 of starting phi)
+
+        Lambda =  3.61274E-03 ----->
+           Phi =  1.84072E+05  (  0.578 of starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:  1.76150E+05
+
+       Current parameter values                 Previous parameter values
+       nne_ssw_p32     1.295914E-03             nne_ssw_p32      1.160406E-03
+       nne_ssw_min      51.5683                 nne_ssw_min       152.603    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        2.098188E-04
+       nw_se_p32       7.844286E-04             nw_se_p32        7.923153E-04
+       regional_min     25.0000                 regional_min      25.0000    
+    Maximum relative change: 0.9523     ["ne_sw_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 16
+    Model calls so far             : 192
+    Starting phi for this iteration                          :  1.76150E+05
+    Contribution to phi from observation group "lineaments"  :   31389.    
+    Contribution to phi from observation group "d2w"         :  1.44760E+05
+    All frozen parameters freed.
+        param "ne_sw_p32" frozen: gradient and update vectors out of bounds
+        param "regional_min" frozen: - update vector out of bounds
+
+        Lambda =  3.61274E-03 ----->
+           Phi =  2.59133E+05  (  1.471 times starting phi)
+
+        Lambda =  5.54347E-04 ----->
+           Phi =  4.00912E+05  (  2.276 times starting phi)
+
+        Lambda =  2.35446E-02 ----->
+           Phi =  2.20147E+05  (  1.250 times starting phi)
+
+        Lambda =  0.15344     ----->
+           Phi =  2.14747E+05  (  1.219 times starting phi)
+
+    No more lambdas: relative phi reduction between lambdas less than 0.0300
+    Lowest phi this iteration:  2.14747E+05
+
+       Current parameter values                 Previous parameter values
+       nne_ssw_p32     1.375318E-03             nne_ssw_p32      1.295914E-03
+       nne_ssw_min      46.5664                 nne_ssw_min       51.5683    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       1.102396E-03             nw_se_p32        7.844286E-04
+       regional_min     25.0000                 regional_min      25.0000    
+    Maximum relative change: 0.4053     ["nw_se_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 17
+    Model calls so far             : 206
+    Starting phi for this iteration                          :  2.14747E+05
+    Contribution to phi from observation group "lineaments"  :   40278.    
+    Contribution to phi from observation group "d2w"         :  1.74469E+05
+    All frozen parameters freed.
+        param "ne_sw_p32" frozen: - update vector out of bounds
+
+        Lambda =  0.15344     ----->
+           Phi =  3.23736E+06  ( 15.075 times starting phi)
+
+        Lambda =  7.67212E-02 ----->
+           Phi =  2.54635E+06  ( 11.857 times starting phi)
+
+        Lambda =  3.83606E-02 ----->
+           Phi =  3.93919E+06  ( 18.343 times starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:  2.54635E+06
+
+       Current parameter values                 Previous parameter values
+       nne_ssw_p32     2.777175E-03             nne_ssw_p32      1.375318E-03
+       nne_ssw_min      25.0000                 nne_ssw_min       46.5664    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       3.189118E-03             nw_se_p32        1.102396E-03
+       regional_min     37.3984                 regional_min      25.0000    
+    Maximum relative change:  1.893     ["nw_se_p32"]
+
+
+ OPTIMISATION ITERATION NO.        : 18
+    Model calls so far             : 219
+    Starting phi for this iteration                          :  2.54635E+06
+    Contribution to phi from observation group "lineaments"  :  2.48030E+06
+    Contribution to phi from observation group "d2w"         :   66055.    
+    All frozen parameters freed.
+        param "nne_ssw_min" frozen: gradient and update vectors out of bounds
+        param "ne_sw_p32" frozen: gradient and update vectors out of bounds
+
+        Lambda =  3.83606E-02 ----->
+           Phi =  1.51206E+06  (  0.594 of starting phi)
+
+        Lambda =  1.29374E-02 ----->
+           Phi =  2.00059E+06  (  0.786 of starting phi)
+
+        Lambda =  0.11374     ----->
+           Phi =  1.00534E+06  (  0.395 of starting phi)
+
+        Lambda =  0.33726     ----->
+           Phi =  7.28658E+05  (  0.286 of starting phi)
+
+    No more lambdas: phi is less than 0.3000 of starting phi
+    Lowest phi this iteration:  7.28658E+05
+
+       Current parameter values                 Previous parameter values
+       nne_ssw_p32     1.926545E-03             nne_ssw_p32      2.777175E-03
+       nne_ssw_min      25.0000                 nne_ssw_min       25.0000    
+       ne_sw_p32       1.000000E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       2.705595E-03             nw_se_p32        3.189118E-03
+       regional_min     25.0000                 regional_min      37.3984    
+    Maximum relative change: 0.3315     ["regional_min"]
+
+
+ OPTIMISATION ITERATION NO.        : 19
+    Model calls so far             : 233
+    Starting phi for this iteration                          :  7.28658E+05
+    Contribution to phi from observation group "lineaments"  :  6.28264E+05
+    Contribution to phi from observation group "d2w"         :  1.00394E+05
+    All frozen parameters freed.
+        param "nne_ssw_min" frozen: - update vector out of bounds
+
+        Lambda =  0.33726     ----->
+           Phi =  2.39925E+05  (  0.329 of starting phi)
+        param "ne_sw_p32" frozen: - update vector out of bounds
+
+        Lambda =  0.16863     ----->
+           Phi =  3.15930E+05  (  0.434 of starting phi)
+
+        Lambda =  8.43144E-02 ----->
+           Phi =  5.00158E+05  (  0.686 of starting phi)
+
+        Lambda =  0.33726     ----->
+           Phi =  3.85236E+05  (  0.529 of starting phi)
+
+    No more lambdas: phi rising
+    Lowest phi this iteration:  2.39925E+05
+
+       Current parameter values                 Previous parameter values
+       nne_ssw_p32     1.567154E-03             nne_ssw_p32      1.926545E-03
+       nne_ssw_min      25.0000                 nne_ssw_min       25.0000    
+       ne_sw_p32       4.512372E-05             ne_sw_p32        1.000000E-05
+       nw_se_p32       3.156247E-03             nw_se_p32        2.705595E-03
+       regional_min     30.6374                 regional_min      25.0000    
+    Maximum relative change: 0.2255     ["regional_min"]
 
     Optimisation complete:   4 optimisation iterations have elapsed since lowest
                            phi was achieved.
-    Total model calls:    156
+    Total model calls:    247
 
     The model has been run one final time using best parameters. 
     Thus all model input files contain best parameter values, and model 
@@ -513,11 +724,11 @@
 
  Parameter        Estimated         95% percent confidence limits
                   value             lower limit       upper limit
-  nne_ssw_p32    3.908354E-03      -1.768218E-02      2.549889E-02
-  nne_ssw_min     94.3831           -2890.42           3079.19    
-  ne_sw_p32      8.796337E-04      -1.821126E-02      1.997053E-02
-  nw_se_p32      3.551971E-03      -1.577072E-02      2.287466E-02
-  regional_min    96.5673           -614.899           808.033    
+  nne_ssw_p32    1.295914E-03      -1.299131E-04      2.721740E-03
+  nne_ssw_min     51.5683           -1519.64           1622.78    
+  ne_sw_p32      1.000000E-05      -1.682367E-03      1.702367E-03
+  nw_se_p32      7.844286E-04      -5.271329E-03      6.840186E-03
+  regional_min    25.0000           -27.8691           77.8691    
 
  Note: confidence limits provide only an indication of parameter uncertainty.
        They rely on a linearity assumption which  may not extend as far in 
@@ -530,18 +741,18 @@
 
  Observation            Measured       Calculated     Residual       Weight     Group
                         value          value
- total_length           6150.00        13889.4       -7739.40       0.1000      lineaments  
- num_lineaments         18.0000        35.0000       -17.0000        10.00      lineaments  
- d2wm3s                 6.59179        8.32533       -1.73354        1.000      d2w         
- d2wm2s                 19.4598        22.3436       -2.88378        1.000      d2w         
- d2wm1s                 37.6725        42.6999       -5.02745        1.000      d2w         
- d2w0s                  70.9953        115.172       -44.1769        1.000      d2w         
- d2wp1s                 145.450        294.820       -149.370        1.000      d2w         
- d2wp2s                 370.649        566.595       -195.947        1.000      d2w         
- d2wp3s                 578.664        627.119       -48.4548        1.000      d2w         
- d2w100                0.743967       0.510468       0.233498        100.0      d2w         
- d2w200                0.227223       0.382282      -0.155058        100.0      d2w         
- d2w300                2.881002E-02   0.107250      -7.843975E-02    100.0      d2w         
+ total_length           6150.00        7612.51       -1462.51       0.1000      lineaments  
+ num_lineaments         18.0000        17.0000        1.00000        100.0      lineaments  
+ d2wm3s                 6.59179        11.7344       -5.14258        1.000      d2w         
+ d2wm2s                 19.4598        24.8918       -5.43203        1.000      d2w         
+ d2wm1s                 37.6725        50.6360       -12.9635        1.000      d2w         
+ d2w0s                  70.9953        130.370       -59.3743        1.000      d2w         
+ d2wp1s                 145.450        447.860       -302.410        1.000      d2w         
+ d2wp2s                 370.649        588.487       -217.839        1.000      d2w         
+ d2wp3s                 578.664        610.553       -31.8890        1.000      d2w         
+ d2w100                0.743967       0.479081       0.264886        100.0      d2w         
+ d2w200                0.227223       0.401994      -0.174771        100.0      d2w         
+ d2w300                2.881002E-02   0.118925      -9.011487E-02    100.0      d2w         
 
  See file duvernay.res for more details of residuals in graph-ready format.
 
@@ -550,25 +761,25 @@
 
  Objective function ----->
 
-   Sum of squared weighted residuals (ie phi)                =  6.93773E+05
-   Contribution to phi from observation group "lineaments"   =  6.27883E+05
-   Contribution to phi from observation group "d2w"          =   65890.    
+   Sum of squared weighted residuals (ie phi)                =  1.76150E+05
+   Contribution to phi from observation group "lineaments"   =   31389.    
+   Contribution to phi from observation group "d2w"          =  1.44760E+05
 
 
  Correlation Coefficient ----->
 
-   Correlation coefficient                                   =  0.92710    
+   Correlation coefficient                                   =  0.97649    
 
 
  Analysis of residuals ----->
 
    All residuals:-
       Number of residuals with non-zero weight                       =    12
-      Mean value of non-zero weighted residuals                      =  -116.0    
-      Maximum weighted residual [observation "d2w100"]               =   23.35    
-      Minimum weighted residual [observation "total_length"]         =  -773.9    
-      Standard variance of weighted residuals                        =  9.9110E+04
-      Standard error of weighted residuals                           =   314.8    
+      Mean value of non-zero weighted residuals                      =  -56.78    
+      Maximum weighted residual [observation "num_lineaments"]       =   100.0    
+      Minimum weighted residual [observation "d2wp1s"]               =  -302.4    
+      Standard variance of weighted residuals                        =  2.5164E+04
+      Standard error of weighted residuals                           =   158.6    
 
       Note: the above variance was obtained by dividing the objective 
       function by the number of system degrees of freedom (ie. number of 
@@ -580,22 +791,22 @@
 
    Residuals for observation group "lineaments":-
       Number of residuals with non-zero weight                       =     2
-      Mean value of non-zero weighted residuals                      =  -472.0    
-      Maximum weighted residual [observation "num_lineaments"]       =  -170.0    
-      Minimum weighted residual [observation "total_length"]         =  -773.9    
-      "Variance" of weighted residuals                               =  3.1394E+05
-      "Standard error" of weighted residuals                         =   560.3    
+      Mean value of non-zero weighted residuals                      =  -23.13    
+      Maximum weighted residual [observation "num_lineaments"]       =   100.0    
+      Minimum weighted residual [observation "total_length"]         =  -146.3    
+      "Variance" of weighted residuals                               =  1.5695E+04
+      "Standard error" of weighted residuals                         =   125.3    
 
       Note: the above "variance" was obtained by dividing the sum of squared 
       residuals by the number of items with non-zero weight.
 
    Residuals for observation group "d2w":-
       Number of residuals with non-zero weight                       =    10
-      Mean value of non-zero weighted residuals                      =  -44.76    
-      Maximum weighted residual [observation "d2w100"]               =   23.35    
-      Minimum weighted residual [observation "d2wp2s"]               =  -195.9    
-      "Variance" of weighted residuals                               =   6589.    
-      "Standard error" of weighted residuals                         =   81.17    
+      Mean value of non-zero weighted residuals                      =  -63.51    
+      Maximum weighted residual [observation "d2w100"]               =   26.49    
+      Minimum weighted residual [observation "d2wp1s"]               =  -302.4    
+      "Variance" of weighted residuals                               =  1.4476E+04
+      "Standard error" of weighted residuals                         =   120.3    
 
       Note: the above "variance" was obtained by dividing the sum of squared 
       residuals by the number of items with non-zero weight.
@@ -604,41 +815,41 @@
  K-L information statistics ----->
 
  
-   AIC   =   143.5799    
-   AICC  =   160.3799    
-   BIC   =   146.4894    
-   KIC   =   148.0791    
+   AIC   =   127.1302    
+   AICC  =   143.9302    
+   BIC   =   130.0396    
+   KIC   =   136.1647    
 
  Parameter covariance matrix ----->
 
               nne_ssw_p32  nne_ssw_min   ne_sw_p32    nw_se_p32   regional_min
- nne_ssw_p32    8.3342E-05    11.19      -7.3217E-05  -7.2683E-05    2.581    
- nne_ssw_min     11.19       1.5928E+06   -9.749       -10.28       3.6037E+05
- ne_sw_p32     -7.3217E-05   -9.749       6.5161E-05   6.2855E-05   -2.231    
- nw_se_p32     -7.2683E-05   -10.28       6.2855E-05   6.6753E-05   -2.331    
- regional_min    2.581       3.6037E+05   -2.231       -2.331       9.0499E+04
+ nne_ssw_p32    3.6347E-07  -0.3288       6.0224E-08   1.1094E-06   8.3490E-03
+ nne_ssw_min   -0.3288       4.4137E+05   4.2812E-02   -1.338      -1.2741E+04
+ ne_sw_p32      6.0224E-08   4.2812E-02   5.1207E-07   8.2519E-08   4.1656E-03
+ nw_se_p32      1.1094E-06   -1.338       8.2519E-08   6.5565E-06   3.4565E-02
+ regional_min   8.3490E-03  -1.2741E+04   4.1656E-03   3.4565E-02    499.7    
 
 
  Parameter correlation coefficient matrix ----->
 
               nne_ssw_p32  nne_ssw_min   ne_sw_p32    nw_se_p32   regional_min
- nne_ssw_p32     1.000       0.9711      -0.9935      -0.9745       0.9396    
- nne_ssw_min    0.9711        1.000      -0.9569      -0.9965       0.9492    
- ne_sw_p32     -0.9935      -0.9569        1.000       0.9530      -0.9188    
- nw_se_p32     -0.9745      -0.9965       0.9530        1.000      -0.9484    
- regional_min   0.9396       0.9492      -0.9188      -0.9484        1.000    
+ nne_ssw_p32     1.000      -0.8209       0.1396       0.7186       0.6195    
+ nne_ssw_min   -0.8209        1.000       9.0053E-02  -0.7866      -0.8579    
+ ne_sw_p32      0.1396       9.0053E-02    1.000       4.5035E-02   0.2604    
+ nw_se_p32      0.7186      -0.7866       4.5035E-02    1.000       0.6039    
+ regional_min   0.6195      -0.8579       0.2604       0.6039        1.000    
 
 
  Normalized eigenvectors of parameter covariance matrix ----->
 
                Vector_1     Vector_2     Vector_3     Vector_4     Vector_5   
- nne_ssw_p32   -0.5774       0.4655       0.6708       4.0608E-06  -6.8560E-06
- nne_ssw_min   -3.4605E-06  -5.0050E-06  -8.1292E-06  -0.2218      -0.9751    
- ne_sw_p32     -0.4963       0.4522      -0.7411      -1.5524E-06   5.9715E-06
- nw_se_p32     -0.6483      -0.7608      -3.0064E-02   7.2608E-07   6.2913E-06
- regional_min   1.3100E-06  -1.7906E-06  -5.7999E-06   0.9751      -0.2218    
+ nne_ssw_p32   -0.8435       0.5354      -4.2956E-02   8.6843E-06  -7.4460E-07
+ nne_ssw_min   -1.7505E-06  -1.1945E-06  -3.6747E-06  -2.8863E-02   0.9996    
+ ne_sw_p32      0.5339       0.8272      -0.1753      -4.0952E-05   9.6603E-08
+ nw_se_p32     -5.8312E-02  -0.1708      -0.9836       3.0884E-05  -3.0303E-06
+ regional_min  -3.0954E-05  -3.4480E-05  -2.3476E-05  -0.9996      -2.8863E-02
 
 
  Eigenvalues ----->
 
-                9.6826E-10   7.7957E-07   9.5772E-06    8530.       1.6748E+06
+                2.6048E-08   2.9854E-07   2.4453E-06    131.8       4.4174E+05

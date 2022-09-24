@@ -6,7 +6,7 @@ restart estimation
 10  -3.0  0.3  0.03  10  0
 5.0  5.0  1.0e-3
 0.1  noaui
-20  .005  4  4  .005  4
+10  .005  4  4  .005  4
 1  1  1
 * parameter groups
 p32_vals  relative  1E-2  1E-4  switch  1.50  parabolic
@@ -14,7 +14,7 @@ trunc_lims  relative  1E-1  1E-3  switch  1.50  parabolic
 * parameter data
 NNE_SSW_P32  none  relative  0.005  1E-4  0.01  p32_vals  1.0  0.0  1
 NNE_SSW_MIN  none  relative  50  25  250  trunc_lims  1.0  0.0  1
-NE_SW_P32  none  relative  0.001  1E-5  0.01  p32_vals  1.0  0.0  1
+NE_SW_P32  none  relative  0.0005  1E-5  0.01  p32_vals  1.0  0.0  1
 NW_SE_P32  none  relative  0.001  1E-5  0.01  p32_vals  1.0  0.0  1
 REGIONAL_MIN  none  relative  100  25  250  trunc_lims  1.0  0.0  1
 * observation groups
@@ -22,7 +22,7 @@ lineaments
 d2w
 * observation data
 total_length  6150  0.1  lineaments
-num_lineaments 18  10  lineaments
+num_lineaments 18  100  lineaments
 d2wm3s  6.59179413  1  d2w
 d2wm2s  19.45979499  1  d2w
 d2wm1s  37.67247344  1  d2w

@@ -54,7 +54,7 @@ END
 		END
 	END
 	#** Intensity
-		P32 = 0.01 [1/m]
+		P32 = 0.001 [1/m]
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -69,7 +69,7 @@ END
 		Type = "POWERLAW"
 		Parameter "Xmin" = 10 [m]
 		Parameter "D" = 1.01
-		MinValue = 500.0 [m]
+		MinValue = 25.0 [m]
 		MaxValue = 1000 [m]
 	END
 	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "
@@ -116,7 +116,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 = 0.01 [1/m]
+		P32 = 0.001 [1/m]
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -131,7 +131,7 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" = 10 [m]
 		Parameter "D" = 1.01
-		MinValue = 500.0 [m]
+		MinValue = 25.0 [m]
 		MaxValue = 1000 [m]
 	END
 	HeightFunction = "FractureLength* 1/RandomUniform( 2, 1 ) "
@@ -164,7 +164,7 @@ BEGIN DefineClusterAnalysis
 	RetainHullObjects = 0
 	SaveStats = 0
 	ClusterDetails = 0
-	SaveToFab = "cluster_fractures_99.fab"
+	SaveToFab = "cluster_fractures_0.fab"
 END
 
 BEGIN RunClusterAnalysis
@@ -192,7 +192,7 @@ BEGIN SetObjectOption
 END
 
 BEGIN ExportFile
-	Path = "clusters_99.frd"
+	Path = "clusters_0.frd"
 	TypeName = "FRED"
 END
 

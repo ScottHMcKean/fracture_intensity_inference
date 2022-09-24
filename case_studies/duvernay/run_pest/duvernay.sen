@@ -3,110 +3,173 @@
 
  OPTIMISATION ITERATION NO.  1 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        5.000000E-03      98007.6    
-   nne_ssw_min     trunc_lims       50.0000          1.25840    
-   ne_sw_p32       p32_vals        1.000000E-03      374590.    
-   nw_se_p32       p32_vals        1.000000E-03      132707.    
-   regional_min    trunc_lims       100.000          5.03355    
+   nne_ssw_p32     p32_vals        5.000000E-03      158040.    
+   nne_ssw_min     trunc_lims       50.0000          1.09578    
+   ne_sw_p32       p32_vals        5.000000E-04      266785.    
+   nw_se_p32       p32_vals        1.000000E-03      372297.    
+   regional_min    trunc_lims       100.000         0.917926    
 
 
  OPTIMISATION ITERATION NO.  2 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        5.000000E-03      110021.    
-   nne_ssw_min     trunc_lims       50.0000         0.283553    
-   ne_sw_p32       p32_vals        1.000000E-03      154378.    
-   nw_se_p32       p32_vals        1.000000E-03      136413.    
-   regional_min    trunc_lims       100.000          2.07110    
+   nne_ssw_p32     p32_vals        5.000000E-03      84529.5    
+   nne_ssw_min     trunc_lims       50.0000         0.800852    
+   ne_sw_p32       p32_vals        5.000000E-04      176370.    
+   nw_se_p32       p32_vals        1.000000E-03      45777.2    
+   regional_min    trunc_lims       100.000         0.318167    
 
 
  OPTIMISATION ITERATION NO.  3 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        5.195665E-03      239028.    
-   nne_ssw_min     trunc_lims       50.0186         0.743450    
-   ne_sw_p32       p32_vals        1.071208E-03      66530.8    
-   nw_se_p32       p32_vals        1.943091E-03      233475.    
-   regional_min    trunc_lims       100.079         0.432714    
+   nne_ssw_p32     p32_vals        1.000000E-04      77987.4    
+   nne_ssw_min     trunc_lims       48.0443         0.279237    
+   ne_sw_p32       p32_vals        1.000000E-05      84373.8    
+   nw_se_p32       p32_vals        2.230439E-03      19553.8    
+   regional_min    trunc_lims       100.091         0.143030    
 
 
  OPTIMISATION ITERATION NO.  4 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        5.412903E-03      54927.5    
-   nne_ssw_min     trunc_lims       54.3280          2.76156    
-   ne_sw_p32       p32_vals        1.874394E-03      170705.    
-   nw_se_p32       p32_vals        1.275674E-03      265341.    
-   regional_min    trunc_lims       99.9635         0.225383    
+   nne_ssw_p32     p32_vals        6.000000E-04      94090.6    
+   nne_ssw_min     trunc_lims       73.3050         0.118623    
+   ne_sw_p32       p32_vals        1.000000E-05      279124.    
+   nw_se_p32       p32_vals        2.074531E-03      51924.6    
+   regional_min    trunc_lims       91.7403         0.123480    
 
 
  OPTIMISATION ITERATION NO.  5 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        5.029269E-03      264383.    
-   nne_ssw_min     trunc_lims       79.1827          2.10742    
-   ne_sw_p32       p32_vals        1.645847E-03      132053.    
-   nw_se_p32       p32_vals        1.444263E-03      303642.    
-   regional_min    trunc_lims       109.697         0.318063    
+   nne_ssw_p32     p32_vals        2.149311E-03      124850.    
+   nne_ssw_min     trunc_lims       42.9159         0.852187    
+   ne_sw_p32       p32_vals        1.000000E-05      673118.    
+   nw_se_p32       p32_vals        3.438506E-03      57713.3    
+   regional_min    trunc_lims       87.8288         0.206515    
 
 
  OPTIMISATION ITERATION NO.  6 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        4.130344E-03      392442.    
-   nne_ssw_min     trunc_lims       80.6824          1.07726    
-   ne_sw_p32       p32_vals        1.506928E-03      121719.    
-   nw_se_p32       p32_vals        2.679742E-03      130929.    
-   regional_min    trunc_lims       110.980         0.969570    
+   nne_ssw_p32     p32_vals        1.929411E-03      90942.3    
+   nne_ssw_min     trunc_lims       43.0858          1.67031    
+   ne_sw_p32       p32_vals        6.000000E-05      162954.    
+   nw_se_p32       p32_vals        3.636010E-03      54374.9    
+   regional_min    trunc_lims       87.4614         0.127238    
 
 
  OPTIMISATION ITERATION NO.  7 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        3.797605E-03      30425.8    
-   nne_ssw_min     trunc_lims       80.9950          2.62516    
-   ne_sw_p32       p32_vals        8.076768E-04      103902.    
-   nw_se_p32       p32_vals        3.486887E-03      170322.    
-   regional_min    trunc_lims       94.4911         0.237518    
+   nne_ssw_p32     p32_vals        1.760612E-03      137949.    
+   nne_ssw_min     trunc_lims       45.3610         0.330750    
+   ne_sw_p32       p32_vals        1.000000E-05      498792.    
+   nw_se_p32       p32_vals        3.309614E-03      36741.1    
+   regional_min    trunc_lims       84.5252          1.12313    
 
 
  OPTIMISATION ITERATION NO.  8 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        3.865743E-03      487034.    
-   nne_ssw_min     trunc_lims       95.7354          2.92289    
-   ne_sw_p32       p32_vals        9.950677E-04      418708.    
-   nw_se_p32       p32_vals        3.505553E-03      547049.    
-   regional_min    trunc_lims       89.6391          1.14097    
+   nne_ssw_p32     p32_vals        1.729997E-03      71554.7    
+   nne_ssw_min     trunc_lims       45.2144         0.986587    
+   ne_sw_p32       p32_vals        2.250000E-05      96755.1    
+   nw_se_p32       p32_vals        3.223536E-03      21190.3    
+   regional_min    trunc_lims       84.2165         0.616175    
 
 
  OPTIMISATION ITERATION NO.  9 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        3.908354E-03      52622.3    
-   nne_ssw_min     trunc_lims       94.3831         0.984316    
-   ne_sw_p32       p32_vals        8.796337E-04      187126.    
-   nw_se_p32       p32_vals        3.551971E-03      74388.5    
-   regional_min    trunc_lims       96.5673         0.520304    
+   nne_ssw_p32     p32_vals        1.753289E-03      88664.9    
+   nne_ssw_min     trunc_lims       45.1512         0.881193    
+   ne_sw_p32       p32_vals        1.000000E-05      40374.6    
+   nw_se_p32       p32_vals        3.154116E-03      134802.    
+   regional_min    trunc_lims       81.0772         0.871640    
 
 
  OPTIMISATION ITERATION NO. 10 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        4.250923E-03      66565.7    
-   nne_ssw_min     trunc_lims       141.134         0.608973    
-   ne_sw_p32       p32_vals        1.191066E-03      94743.7    
-   nw_se_p32       p32_vals        3.893957E-03      293857.    
-   regional_min    trunc_lims       91.7337          2.14554    
+   nne_ssw_p32     p32_vals        1.758432E-03      106272.    
+   nne_ssw_min     trunc_lims       46.1478         0.405792    
+   ne_sw_p32       p32_vals        1.312500E-05      47126.2    
+   nw_se_p32       p32_vals        3.155855E-03      48341.1    
+   regional_min    trunc_lims       82.8416         0.127522    
 
 
  OPTIMISATION ITERATION NO. 11 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        4.232783E-03      405767.    
-   nne_ssw_min     trunc_lims       146.383         0.243900    
-   ne_sw_p32       p32_vals        7.363451E-04      207842.    
-   nw_se_p32       p32_vals        4.258026E-03      115830.    
-   regional_min    trunc_lims       72.7432         0.250528    
+   nne_ssw_p32     p32_vals        1.681109E-03      100300.    
+   nne_ssw_min     trunc_lims       36.3311         0.394095    
+   ne_sw_p32       p32_vals        7.875000E-05      201233.    
+   nw_se_p32       p32_vals        3.169076E-03      78377.4    
+   regional_min    trunc_lims       99.2655         0.370502    
 
 
  OPTIMISATION ITERATION NO. 12 ----->
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        4.075075E-03      155497.    
-   nne_ssw_min     trunc_lims       155.303         0.318926    
-   ne_sw_p32       p32_vals        8.769047E-04      18510.7    
-   nw_se_p32       p32_vals        4.260482E-03      27541.3    
-   regional_min    trunc_lims       75.7561          1.15369    
+   nne_ssw_p32     p32_vals        1.400996E-03      20544.2    
+   nne_ssw_min     trunc_lims       29.5692          1.02738    
+   ne_sw_p32       p32_vals        1.000000E-05      88970.9    
+   nw_se_p32       p32_vals        2.524071E-03      67173.9    
+   regional_min    trunc_lims       81.0718         0.537223    
+
+
+ OPTIMISATION ITERATION NO. 13 ----->
+ Parameter name    Group          Current value    Sensitivity
+   nne_ssw_p32     p32_vals        4.090442E-04      88128.0    
+   nne_ssw_min     trunc_lims       71.8897         0.190267    
+   ne_sw_p32       p32_vals        1.000000E-05      42290.3    
+   nw_se_p32       p32_vals        2.629206E-03      41625.0    
+   regional_min    trunc_lims       25.0000         0.448899    
+
+
+ OPTIMISATION ITERATION NO. 14 ----->
+ Parameter name    Group          Current value    Sensitivity
+   nne_ssw_p32     p32_vals        5.972981E-04      136227.    
+   nne_ssw_min     trunc_lims       79.0000         8.652961E-02
+   ne_sw_p32       p32_vals        6.000000E-05      27454.0    
+   nw_se_p32       p32_vals        2.491222E-03      15550.8    
+   regional_min    trunc_lims       25.0000          4.46508    
+
+
+ OPTIMISATION ITERATION NO. 15 ----->
+ Parameter name    Group          Current value    Sensitivity
+   nne_ssw_p32     p32_vals        1.160406E-03      70295.3    
+   nne_ssw_min     trunc_lims       152.603         0.154459    
+   ne_sw_p32       p32_vals        2.098188E-04      48116.9    
+   nw_se_p32       p32_vals        7.923153E-04      10441.4    
+   regional_min    trunc_lims       25.0000          2.91338    
+
+
+ OPTIMISATION ITERATION NO. 16 ----->
+ Parameter name    Group          Current value    Sensitivity
+   nne_ssw_p32     p32_vals        1.295914E-03      121982.    
+   nne_ssw_min     trunc_lims       51.5683          1.11129    
+   ne_sw_p32       p32_vals        1.000000E-05      118655.    
+   nw_se_p32       p32_vals        7.844286E-04      29757.6    
+   regional_min    trunc_lims       25.0000          5.25393    
+
+
+ OPTIMISATION ITERATION NO. 17 ----->
+ Parameter name    Group          Current value    Sensitivity
+   nne_ssw_p32     p32_vals        1.375318E-03      171817.    
+   nne_ssw_min     trunc_lims       46.5664         0.664719    
+   ne_sw_p32       p32_vals        1.000000E-05      68133.5    
+   nw_se_p32       p32_vals        1.102396E-03      96258.5    
+   regional_min    trunc_lims       25.0000         0.910731    
+
+
+ OPTIMISATION ITERATION NO. 18 ----->
+ Parameter name    Group          Current value    Sensitivity
+   nne_ssw_p32     p32_vals        2.777175E-03      143769.    
+   nne_ssw_min     trunc_lims       25.0000          7.61481    
+   ne_sw_p32       p32_vals        1.000000E-05      168538.    
+   nw_se_p32       p32_vals        3.189118E-03      24121.3    
+   regional_min    trunc_lims       37.3984         0.484299    
+
+
+ OPTIMISATION ITERATION NO. 19 ----->
+ Parameter name    Group          Current value    Sensitivity
+   nne_ssw_p32     p32_vals        1.926545E-03      188386.    
+   nne_ssw_min     trunc_lims       25.0000          1.26257    
+   ne_sw_p32       p32_vals        1.000000E-05      212539.    
+   nw_se_p32       p32_vals        2.705595E-03      54901.0    
+   regional_min    trunc_lims       25.0000          1.55677    
 
 
 
@@ -116,11 +179,11 @@
 
  Number of observations with non-zero weight =     2
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        3.908354E-03     2.920753E+06
-   nne_ssw_min     trunc_lims       94.3831          17.5128    
-   ne_sw_p32       p32_vals        8.796337E-04     2.510144E+06
-   nw_se_p32       p32_vals        3.551971E-03     3.274604E+06
-   regional_min    trunc_lims       96.5673          6.69345    
+   nne_ssw_p32     p32_vals        1.295914E-03      416194.    
+   nne_ssw_min     trunc_lims       51.5683         0.890775    
+   ne_sw_p32       p32_vals        1.000000E-05      285748.    
+   nw_se_p32       p32_vals        7.844286E-04      33394.8    
+   regional_min    trunc_lims       25.0000          16.2644    
 
 
 
@@ -128,11 +191,11 @@
 
  Number of observations with non-zero weight =    10
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        3.908354E-03      18416.2    
-   nne_ssw_min     trunc_lims       94.3831         0.185339    
-   ne_sw_p32       p32_vals        8.796337E-04      20564.2    
-   nw_se_p32       p32_vals        3.551971E-03      44907.3    
-   regional_min    trunc_lims       96.5673         0.287264    
+   nne_ssw_p32     p32_vals        1.295914E-03      13673.3    
+   nne_ssw_min     trunc_lims       51.5683         5.114584E-02
+   ne_sw_p32       p32_vals        1.000000E-05      8238.69    
+   nw_se_p32       p32_vals        7.844286E-04      10601.2    
+   regional_min    trunc_lims       25.0000          1.28110    
 
 
 
@@ -140,8 +203,8 @@
 
  Number of observations with non-zero weight =    12
  Parameter name    Group          Current value    Sensitivity
-   nne_ssw_p32     p32_vals        3.908354E-03      487034.    
-   nne_ssw_min     trunc_lims       94.3831          2.92289    
-   ne_sw_p32       p32_vals        8.796337E-04      418708.    
-   nw_se_p32       p32_vals        3.551971E-03      547049.    
-   regional_min    trunc_lims       96.5673          1.14097    
+   nne_ssw_p32     p32_vals        1.295914E-03      70295.3    
+   nne_ssw_min     trunc_lims       51.5683         0.154459    
+   ne_sw_p32       p32_vals        1.000000E-05      48116.9    
+   nw_se_p32       p32_vals        7.844286E-04      10441.4    
+   regional_min    trunc_lims       25.0000          2.91338    

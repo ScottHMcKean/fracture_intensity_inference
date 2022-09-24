@@ -6,7 +6,7 @@
 ### Load Data
 # Well paths, stages, and induced seismicity points in .frd file
 #=================================================================
-BEGIN_LOOP(1,10,1)
+BEGIN_LOOP(1,30,1)
  
 BEGIN ImportFile
 	Path = "duvernay_model.frd"
@@ -345,7 +345,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 =     8.7963374E-04 [1/m] #NE_SW_P32
+		P32 =     1.0000000E-05 [1/m] #NE_SW_P32
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -360,7 +360,7 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" =  210 [m] #NE_SW_X
 		Parameter "D" = 1.8 #NE_SW_D
-		MinValue =        9.6567323E+01 #NE_SW_MIN
+		MinValue =        2.5000000E+01 #NE_SW_MIN
 		MaxValue = 1000 [m] #NE_SW_MAX
 	END
 	BEGIN HeightDistribution
@@ -408,7 +408,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 =    3.5519706E-03 #NW_SE_P32
+		P32 =    7.8442864E-04 #NW_SE_P32
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -423,7 +423,7 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" = 210 [m] #NW_SE_X
 		Parameter "D" = 1.8 #NW_SE_D
-		MinValue =        9.6567323E+01 [m] #NW_SE_MIN
+		MinValue =        2.5000000E+01 [m] #NW_SE_MIN
 		MaxValue = 1000 [m] #NW_SE_MAX
 	END
 	BEGIN HeightDistribution
@@ -471,7 +471,7 @@ BEGIN DefineFractureSetDefinition
 		END
 	END
 	#** Intensity
-		P32 =     3.9083543E-03 [1/m] #NNE_SSW_P32
+		P32 =     1.2959136E-03 [1/m] #NNE_SSW_P32
 		AdjustedByTruncation = 1
 	#** Orientation
 		UsePole = 1
@@ -486,7 +486,7 @@ BEGIN DefineFractureSetDefinition
 		Type = "POWERLAW"
 		Parameter "Xmin" = 210 [m] #NNE_SSW_X
 		Parameter "D" = 1.8 #NNE_SSW_D
-		MinValue =       9.4383095E+01 [m] #NNE_SSW_MIN
+		MinValue =       5.1568337E+01 [m] #NNE_SSW_MIN
 		MaxValue = 1000 [m] #NNE_SSW_MAX
 	END
 	BEGIN HeightDistribution

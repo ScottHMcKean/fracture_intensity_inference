@@ -1,0 +1,145 @@
+ RECORD OF "NORMAL MATRIX" CONDITION NUMBERS: CASE montney
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    1
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     10.0    
+           MATRIX CONDITION NUMBER =  6.79697E+06
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     4.64    
+           MATRIX CONDITION NUMBER =  9.03887E+06
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    2
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     2.15    
+           MATRIX CONDITION NUMBER =  2.42823E+06
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     1.08    
+           MATRIX CONDITION NUMBER =  4.00642E+06
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     4.31    
+           MATRIX CONDITION NUMBER =  1.63913E+06
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    3
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     2.32    
+           MATRIX CONDITION NUMBER =  1.23033E+05
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    4
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =     1.16    
+           MATRIX CONDITION NUMBER =  3.33920E+05
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    5
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    0.580    
+           MATRIX CONDITION NUMBER =  1.03161E+05
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    0.290    
+           MATRIX CONDITION NUMBER =  1.93252E+05
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    0.145    
+           MATRIX CONDITION NUMBER =  3.73434E+05
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    6
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    0.145    
+           MATRIX CONDITION NUMBER =  1.85814E+08
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    7.252E-02
+           MATRIX CONDITION NUMBER =  3.65125E+08
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    7
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    3.626E-02
+           MATRIX CONDITION NUMBER =  1.91460E+07
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    1.200E-02
+           MATRIX CONDITION NUMBER =  5.74965E+07
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    3.973E-03
+           MATRIX CONDITION NUMBER =  1.73362E+08
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    8
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    3.973E-03
+           MATRIX CONDITION NUMBER =  4.61254E+07
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    6.292E-04
+           MATRIX CONDITION NUMBER =  2.90991E+08
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    2.508E-02
+           MATRIX CONDITION NUMBER =  7.34382E+06
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :    9
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    3.973E-03
+           MATRIX CONDITION NUMBER =  4.15553E+08
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    6.292E-04
+           MATRIX CONDITION NUMBER =  2.62160E+09
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    9.965E-05
+           MATRIX CONDITION NUMBER =  1.65505E+10
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    1.578E-05
+           MATRIX CONDITION NUMBER =  1.04497E+11
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    2.500E-06
+           MATRIX CONDITION NUMBER =  6.59778E+11
+
+
+ ------------------------------------------------------------------------------
+ OPTIMISATION ITERATION NO.        :   10
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    2.500E-06
+           MATRIX CONDITION NUMBER =  1.42116E+11
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    3.392E-08
+           MATRIX CONDITION NUMBER =  1.04735E+13
+
+
+ CURRENT VALUE OF MARQUARDT LAMBDA =    1.842E-04
+           MATRIX CONDITION NUMBER =  1.92881E+09
