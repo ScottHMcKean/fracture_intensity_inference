@@ -1,0 +1,152 @@
+# Set Region
+BEGIN EDITREGION
+	ObjectName = "Base_to_Wab"
+	Type = "Box"
+	Center = 0., 1500., -2237.985
+	Size = 3499., 4499., 727.09
+END
+
+BEGIN VISIBLEREGION
+	Region = "Base_to_Wab"
+END
+
+BEGIN FRACWORLDREGION
+	Region = "Base_to_Wab"
+END
+
+BEGIN CLIPFRACTURES
+	Object = "Base_to_Wab"
+	ClipToPositive = 1
+END
+
+BEGIN SetObjectOption
+	Object = "Base_to_Wab"
+	DrawNormals = 0
+END
+
+BEGIN DEFINE_VIEW
+	Name = "PlanView"
+	Projection = 1     #0=perspective, 1=orthographic
+	ViewType = "Matrix"
+	ModelScale = 1., 1., 1.
+	ModelPosition = 402.004392387595, 1417.97071253962, 808.7775585
+	ModelRotation = 0., 0., 0.
+	ViewDistance = 11294.5960255004
+	ViewPosition = 3270.05, 829.99, 808.7775585
+	ClipRegion = "Base_to_Wab"
+	FracWorldRegion = ""
+END
+
+BEGIN EXECUTE_VIEW
+	Name = "PlanView"
+END
+
+# Turn off objects
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "Regions"
+END
+
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "Surfaces"
+END
+
+BEGIN SetObjectOption
+	Object = "SeismicTraces"
+	DrawWireframe = 1
+	WireColor = 100, 100, 100
+	Visible = 1
+END
+
+BEGIN SetObjectOption
+	Object = "InducedSeismicity_1"
+    	Visible = 1
+	FillColor = 247, 129, 191
+	PointSize = 5
+END
+
+# Turn on and clean up stage points
+BEGIN SetObjectOption
+	Object = "Well_A_mid"
+	PointSize = 5
+  	FillColor = 77, 175, 74
+	Visible = 1
+END
+
+BEGIN SetObjectOption
+	Object = "Well_A_fracs_1"
+	Visible = 1
+	WireColor = 77, 175, 74
+END
+
+BEGIN SetObjectOption
+	Object = "Well_B_mid"
+	PointSize = 5
+	FillColor = 77, 175, 74
+	Visible = 1
+END
+
+BEGIN SetObjectOption
+	Object = "Well_B_fracs_1"
+    	Visible = 1
+    	WireColor = 77, 175, 74
+END
+
+BEGIN SetObjectOption
+	Object = "Well_C_mid"
+	PointSize = 5
+    	FillColor = 77, 175, 74
+    	Visible = 1
+END
+
+BEGIN SetObjectOption
+	Object = "Well_C_fracs_1"
+    	Visible = 1
+    	WireColor = 77, 175, 74
+END
+
+BEGIN SetObjectOption
+	Object = "Well_D_mid"
+	PointSize = 5
+    	FillColor = 77, 175, 74
+    	Visible = 1
+END
+
+BEGIN SetObjectOption
+	Object = "Well_D_fracs_1"
+    	Visible = 1
+    	WireColor = 77, 175, 74
+END
+
+# Turn off other fractures
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "Set A_1"
+END
+
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "Set B_1"
+END
+
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "SeismogenicFracs"
+END
+
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "SeismogenicFracs_tess_1"
+END
+
+BEGIN SetObjectOption
+	Visible = 0
+	Object = "ConnectedFracs"
+END
+
+BEGIN CaptureScreen
+	Clipboard = 0
+	Path = "base_figure.png"
+	ScaleFactor = 1
+END

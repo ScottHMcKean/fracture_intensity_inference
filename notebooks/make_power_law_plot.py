@@ -7,7 +7,7 @@ import seaborn as sns
 import mplstereonet
 from pyfracman.data import read_f2d_trace_file
 
-## Duvernay
+## DUVERNAY ##
 root_dir = Path("C:/repos/fracture_intensity_inference")
 duvernay_path = Path("./case_studies/duvernay/generate_model")
 seismic_faults = pd.read_csv(root_dir / duvernay_path / "seismic_fault_info.csv")[
@@ -40,7 +40,7 @@ sns.set_palette("Set1")
 f, ax = plt.subplots(figsize=(5, 5))
 
 # bin lengths for power law plot
-sns.scatterplot(data=combined_counts, x="lengths", y="comp_count", hue="Set", ax=ax)
+sns.scatterplot(data=combined_counts, x="lengths", y="comp_count", hue="Set", ax=ax, edgecolor="none")
 
 ymax = combined_counts.comp_count.max()
 xmin = 210
@@ -54,6 +54,8 @@ plt.xscale("log")
 plt.yscale("log")
 plt.ylabel("Normalized Complementary Cumulative Number")
 plt.xlabel("Fracture Length (m)")
+plt.savefig(f"duvernay_power_law.pdf")
+plt.savefig(f"duvernay_power_law.png")
 plt.show(block=False)
 
 ### Strike Rose Diagram
@@ -78,7 +80,7 @@ ax.bar(
     seismic_two_halves,
     width=np.deg2rad(10),
     bottom=0.0,
-    color="red",
+    color="#e41a1c",
     edgecolor="k",
 )
 ax.bar(
@@ -86,7 +88,7 @@ ax.bar(
     nne_ssw_two_halves,
     width=np.deg2rad(10),
     bottom=0.0,
-    color="blue",
+    color="#377eb8",
     edgecolor="k",
 )
 
@@ -94,9 +96,11 @@ ax.set_theta_zero_location("N")
 ax.set_theta_direction(-1)
 ax.set_thetagrids(np.arange(0, 360, 15), labels=np.arange(0, 360, 15))
 ax.set_rgrids(np.arange(1, seismic_two_halves.max(), 5), angle=0)
-plt.show()
+plt.savefig(f"duvernay_orientation_plot.pdf")
+plt.savefig(f"duvernay_orientation_plot.png")
+plt.show(block=False)
 
-
+## MONTNEY ##
 montney_path = Path("./case_studies/montney/generate_model")
 filepath = root_dir / montney_path / "SeismicTraces.f2d"
 is_faults = read_f2d_trace_file(root_dir / montney_path / "SeismicTraces.f2d").assign(
@@ -115,7 +119,14 @@ sns.set_palette("tab10")
 f, ax = plt.subplots(figsize=(5, 5))
 
 # bin lengths for power law plot
-sns.scatterplot(data=is_counts, x="lengths", y="comp_count", hue="Set", ax=ax)
+sns.scatterplot(
+    data=is_counts,
+    x="lengths",
+    y="comp_count",
+    hue="Set",
+    ax=ax,
+    edgecolor="none",
+)
 
 
 ymax = is_counts.comp_count.max()
@@ -131,7 +142,9 @@ plt.xscale("log")
 plt.yscale("log")
 plt.ylabel("Complementary Cumulative Number")
 plt.xlabel("Fracture Length (m)")
-plt.show()
+plt.savefig(f"montney_power_law.pdf")
+plt.savefig(f"montney_power_law.png")
+plt.show(block=False)
 
 
 ### Strike Rose Diagram
@@ -158,7 +171,7 @@ ax.bar(
     regional_two_halves,
     width=np.deg2rad(10),
     bottom=0.0,
-    color="red",
+    color="#377eb8",
     edgecolor="k",
 )
 ax.bar(
@@ -166,7 +179,7 @@ ax.bar(
     is_two_halves,
     width=np.deg2rad(10),
     bottom=0.0,
-    color="blue",
+    color="#e41a1c",
     edgecolor="k",
 )
 
@@ -174,4 +187,6 @@ ax.set_theta_zero_location("N")
 ax.set_theta_direction(-1)
 ax.set_thetagrids(np.arange(0, 360, 15), labels=np.arange(0, 360, 15))
 ax.set_rgrids(np.arange(1, seismic_two_halves.max(), 5), angle=0)
-plt.show()
+plt.savefig(f"montney_orientation_plot.pdf")
+plt.savefig(f"montney_orientation_plot.png")
+plt.show(block=False)
