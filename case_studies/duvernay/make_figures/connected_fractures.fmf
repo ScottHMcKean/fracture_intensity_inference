@@ -53,83 +53,82 @@ BEGIN SetObjectOption
 END
 
 BEGIN SetObjectOption
-	Object = "SeismicTraces"
-	DrawWireframe = 1
-	WireColor = 100, 100, 100
+	Visible = 0
+	Object = "Trace Maps"
+END
+
+# Set Wireframes to light grey
+BEGIN SetObjectOption
 	Visible = 1
+	Object = "NE-SW_1"
+	WireColor = 210, 210, 210
 END
 
 BEGIN SetObjectOption
-	Object = "InducedSeismicity_1"
-    	Visible = 1
-	FillColor = 247, 129, 191
-	PointSize = 5
+	Visible = 1
+	Object = "NNE-SSW_1"
+	WireColor = 210, 210, 210
 END
+
+BEGIN SetObjectOption
+	Visible = 1
+	Object = "NW-SE_1"
+	WireColor = 210, 210, 210
+END
+
+
 
 # Turn on and clean up stage points
 BEGIN SetObjectOption
 	Object = "Well_A_mid"
-	PointSize = 5
-  	FillColor = 77, 175, 74
+	PointSize = 3
+  	FillColor = 0, 0, 0
 	Visible = 1
 END
 
+
 BEGIN SetObjectOption
 	Object = "Well_A_fracs_1"
-	Visible = 1
-	WireColor = 77, 175, 74
+    	Visible = 0
 END
 
 BEGIN SetObjectOption
 	Object = "Well_B_mid"
-	PointSize = 5
-	FillColor = 77, 175, 74
+	PointSize = 3
+	FillColor = 0, 0, 0
 	Visible = 1
 END
 
 BEGIN SetObjectOption
 	Object = "Well_B_fracs_1"
-    	Visible = 1
-    	WireColor = 77, 175, 74
+    	Visible = 0
 END
 
 BEGIN SetObjectOption
 	Object = "Well_C_mid"
-	PointSize = 5
-    	FillColor = 77, 175, 74
+	PointSize = 3
+    	FillColor = 0, 0, 0
     	Visible = 1
 END
 
 BEGIN SetObjectOption
 	Object = "Well_C_fracs_1"
-    	Visible = 1
-    	WireColor = 77, 175, 74
+    	Visible = 0
 END
 
 BEGIN SetObjectOption
 	Object = "Well_D_mid"
-	PointSize = 5
-    	FillColor = 77, 175, 74
+	PointSize = 3
+    	FillColor = 0, 0, 0
     	Visible = 1
 END
 
 BEGIN SetObjectOption
 	Object = "Well_D_fracs_1"
-    	Visible = 1
-    	WireColor = 77, 175, 74
+    	Visible = 0
 END
 
 # Turn off other fractures
-BEGIN SetObjectOption
-	Visible = 0
-	Object = "Set A_1"
-END
-
-BEGIN SetObjectOption
-	Visible = 0
-	Object = "Set B_1"
-END
-
 BEGIN SetObjectOption
 	Visible = 0
 	Object = "SeismogenicFracs"
@@ -140,36 +139,34 @@ BEGIN SetObjectOption
 	Object = "SeismogenicFracs_tess_1"
 END
 
+
+# Show connected fractures
 BEGIN SetObjectOption
-	Visible = 0
+    Visible = 1
 	Object = "ConnectedFracs"
+	DrawFilled = 0
+    WireColor = 228, 26, 28
+    DrawOutline = 1
+    OutlineColor = 228, 26, 28
+END
+
+# Show subsampled events and induced seismicity
+BEGIN SetObjectOption
+	Object = "SubsampledEvents"
+    Visible = 1
+    FillColor = 228, 26, 28
+    PointSize = 5
 END
 
 BEGIN SetObjectOption
-	Visible = 0
-	Object = "NE-SW_1"
+	Object = InducedMicroseismicity_1
+    Visible = 1
+    FillColor = 247, 129, 191
+    PointSize = 2
 END
-
-BEGIN SetObjectOption
-	Visible = 0
-	Object = "NNE-SSW_1"
-END
-
-BEGIN SetObjectOption
-	Visible = 0
-	Object = "NW-SE_1"
-END
-
-BEGIN SetObjectOption
-	Visible = 1
-	Object = "InducedMicroseismicity_1"
-	FillColor = 247, 129, 191
-	PointSize = 2
-END
-
 
 BEGIN CaptureScreen
 	Clipboard = 0
-	Path = "base_figure.png"
+	Path = "connected_fractures.png"
 	ScaleFactor = 1
 END

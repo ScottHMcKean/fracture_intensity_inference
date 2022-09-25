@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import re
 import matplotlib.ticker as ticker
 
-root_path = Path(r"C:\repos\fracture_intensity_inference\case_studies\duvernay")
+root_path = Path(r"C:\repos\fracture_intensity_inference\case_studies\montney")
 
 # load wells
 well_paths = []
@@ -46,7 +46,7 @@ sns.lineplot(
     x="X",
     y="Y",
     hue="Well",
-    palette=["k", "k", "k", "k"],
+    palette=["k", "k", "k"],
     ax=ax,
     sort=False,
     legend=False,
@@ -70,10 +70,10 @@ ax.set_xlabel("")
 plt.gca().set_aspect("equal")
 ax.yaxis.set_major_locator(ticker.MultipleLocator(500))
 ax.xaxis.set_major_locator(ticker.MultipleLocator(500))
-ax.set_ylim(-1000, 4000)
-ax.set_xlim(-2000, 2000)
+ax.set_ylim(-1500, 1000)
+ax.set_xlim(-500, 2500)
 fig.axes[-1].set_yticklabels([f"{t:.2f}" for t in level_bins])
 plt.tight_layout()
-plt.savefig("duvernay_is_realizations.pdf")
-plt.savefig("duvernay_is_realizations.png")
+plt.savefig("montney_is_realizations.pdf")
+plt.savefig("montney_is_realizations.png")
 plt.show(block=False)
