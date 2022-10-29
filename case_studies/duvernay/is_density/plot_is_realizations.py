@@ -38,7 +38,27 @@ combined_events = pd.concat(event_dfs)
 sns.set_style("whitegrid")
 sns.set_palette("Set1")
 
-level_bins = [0.05, 0.10, 0.20, 0.30, 0.40, 0.75, 0.90, 0.95]
+level_bins = [
+    0.05,
+    0.10,
+    0.15,
+    0.20,
+    0.25,
+    0.30,
+    0.35,
+    0.40,
+    0.45,
+    0.50,
+    0.55,
+    0.60,
+    0.65,
+    0.70,
+    0.75,
+    0.80,
+    0.85,
+    0.90,
+    0.95,
+]
 
 fig, ax = plt.subplots(figsize=(8, 8))
 sns.lineplot(
@@ -63,7 +83,6 @@ sns.kdeplot(
     levels=level_bins,
     cmap="viridis",
 )
-sns.scatterplot(data=combined_events, x="x", y="y", s=1, color="black", alpha=0.15)
 sns.set_style({"axes.gridcolor": "#000000"})
 ax.set_ylabel("")
 ax.set_xlabel("")

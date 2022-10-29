@@ -8,7 +8,7 @@ from scipy.spatial.distance import cdist
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-case = "duvernay"  # "montney" or "duvernay"
+case = "montney"  # "montney" or "duvernay"
 
 if case == "duvernay":
     root_dir = Path("C:/repos/fracture_intensity_inference")
@@ -47,7 +47,7 @@ counts = pd.DataFrame(
 # read scenario .fab file to get seismic length
 
 simulations = []
-for run in range(1, 21):
+for run in range(1, 21, 2):
     fab_info = parse_fab_file(
         root_dir / case_path / "run_pest" / f"SeismogenicFracs_{run}.fab"
     )
